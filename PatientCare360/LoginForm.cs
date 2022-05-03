@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PatientCare360
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace PatientCare360
         }
 
         private void TextBoxUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
