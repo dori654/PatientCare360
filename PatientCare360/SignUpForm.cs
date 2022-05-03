@@ -38,15 +38,25 @@ namespace PatientCare360
         {
             if (!CheckUserName(Username))
             {
-                MessageBox.Show("User Name Needs to be between 6 to 8 charcters and contains max 2 number");
+                MessageBox.Show("User Name Needs to be between 6 - 8 charcters and contains max 2 number");
                 
             }
 
             if (Password != ConfPassword)
+            {
                 MessageBox.Show("Passwords Don't match");
+            }
 
-            
+            if (!CheckPassword(Password))
+            {
+                MessageBox.Show(
+                    "Password Length must be 8-10 contain at least 1 number  and 1 special charcter and 1 letter");
+            }
 
+            if (!CheckID(id))
+            {
+                MessageBox.Show("Invalid User id: length 9 character only numbers or Id already registered.");
+            }
         }
 
         private bool CheckUserName(string Username)
@@ -108,6 +118,8 @@ namespace PatientCare360
             }
 
             return true;
+
+            //TODO: check if allready registered
         }
     }
 }
