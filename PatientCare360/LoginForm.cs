@@ -41,5 +41,15 @@ namespace PatientCare360
         {
 
         }
+
+        private void BtnSignup_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+            SignUpForm s = new SignUpForm();
+            s.Visible = true;
+         
+
+        }
     }
 }
