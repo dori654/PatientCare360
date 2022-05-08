@@ -12,36 +12,15 @@ namespace PatientCare360
 {
     public partial class LoginForm : Form
     {
+        public string Username;
+        public string Password;
         public LoginForm()
         {
             InitializeComponent();
+            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBoxUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void BtnSignup_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -51,5 +30,25 @@ namespace PatientCare360
          
 
         }
+
+        private void BtnEnter_Click(object sender, EventArgs e)
+        {
+
+            if (Excel.Excel.SearchUser(TextBoxUsername.Text, textBoxPassword.Text))
+            {
+                this.Visible = false;
+                DoctorUI Doctor = new DoctorUI();
+
+                Doctor.Visible = true;
+            }
+
+            else
+            {
+                MessageBox.Show("Could not find user in the database , try to register first!");
+            }
+            
+        }
+
+       
     }
 }

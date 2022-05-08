@@ -47,7 +47,7 @@
             this.labelUsername.Size = new System.Drawing.Size(135, 26);
             this.labelUsername.TabIndex = 0;
             this.labelUsername.Text = "Username :";
-            this.labelUsername.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // labelPassword
             // 
@@ -74,7 +74,7 @@
             this.TextBoxUsername.Name = "TextBoxUsername";
             this.TextBoxUsername.Size = new System.Drawing.Size(318, 33);
             this.TextBoxUsername.TabIndex = 4;
-            this.TextBoxUsername.TextChanged += new System.EventHandler(this.TextBoxUser_TextChanged);
+
             // 
             // BtnEnter
             // 
@@ -85,6 +85,7 @@
             this.BtnEnter.TabIndex = 5;
             this.BtnEnter.Text = "Log in";
             this.BtnEnter.UseVisualStyleBackColor = true;
+            this.BtnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
             // 
             // BtnSignup
             // 
@@ -106,7 +107,7 @@
             this.label1.Size = new System.Drawing.Size(192, 26);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome , Guest";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+
             // 
             // label2
             // 
@@ -116,7 +117,7 @@
             this.label2.Size = new System.Drawing.Size(155, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "//TODO add icon/img";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // LoginForm
             // 

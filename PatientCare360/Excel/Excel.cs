@@ -10,7 +10,7 @@ namespace PatientCare360.Excel
 
     internal class Excel
     {
-        public static string ExcelPafh1 = "C:\\Users\\dori6\\source\\repos\\PatientCare360\\PatientCare360\\Excel\\Users.xlsx";
+        public static string ExcelPafh1 = "../../Excel/Users.xlsx";
         public static WorkBook workBook = WorkBook.Load(ExcelPafh1);
         public static WorkSheet Worksheet = workBook.DefaultWorkSheet;
 
