@@ -28,9 +28,11 @@ namespace PatientCare360
         public SignUpForm()
         {
             InitializeComponent();
-            
-
-
+            Username = textBoxUsername.Text;
+            Password = textBoxPassword.Text;
+            Fullname = textBoxFuname.Text;
+            id = textBoxID.Text;
+            ConfPassword = textBoxConfPassword.Text;
         }
 
 
@@ -40,7 +42,11 @@ namespace PatientCare360
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
-            
+            Username = textBoxUsername.Text;
+            Password = textBoxPassword.Text;
+            Fullname = textBoxFuname.Text;
+            id = textBoxID.Text;
+            ConfPassword = textBoxConfPassword.Text;
             bool flag = false;
 
             if (CheckUserName(Username))
@@ -56,7 +62,7 @@ namespace PatientCare360
                 flag=false;
             }
 
-            if (CheckPassword(Password))
+            if (!CheckPassword(Password))
             {
                 MessageBox.Show(
                     "Password Length must be 8-10 contain at least 1 number  and 1 special charcter and 1 letter");
@@ -80,28 +86,30 @@ namespace PatientCare360
                 ConfPassword = textBoxConfPassword.Text;
 
 
-                Excel.Excel.AddUser(Username, Password, id);
+                Excel.Excel.AddUser(textBoxUsername.Text, textBoxPassword.Text, textBoxID.Text);
             }
         }
 
-        private bool CheckUserName(string Username)
+        private bool CheckUserName(string username)
         {
-            if (Username.Length < 6 || Username.Length > 8)
+
+            if (username.Length < 6 || username.Length > 8)
             {
                 return false;
             }
             //Contains a maximum of 2 digits ,Contains letters or numbers
             int count = 0;
 
-            foreach (var c in Username)
+            for (int i = 0; i < username.Length; i++)
             {
-                if(char.IsDigit(Username,c))
+                if (char.IsDigit(username, i))
                     count++;
-                else if (!char.IsLetter(Username,c))
+                else if (!char.IsLetter(username,i))
                 {
                     return false;
                 }
-                if (count > 2) return false;
+                if (count > 2 )
+                    return false;
             }
 
             return true;
@@ -110,6 +118,7 @@ namespace PatientCare360
 
         private bool CheckPassword(string password)
         {
+            Password = textBoxPassword.Text;
             if (password.Length < 6 || password.Length > 10)
                 return false;
 
@@ -117,34 +126,30 @@ namespace PatientCare360
             var count2 = 0;
             var count3 = 0;
 
-            foreach (var c in password)
+            for (int i = 0; i < password.Length; i++)
             {
-                if (char.IsDigit(password,c)) count1++;
-
-                else if (char.IsLetter(password, c)) count2++;
-
+                if (char.IsDigit(password,i)) count1++;
+                else if (char.IsLetter(password, i)) count2++;
                 else count3++;
-                
-                if (count1 >=1 && count2 >= 1 && count3 >= 1)
+
+                if (count1 >= 1 && count2 >= 1 && count3 >= 1)
                     return true;
             }
 
             return false;
         }
 
-        public static bool CheckID(string user_ID)
+        public bool CheckID(string user_ID)
         {
-            foreach (var c in user_ID)
+            for (int i = 0; i < user_ID.Length; i++)
             {
-                if (!char.IsDigit(user_ID, c))
+                if (!char.IsDigit(user_ID, i))
                     return false;
                 if (user_ID.Length != 9)
                     return false;
             }
-
+            
             return true;
-
-            //TODO: check if allready registered
         }
 
     }
