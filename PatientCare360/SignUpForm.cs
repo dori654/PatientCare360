@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel;
 using Microsoft.Office.Interop.Excel;
-
+using OfficeOpenXml.ExternalReferences;
 
 
 namespace PatientCare360
@@ -22,36 +22,6 @@ namespace PatientCare360
         public string id;
         private string ConfPassword;
 
-        // public List<T> ImportExel<T>(string exelFilePath , string sheetname)
-        // {
-        //     List<T> list = new List<T>();
-        //     Type typeOfObject = typeof(T);
-        //
-        //     using (IXLWorkbook workbook = new XLWorkbook(exelFilePath))
-        //     {
-        //         var worksheet = workbook.Worksheets.Where(w => w.Name == sheetname).First();
-        //         var properties = typeOfObject.GetProperties();
-        //         //header colum texts
-        //         var colums = worksheet.FirstRow().Cells().Select((v, i) => new {v.Value, Index = i + 1}); //indexing in closedXML starts with 1 not from 0
-        //
-        //         foreach (IXLRow row in worksheet.RowsUsed().Skip(1))//skip first row wtich is used for column header texts
-        //         {
-        //             T obj = (T) Activator.CreateInstance(typeOfObject);
-        //
-        //             foreach (var prop in properties)
-        //             {
-        //                 int colIndex = colums.SingleOrDefault(c => c.Value.ToString() == prop.Name.ToString()).Index;
-        //                 var val = row.Cell(colIndex).Value;
-        //                 var type = prop.PropertyType;
-        //                 prop.SetValue(obj,Convert.ChangeType(val,type));
-        //             }
-        //             list.Add(obj);
-        //         }
-        //     }
-        //
-        //
-        //     return list;
-        // }
 
      
 
@@ -65,18 +35,15 @@ namespace PatientCare360
             id = textBoxID.Text;
             ConfPassword = textBoxConfPassword.Text;
 
-
-            // var Sheet = new SignUpForm().ImportExel<SignUpForm>(
-            //     @"C: \Users\dori6\source\repos\PatientCare360\PatientCare360\Users.xlsx", "Users");
         }
 
 
         private void SignUpForm_Load(object sender, EventArgs e) { }
 
 
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            
             bool flag = false;
 
             if (CheckUserName(Username))
@@ -108,15 +75,13 @@ namespace PatientCare360
             flag = true;
             if (flag)
             {
+
                 Username = textBoxUsername.Text;
                 Password = textBoxPassword.Text;
                 Fullname = textBoxFuname.Text;
                 id = textBoxID.Text;
                 ConfPassword = textBoxConfPassword.Text;
 
-
-                Excel.WriteExcel.writeExcel();
-                MessageBox.Show("Complete");
 
             }
         }
@@ -188,14 +153,7 @@ namespace PatientCare360
 
 
 
-    public class ExcelFile
-    {
-        public string Name { get; set; }
-        public string ID { get; set; }
-        public string Password { get; set; }
 
-
-    }
 
 
 }
