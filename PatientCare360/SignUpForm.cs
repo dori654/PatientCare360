@@ -87,6 +87,10 @@ namespace PatientCare360
 
 
                 Excel.Excel.AddUser(textBoxUsername.Text, textBoxPassword.Text, textBoxID.Text);
+                MessageBox.Show("Registration completed");
+                LoginForm log = new LoginForm();
+                this.Visible = false;
+                log.Visible = true;
             }
         }
 
@@ -152,6 +156,13 @@ namespace PatientCare360
             return true;
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            this.Visible = false;
+            login.Visible = true;
+            
+        }
     }
 
 
