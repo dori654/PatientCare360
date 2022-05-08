@@ -29,11 +29,7 @@ namespace PatientCare360
         {
             InitializeComponent();
             
-            Username = textBoxUsername.Text;
-            Password = textBoxPassword.Text;
-            Fullname = textBoxFuname.Text;
-            id = textBoxID.Text;
-            ConfPassword = textBoxConfPassword.Text;
+
 
         }
 
@@ -43,6 +39,7 @@ namespace PatientCare360
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+
             
             bool flag = false;
 
@@ -83,6 +80,7 @@ namespace PatientCare360
                 ConfPassword = textBoxConfPassword.Text;
 
 
+                Excel.Excel.AddUser(Username, Password, id);
             }
         }
 

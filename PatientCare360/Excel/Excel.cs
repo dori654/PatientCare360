@@ -1,92 +1,65 @@
-﻿using  IronXL;
+﻿using System;
+using  IronXL;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using DocumentFormat.OpenXml.Spreadsheet;
-using OfficeOpenXml.Style;
-using _Excel = IronXL;
+
 
 
 namespace PatientCare360.Excel
 {
 
-    
-    public class Excel
+
+    internal class Excel
     {
-        private string path = "";
-        private WorkBook wb;
-        private WorkSheet ws;
+        public static string ExcelPafh1 = "C:\\Users\\dori6\\source\\repos\\PatientCare360\\PatientCare360\\Excel\\Users.xlsx";
+        public static WorkBook workBook = WorkBook.Load(ExcelPafh1);
+        public static WorkSheet Worksheet = workBook.DefaultWorkSheet;
 
-
-        public Excel()
+        public static Boolean SearchUser(string UserName, string Pass)
         {
-
-        }
-        public Excel(string path, int Sheet)
-        {
-            this.path = path;
-            this.wb = WorkBook.Load(@"Users.xlsx");
-            this.ws = wb.GetWorkSheet("Sheet1");
-        }
-
-        public string ReadCell(int i, int j)
-        {
-            i++;
-            j++;
-            if (ws["A2:C2"] != null)
-                return ws["A2:C2"].Value.ToString();
-            else
-                return "";
-
-
-        }
-        public void writeToCell(int i ,int j, string s)
-        {
-            for (int y = 2; y < 101; y++)
+            for (int i = 1; i <= Worksheet.Rows.Length; i++)
             {
-                var result =new 
+                if(UserName == Worksheet["A"+i].Value.ToString())
+                    if (Pass == Worksheet["B"+i].Value.ToString())
+                        return true;
                 
             }
-
-
-
-
-            // string filePath = "C:\\Users\\dori6\\source\\repos\\PatientCare360\\PatientCare360\\Users.xlsx";
-            // Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            // Workbook wb;
-            // Worksheet ws;
-            //
-            // wb = excel.Workbooks.Open(filePath);
-            // ws = wb.Worksheets[1];
-            //
-            // Range cell = ws.Range["A2:C2"];
-            //
-            // string[] User = new[] {form.Username,cExcel.Fullname,cExcel.Password};
-            //
-            // cell.Value[XlRangeValueDataType.xlRangeValueDefault] = User;
-            //
-            // wb.SaveAs(filePath);
-            // wb.Close();
+            return false;
 
         }
 
-        public void Save()
+        public static void AddUser(string UserName, string Pass, string id)
         {
-            wb.Save();
+            int i = Worksheet.Rows.Length + 1;
+            Worksheet["A" + i].Value = UserName;
+            Worksheet["B" + i].Value = Pass;
+            Worksheet["C" + i].Value = id;
+            workBook.SaveAs(ExcelPafh1);
         }
 
-        public void SaveAs(string path)
-        {
-            wb.SaveAs(path);
-        }
-
-        public void Close()
-        {
-            wb.Close();
-        }
-
-        public void CreateNewFile()
-        {
-            this.wb = excel.Workbooks.Add(_Excel.XlWBATemplate.xlWBATWorksheet);
-        }
     }
+    // public void writeToCell(int i ,int j, string s)
+    // {
+    //     
+    //
+    //
+    //     // string filePath = "C:\\Users\\dori6\\source\\repos\\PatientCare360\\PatientCare360\\Users.xlsx";
+    //     // Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+    //     // Workbook wb;
+    //     // Worksheet ws;
+    //     //
+    //     // wb = excel.Workbooks.Open(filePath);
+    //     // ws = wb.Worksheets[1];
+    //     //
+    //     // Range cell = ws.Range["A2:C2"];
+    //     //
+    //     // string[] User = new[] {form.Username,cExcel.Fullname,cExcel.Password};
+    //     //
+    //     // cell.Value[XlRangeValueDataType.xlRangeValueDefault] = User;
+    //     //
+    //     // wb.SaveAs(filePath);
+    //     // wb.Close();
+    //
+    // }
+
 }
+
