@@ -87,6 +87,7 @@ namespace PatientCare360
 
 
                 Excel.Excel.AddUser(textBoxUsername.Text, textBoxPassword.Text, textBoxID.Text);
+                MessageBox.Show("Registration completed");
                 LoginForm log = new LoginForm();
                 this.Visible = false;
                 log.Visible = true;
@@ -160,7 +161,7 @@ namespace PatientCare360
             LoginForm login = new LoginForm();
             this.Visible = false;
             login.Visible = true;
-            
+
         }
     }
 
