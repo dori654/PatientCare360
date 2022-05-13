@@ -45,7 +45,9 @@ namespace PatientCare360
         {
             panelLeft.Height = btnLogOut.Height;
             panelLeft.Top = btnLogOut.Top;
-            
+            this.Visible = false;
+            LoginForm log = new LoginForm();
+            log.Visible = true;
         }
 
 
@@ -62,6 +64,53 @@ namespace PatientCare360
         private void minimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void DoctorUI_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point lastPoint = new Point();
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void DoctorUI_MouseDown(object sender, MouseEventArgs e)
+        {
+            Point lastPoint = new Point();
+            lastPoint = new Point(e.X, e.Y);
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
