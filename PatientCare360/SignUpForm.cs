@@ -156,13 +156,6 @@ namespace PatientCare360
             return true;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            LoginForm login = new LoginForm();
-            this.Visible = false;
-            login.Visible = true;
-            
-        }
     }
 
 
