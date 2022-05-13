@@ -49,6 +49,9 @@ namespace PatientCare360
             
         }
 
-       
+        private void labelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
