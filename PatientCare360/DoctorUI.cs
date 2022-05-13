@@ -14,6 +14,7 @@ namespace PatientCare360
         public DoctorUI()
         {
             InitializeComponent();
+     
         }
 
         private void DoctorUI_Load(object sender, EventArgs e)
@@ -47,15 +48,6 @@ namespace PatientCare360
             
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
