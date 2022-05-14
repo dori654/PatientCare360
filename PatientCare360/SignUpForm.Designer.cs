@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.labelFullname = new System.Windows.Forms.Label();
             this.textBoxFuname = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -40,110 +41,111 @@
             this.labelConfirmPassword = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelFullname
             // 
             this.labelFullname.AutoSize = true;
             this.labelFullname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFullname.Location = new System.Drawing.Point(99, 69);
+            this.labelFullname.Location = new System.Drawing.Point(100, 174);
             this.labelFullname.Name = "labelFullname";
-            this.labelFullname.Size = new System.Drawing.Size(163, 22);
+            this.labelFullname.Size = new System.Drawing.Size(193, 26);
             this.labelFullname.TabIndex = 0;
             this.labelFullname.Text = "Your Full Name : ";
             // 
             // textBoxFuname
             // 
             this.textBoxFuname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFuname.Location = new System.Drawing.Point(103, 92);
+            this.textBoxFuname.Location = new System.Drawing.Point(105, 203);
             this.textBoxFuname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFuname.Name = "textBoxFuname";
-            this.textBoxFuname.Size = new System.Drawing.Size(323, 29);
+            this.textBoxFuname.Size = new System.Drawing.Size(363, 33);
             this.textBoxFuname.TabIndex = 1;
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(103, 158);
+            this.textBoxUsername.Location = new System.Drawing.Point(105, 286);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(323, 29);
+            this.textBoxUsername.Size = new System.Drawing.Size(363, 33);
             this.textBoxUsername.TabIndex = 3;
             // 
             // labelUserName
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserName.Location = new System.Drawing.Point(99, 135);
+            this.labelUserName.Location = new System.Drawing.Point(100, 257);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(161, 22);
+            this.labelUserName.Size = new System.Drawing.Size(191, 26);
             this.labelUserName.TabIndex = 2;
             this.labelUserName.Text = "Your Username :";
             // 
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(104, 225);
+            this.textBoxID.Location = new System.Drawing.Point(106, 369);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(323, 29);
+            this.textBoxID.Size = new System.Drawing.Size(363, 33);
             this.textBoxID.TabIndex = 5;
             // 
             // label_ID
             // 
             this.label_ID.AutoSize = true;
             this.label_ID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ID.Location = new System.Drawing.Point(99, 194);
+            this.label_ID.Location = new System.Drawing.Point(100, 330);
             this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(86, 22);
+            this.label_ID.Size = new System.Drawing.Size(102, 26);
             this.label_ID.TabIndex = 4;
             this.label_ID.Text = "Your Id :";
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(103, 292);
+            this.textBoxPassword.Location = new System.Drawing.Point(105, 453);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(323, 29);
+            this.textBoxPassword.Size = new System.Drawing.Size(363, 33);
             this.textBoxPassword.TabIndex = 7;
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(100, 258);
+            this.labelPassword.Location = new System.Drawing.Point(101, 410);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(158, 22);
+            this.labelPassword.Size = new System.Drawing.Size(188, 26);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Your Password :";
             // 
             // textBoxConfPassword
             // 
             this.textBoxConfPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfPassword.Location = new System.Drawing.Point(103, 362);
+            this.textBoxConfPassword.Location = new System.Drawing.Point(105, 540);
             this.textBoxConfPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxConfPassword.Name = "textBoxConfPassword";
-            this.textBoxConfPassword.Size = new System.Drawing.Size(323, 29);
+            this.textBoxConfPassword.Size = new System.Drawing.Size(363, 33);
             this.textBoxConfPassword.TabIndex = 9;
             // 
             // labelConfirmPassword
             // 
             this.labelConfirmPassword.AutoSize = true;
             this.labelConfirmPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConfirmPassword.Location = new System.Drawing.Point(100, 329);
+            this.labelConfirmPassword.Location = new System.Drawing.Point(101, 499);
             this.labelConfirmPassword.Name = "labelConfirmPassword";
-            this.labelConfirmPassword.Size = new System.Drawing.Size(193, 22);
+            this.labelConfirmPassword.Size = new System.Drawing.Size(228, 26);
             this.labelConfirmPassword.TabIndex = 8;
             this.labelConfirmPassword.Text = "Confirm Password : ";
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(122, 480);
+            this.btnRegister.Location = new System.Drawing.Point(128, 649);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(291, 56);
+            this.btnRegister.Size = new System.Drawing.Size(327, 70);
             this.btnRegister.TabIndex = 10;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -152,21 +154,31 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(123, 566);
+            this.btnCancel.Location = new System.Drawing.Point(129, 757);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(291, 56);
+            this.btnCancel.Size = new System.Drawing.Size(327, 70);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(196, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(175, 142);
+            this.panel1.TabIndex = 12;
+            // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(521, 688);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(586, 860);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.textBoxConfPassword);
@@ -179,6 +191,7 @@
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.textBoxFuname);
             this.Controls.Add(this.labelFullname);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignUpForm";
             this.Text = "SignUpForm";
@@ -202,5 +215,6 @@
         private System.Windows.Forms.Label labelConfirmPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

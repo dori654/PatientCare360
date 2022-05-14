@@ -42,41 +42,41 @@
             this.MaxmizeBtn = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Textbox_WBC = new System.Windows.Forms.TextBox();
-            this.TextBox_RBC = new System.Windows.Forms.TextBox();
-            this.Texbox_Urea = new System.Windows.Forms.TextBox();
-            this.TextBox_Creatinine = new System.Windows.Forms.TextBox();
-            this.TextBox_HB = new System.Windows.Forms.TextBox();
-            this.textbox_iron = new System.Windows.Forms.TextBox();
+            this.Button_Submit = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Slider_HCT = new System.Windows.Forms.TrackBar();
+            this.Slider_Lymph = new System.Windows.Forms.TrackBar();
+            this.Slider_Neut = new System.Windows.Forms.TrackBar();
             this.textBox_AP = new System.Windows.Forms.TextBox();
             this.textBox_HDL = new System.Windows.Forms.TextBox();
-            this.Slider_Neut = new System.Windows.Forms.TrackBar();
-            this.Slider_Lymph = new System.Windows.Forms.TrackBar();
-            this.Slider_HCT = new System.Windows.Forms.TrackBar();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Button_Submit = new System.Windows.Forms.Button();
+            this.textbox_iron = new System.Windows.Forms.TextBox();
+            this.TextBox_HB = new System.Windows.Forms.TextBox();
+            this.TextBox_Creatinine = new System.Windows.Forms.TextBox();
+            this.Texbox_Urea = new System.Windows.Forms.TextBox();
+            this.TextBox_RBC = new System.Windows.Forms.TextBox();
+            this.Textbox_WBC = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,7 +89,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(378, 948);
+            this.panel1.Size = new System.Drawing.Size(291, 948);
             this.panel1.TabIndex = 0;
             // 
             // btnLogOut
@@ -163,7 +163,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(378, 103);
+            this.panel3.Size = new System.Drawing.Size(291, 103);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox1
@@ -173,7 +173,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(291, 103);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -263,133 +263,120 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(378, 47);
+            this.panel5.Location = new System.Drawing.Point(297, 47);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1041, 878);
+            this.panel5.Size = new System.Drawing.Size(1122, 901);
             this.panel5.TabIndex = 5;
             // 
-            // label1
+            // Button_Submit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Gender:";
+            this.Button_Submit.BackColor = System.Drawing.Color.Silver;
+            this.Button_Submit.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Submit.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Button_Submit.Location = new System.Drawing.Point(975, 825);
+            this.Button_Submit.Name = "Button_Submit";
+            this.Button_Submit.Size = new System.Drawing.Size(138, 64);
+            this.Button_Submit.TabIndex = 27;
+            this.Button_Submit.Text = "Submit";
+            this.Button_Submit.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // label14
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Female",
-            "Male"});
-            this.comboBox1.Location = new System.Drawing.Point(429, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 31);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(43, 311);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(90, 39);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "RBC:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
-            // label2
+            // Slider_HCT
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.UpArrow;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(422, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 38);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "New Patient";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            this.Slider_HCT.Location = new System.Drawing.Point(429, 375);
+            this.Slider_HCT.Name = "Slider_HCT";
+            this.Slider_HCT.Size = new System.Drawing.Size(419, 69);
+            this.Slider_HCT.TabIndex = 25;
             // 
-            // label4
+            // Slider_Lymph
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 43);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Lymph(%):";
+            this.Slider_Lymph.Location = new System.Drawing.Point(429, 233);
+            this.Slider_Lymph.Name = "Slider_Lymph";
+            this.Slider_Lymph.Size = new System.Drawing.Size(419, 69);
+            this.Slider_Lymph.TabIndex = 24;
             // 
-            // label5
+            // Slider_Neut
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 43);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Neut(%):";
+            this.Slider_Neut.Location = new System.Drawing.Point(429, 176);
+            this.Slider_Neut.Name = "Slider_Neut";
+            this.Slider_Neut.Size = new System.Drawing.Size(419, 69);
+            this.Slider_Neut.TabIndex = 23;
+            this.Slider_Neut.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // label6
+            // textBox_AP
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 43);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "WBC:";
+            this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox_AP.Location = new System.Drawing.Point(429, 800);
+            this.textBox_AP.Name = "textBox_AP";
+            this.textBox_AP.Size = new System.Drawing.Size(419, 37);
+            this.textBox_AP.TabIndex = 22;
             // 
-            // label3
+            // textBox_HDL
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 311);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 43);
-            this.label3.TabIndex = 8;
+            this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox_HDL.Location = new System.Drawing.Point(429, 730);
+            this.textBox_HDL.Name = "textBox_HDL";
+            this.textBox_HDL.Size = new System.Drawing.Size(419, 37);
+            this.textBox_HDL.TabIndex = 21;
             // 
-            // label7
+            // textbox_iron
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(43, 384);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 43);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "HCT(%):";
+            this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textbox_iron.Location = new System.Drawing.Point(429, 659);
+            this.textbox_iron.Name = "textbox_iron";
+            this.textbox_iron.Size = new System.Drawing.Size(419, 37);
+            this.textbox_iron.TabIndex = 20;
             // 
-            // label8
+            // TextBox_HB
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(43, 453);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(190, 43);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Urea(mg):";
+            this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_HB.Location = new System.Drawing.Point(429, 522);
+            this.TextBox_HB.Name = "TextBox_HB";
+            this.TextBox_HB.Size = new System.Drawing.Size(419, 37);
+            this.TextBox_HB.TabIndex = 19;
             // 
-            // label9
+            // TextBox_Creatinine
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(43, 522);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 43);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "HB(mg):";
+            this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_Creatinine.Location = new System.Drawing.Point(429, 589);
+            this.TextBox_Creatinine.Name = "TextBox_Creatinine";
+            this.TextBox_Creatinine.Size = new System.Drawing.Size(419, 37);
+            this.TextBox_Creatinine.TabIndex = 18;
+            this.TextBox_Creatinine.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // label10
+            // Texbox_Urea
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(43, 589);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(205, 43);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Creatinine:";
+            this.Texbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Texbox_Urea.Location = new System.Drawing.Point(429, 453);
+            this.Texbox_Urea.Name = "Texbox_Urea";
+            this.Texbox_Urea.Size = new System.Drawing.Size(419, 37);
+            this.Texbox_Urea.TabIndex = 17;
             // 
-            // label11
+            // TextBox_RBC
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(43, 655);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 43);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Iron:";
+            this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_RBC.Location = new System.Drawing.Point(429, 311);
+            this.TextBox_RBC.Name = "TextBox_RBC";
+            this.TextBox_RBC.Size = new System.Drawing.Size(419, 37);
+            this.TextBox_RBC.TabIndex = 16;
+            // 
+            // Textbox_WBC
+            // 
+            this.Textbox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Textbox_WBC.Location = new System.Drawing.Point(429, 127);
+            this.Textbox_WBC.Name = "Textbox_WBC";
+            this.Textbox_WBC.Size = new System.Drawing.Size(419, 37);
+            this.Textbox_WBC.TabIndex = 15;
             // 
             // label12
             // 
@@ -397,7 +384,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(42, 721);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(186, 46);
+            this.label12.Size = new System.Drawing.Size(180, 43);
             this.label12.TabIndex = 14;
             this.label12.Text = "HDL(mg):";
             // 
@@ -407,119 +394,132 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(42, 800);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 46);
+            this.label13.Size = new System.Drawing.Size(76, 43);
             this.label13.TabIndex = 13;
             this.label13.Text = "AP:";
             // 
-            // Textbox_WBC
+            // label10
             // 
-            this.Textbox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Textbox_WBC.Location = new System.Drawing.Point(429, 127);
-            this.Textbox_WBC.Name = "Textbox_WBC";
-            this.Textbox_WBC.Size = new System.Drawing.Size(419, 32);
-            this.Textbox_WBC.TabIndex = 15;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(43, 589);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(193, 39);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Creatinine:";
             // 
-            // TextBox_RBC
+            // label11
             // 
-            this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_RBC.Location = new System.Drawing.Point(429, 311);
-            this.TextBox_RBC.Name = "TextBox_RBC";
-            this.TextBox_RBC.Size = new System.Drawing.Size(419, 32);
-            this.TextBox_RBC.TabIndex = 16;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(43, 655);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 39);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Iron:";
             // 
-            // Texbox_Urea
+            // label8
             // 
-            this.Texbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Texbox_Urea.Location = new System.Drawing.Point(429, 453);
-            this.Texbox_Urea.Name = "Texbox_Urea";
-            this.Texbox_Urea.Size = new System.Drawing.Size(419, 32);
-            this.Texbox_Urea.TabIndex = 17;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(43, 453);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(180, 39);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Urea(mg):";
             // 
-            // TextBox_Creatinine
+            // label9
             // 
-            this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_Creatinine.Location = new System.Drawing.Point(429, 589);
-            this.TextBox_Creatinine.Name = "TextBox_Creatinine";
-            this.TextBox_Creatinine.Size = new System.Drawing.Size(419, 32);
-            this.TextBox_Creatinine.TabIndex = 18;
-            this.TextBox_Creatinine.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(43, 522);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(146, 39);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "HB(mg):";
             // 
-            // TextBox_HB
+            // label3
             // 
-            this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_HB.Location = new System.Drawing.Point(429, 522);
-            this.TextBox_HB.Name = "TextBox_HB";
-            this.TextBox_HB.Size = new System.Drawing.Size(419, 32);
-            this.TextBox_HB.TabIndex = 19;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 39);
+            this.label3.TabIndex = 8;
             // 
-            // textbox_iron
+            // label7
             // 
-            this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textbox_iron.Location = new System.Drawing.Point(429, 659);
-            this.textbox_iron.Name = "textbox_iron";
-            this.textbox_iron.Size = new System.Drawing.Size(419, 32);
-            this.textbox_iron.TabIndex = 20;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(43, 384);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 39);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "HCT(%):";
             // 
-            // textBox_AP
+            // label6
             // 
-            this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_AP.Location = new System.Drawing.Point(429, 800);
-            this.textBox_AP.Name = "textBox_AP";
-            this.textBox_AP.Size = new System.Drawing.Size(419, 32);
-            this.textBox_AP.TabIndex = 22;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(43, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 39);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "WBC:";
             // 
-            // textBox_HDL
+            // label5
             // 
-            this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_HDL.Location = new System.Drawing.Point(429, 730);
-            this.textBox_HDL.Name = "textBox_HDL";
-            this.textBox_HDL.Size = new System.Drawing.Size(419, 32);
-            this.textBox_HDL.TabIndex = 21;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(43, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 39);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Neut(%):";
             // 
-            // Slider_Neut
+            // label4
             // 
-            this.Slider_Neut.Location = new System.Drawing.Point(429, 176);
-            this.Slider_Neut.Name = "Slider_Neut";
-            this.Slider_Neut.Size = new System.Drawing.Size(419, 56);
-            this.Slider_Neut.TabIndex = 23;
-            this.Slider_Neut.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(43, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(187, 39);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Lymph(%):";
             // 
-            // Slider_Lymph
+            // label2
             // 
-            this.Slider_Lymph.Location = new System.Drawing.Point(429, 233);
-            this.Slider_Lymph.Name = "Slider_Lymph";
-            this.Slider_Lymph.Size = new System.Drawing.Size(419, 56);
-            this.Slider_Lymph.TabIndex = 24;
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(422, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 45);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "New Patient";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // Slider_HCT
+            // comboBox1
             // 
-            this.Slider_HCT.Location = new System.Drawing.Point(429, 375);
-            this.Slider_HCT.Name = "Slider_HCT";
-            this.Slider_HCT.Size = new System.Drawing.Size(419, 56);
-            this.Slider_HCT.TabIndex = 25;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.comboBox1.Location = new System.Drawing.Point(429, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(168, 38);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label14
+            // label1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(43, 311);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 34);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "RBC:";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // Button_Submit
-            // 
-            this.Button_Submit.BackColor = System.Drawing.Color.Silver;
-            this.Button_Submit.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Submit.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Button_Submit.Location = new System.Drawing.Point(894, 800);
-            this.Button_Submit.Name = "Button_Submit";
-            this.Button_Submit.Size = new System.Drawing.Size(138, 64);
-            this.Button_Submit.TabIndex = 27;
-            this.Button_Submit.Text = "Submit";
-            this.Button_Submit.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Gender:";
             // 
             // DoctorUI
             // 
@@ -547,9 +547,9 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).EndInit();
             this.ResumeLayout(false);
 
         }
