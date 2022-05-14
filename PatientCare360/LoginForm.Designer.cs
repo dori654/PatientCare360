@@ -35,14 +35,14 @@
             this.BtnEnter = new System.Windows.Forms.Button();
             this.BtnSignup = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Panel_Icon = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(36, 166);
+            this.labelUsername.Location = new System.Drawing.Point(24, 216);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(114, 22);
             this.labelUsername.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(36, 220);
+            this.labelPassword.Location = new System.Drawing.Point(24, 270);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(111, 22);
             this.labelPassword.TabIndex = 1;
@@ -62,25 +62,29 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(177, 218);
+            this.textBoxPassword.Location = new System.Drawing.Point(165, 268);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(283, 29);
             this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.Text = "Password";
+            this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TextBoxUsername
             // 
             this.TextBoxUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxUsername.Location = new System.Drawing.Point(177, 161);
+            this.TextBoxUsername.Location = new System.Drawing.Point(165, 211);
             this.TextBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxUsername.Name = "TextBoxUsername";
             this.TextBoxUsername.Size = new System.Drawing.Size(283, 29);
             this.TextBoxUsername.TabIndex = 4;
+            this.TextBoxUsername.Text = "Username";
+            this.TextBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnEnter
             // 
-            this.BtnEnter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEnter.Location = new System.Drawing.Point(146, 333);
+            this.BtnEnter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEnter.Location = new System.Drawing.Point(133, 354);
             this.BtnEnter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEnter.Name = "BtnEnter";
             this.BtnEnter.Size = new System.Drawing.Size(315, 58);
@@ -91,8 +95,8 @@
             // 
             // BtnSignup
             // 
-            this.BtnSignup.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSignup.Location = new System.Drawing.Point(146, 427);
+            this.BtnSignup.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSignup.Location = new System.Drawing.Point(133, 448);
             this.BtnSignup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSignup.Name = "BtnSignup";
             this.BtnSignup.Size = new System.Drawing.Size(315, 58);
@@ -104,21 +108,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 62);
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(159, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 22);
+            this.label1.Size = new System.Drawing.Size(262, 34);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome , Guest";
             // 
-            // label2
+            // Panel_Icon
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "//TODO add icon/img";
+            this.Panel_Icon.BackgroundImage = global::PatientCare360.Properties.Resources.forbidden;
+            this.Panel_Icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel_Icon.Location = new System.Drawing.Point(189, 12);
+            this.Panel_Icon.Name = "Panel_Icon";
+            this.Panel_Icon.Size = new System.Drawing.Size(210, 130);
+            this.Panel_Icon.TabIndex = 8;
+            this.Panel_Icon.TabStop = true;
             // 
             // LoginForm
             // 
@@ -126,9 +131,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(651, 589);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Panel_Icon);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnSignup);
             this.Controls.Add(this.BtnEnter);
@@ -136,6 +141,7 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.Text = "PatientCare360";
@@ -153,7 +159,7 @@
         private System.Windows.Forms.Button BtnEnter;
         private System.Windows.Forms.Button BtnSignup;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel Panel_Icon;
     }
 }
 
