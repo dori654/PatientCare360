@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace PatientCare360
 {
@@ -12,6 +13,12 @@ namespace PatientCare360
         private int age;
         private bool geneder;
 
+        public static void ConvertsValues_to_HIGH_LOW_Normal(Dictionary<string, string> dict)
+        {
+            var age = dict["age"];
+            // var 
+
+        }
         public string Return_LOWorHIGHorNORMAL(double a, double b, int val)
         {
             if (val < a)
