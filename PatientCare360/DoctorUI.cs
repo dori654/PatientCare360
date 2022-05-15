@@ -122,15 +122,5 @@ namespace PatientCare360
             panel_AddPatient.Visible=false;
             panel_AddPatient2.Visible=true;
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

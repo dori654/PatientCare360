@@ -10,7 +10,7 @@ namespace PatientCare360
     class Patient
     {
         private int age;
-        private bool geneder;
+        private bool gender;
 
         public string Return_LOWorHIGHorNORMAL(double a, double b, int val)
         {
