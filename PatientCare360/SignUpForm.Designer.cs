@@ -192,6 +192,7 @@
             this.Controls.Add(this.textBoxFuname);
             this.Controls.Add(this.labelFullname);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignUpForm";
             this.Text = "SignUpForm";

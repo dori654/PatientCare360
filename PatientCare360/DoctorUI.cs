@@ -14,7 +14,11 @@ namespace PatientCare360
         public DoctorUI()
         {
             InitializeComponent();
-     
+            panel_AddPatient.Visible = false;
+            panel_AddPatient2.Visible = false;
+
+
+
         }
 
         private void DoctorUI_Load(object sender, EventArgs e)
@@ -26,6 +30,8 @@ namespace PatientCare360
         {
             panelLeft.Height = btnHome.Height;
             panelLeft.Top = btnHome.Top;
+            panel_AddPatient.Visible = false;
+            panel_AddPatient2.Visible = false;
 
         }
 
@@ -33,6 +39,7 @@ namespace PatientCare360
         {
             panelLeft.Height = btnNewPat.Height;
             panelLeft.Top = btnNewPat.Top;
+            panel_AddPatient.Visible=true;
         }
 
         private void btnPatHistory_Click(object sender, EventArgs e)
@@ -83,20 +90,7 @@ namespace PatientCare360
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -109,6 +103,32 @@ namespace PatientCare360
         }
 
         private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_AddPatient2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button_Submit_Click(object sender, EventArgs e)
+        {
+            panel_AddPatient.Visible=false;
+            panel_AddPatient2.Visible=true;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
