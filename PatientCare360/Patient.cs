@@ -11,7 +11,7 @@ namespace PatientCare360
     class Patient
     {
         private int age;
-        private bool geneder;
+        private bool gender;
 
         public static void ConvertsValues_to_HIGH_LOW_Normal(Dictionary<string, string> dict)
         {
