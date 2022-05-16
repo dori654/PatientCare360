@@ -10,10 +10,10 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace PatientCare360
 {
-    class Patient
+    class Patient : DoctorUI
     {
-        private int age;
-        private bool gender;
+        public int age;
+        public bool gender;
 
 
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
