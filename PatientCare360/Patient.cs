@@ -8,17 +8,11 @@ using System.Collections.Generic;
 
 namespace PatientCare360
 {
-    class Patient
+    class Patient : DoctorUI
     {
-        private int age;
-        private bool gender;
+        public int age;
+        public bool gender;
 
-        public static void ConvertsValues_to_HIGH_LOW_Normal(Dictionary<string, string> dict)
-        {
-            var age = dict["age"];
-            // var 
-
-        }
         public string Return_LOWorHIGHorNORMAL(double a, double b, int val)
         {
             if (val < a)

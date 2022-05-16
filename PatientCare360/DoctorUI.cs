@@ -16,9 +16,24 @@ namespace PatientCare360
             InitializeComponent();
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
+        }
 
+        private bool Check_ID(string ID)
+        {
+            for (int i = 0; i < ID.Length; i++)
+            {
+                if (!char.IsLetter(ID, i))
+                {
+                    MessageBox.Show("Age must between 0 to 120");
+                    return false;
+                }
 
-
+                if (ID.Length <= 0 || ID.Length > 9)
+                {
+                    MessageBox.Show("ID field must have exactly 9 numbers!");
+                }
+            }
+            return true;
         }
 
         private void DoctorUI_Load(object sender, EventArgs e)
@@ -107,20 +122,44 @@ namespace PatientCare360
 
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        public void label15_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel_AddPatient2_Paint(object sender, PaintEventArgs e)
+        public void panel_AddPatient2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Button_Submit_Click(object sender, EventArgs e)
+        public void Button_Submit_Click(object sender, EventArgs e)
         {
             panel_AddPatient.Visible=false;
             panel_AddPatient2.Visible=true;
+        }
+
+        private void Textbox_WBC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private bool Check_Age(int age)
+        {
+            if (age < 0 ||  age > 120)
+            {
+                MessageBox.Show("Age field must be between 0 to 120!");
+                return false;
+            }
+            return true;
+        }
+
+        private void textBox_ID_panel2_TextChanged(object sender, EventArgs e)
+        {
+            Check_ID(textBox_ID_panel2.Text);
+        }
+
+        private void textBox_Age_panel2_TextChanged(object sender, EventArgs e)
+        {
+            Check_Age(Convert.ToInt32(textBox_Age_panel2.Text));
         }
     }
 }
