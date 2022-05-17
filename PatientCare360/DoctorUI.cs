@@ -132,12 +132,7 @@ namespace PatientCare360
 
         }
 
-        public void Button_Submit_Click(object sender, EventArgs e)
-        {
-            panel_AddPatient.Visible=false;
-            panel_AddPatient2.Visible=true;
-        }
-
+      
         private void Textbox_WBC_TextChanged(object sender, EventArgs e)
         {
 
@@ -160,6 +155,232 @@ namespace PatientCare360
         private void textBox_Age_panel2_TextChanged(object sender, EventArgs e)
         {
             Check_Age(Convert.ToInt32(textBox_Age_panel2.Text));
+        }
+
+        private void panel_AddPatient_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Slider_HCT_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Slider_Lymph_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_AP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_HDL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textbox_iron_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_HB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Texbox_Urea_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_RBC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel_left_btn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioButton_Pregnant_N_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Pregnant_Y_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Vomiting_N_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Vomiting_Y_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Diarrhea_N_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Diarrhea_Y_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Fever_N_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Fever_Y_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Smokes_Y_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Continue_Panel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_Smokes_N_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_Eth_panel2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button_Submit_Click_1(object sender, EventArgs e)
+        {
+            panel_AddPatient.Visible = false;
+            panel_AddPatient2.Visible = true;
         }
     }
 }

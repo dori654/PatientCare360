@@ -10,15 +10,14 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace PatientCare360
 {
-    class Patient : DoctorUI
+    class Patient
     {
-        public int age;
-        public bool gender;
+      
 
 
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
 
-        public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string,string> dict)
+        public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string, string> dict)
         {
             var age = dict["age"];
             var gender = dict["gender"];
@@ -38,7 +37,7 @@ namespace PatientCare360
 
         }
 
-        public  int CheckDictionaryValues1(Dictionary<string, double> dict)
+        public int CheckDictionaryValues1(Dictionary<string, double> dict)
         {
             try
             {
@@ -210,7 +209,7 @@ namespace PatientCare360
                 a = 0.5;
                 b = 1;
             }
-            else if(age <= 59)
+            else if (age <= 59)
             {
                 a = 0.6;
                 b = 1;
@@ -300,7 +299,7 @@ namespace PatientCare360
             }
         }
 
-        public  void Nautdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
+        public void Nautdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["Neut"] == "HIGH")
             {
@@ -326,7 +325,7 @@ namespace PatientCare360
             }
         }
 
-        public void  RCdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
+        public void RCdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["RBC"] == "HIGH")
             {
@@ -456,7 +455,7 @@ namespace PatientCare360
                 {"Iron poisoning",0},{"Dehydration",0},{"Infection",0},{"Vitamin deficiency",0},{"Viral disease",0},
                 {"Bile duct diseases",0},{"Heart disease",0},{"Blood disease",0},{"Liver disease",0},
                 {"Kidney disease",0},{"Iron deficiency",0},{"Muscle diseases",0},{"Smokers",0},{"Lung disease",0},
-                {"Hypothyroidism",0},{"Adult diabetes",0},{"Cancer",0},{"Increased consumption of meat",0},{"Use of various drugs",0},{"Malnutrition",0}
+                {"Overactive thyroid gland",0},{"Adult diabetes",0},{"Cancer",0},{"Increased consumption of meat",0},{"Use of various drugs",0},{"Malnutrition",0}
             };
 
             WBCdiagnosis(patientInfo, diagnosis);
@@ -475,12 +474,53 @@ namespace PatientCare360
 
         public string get_string_of_diagnosis_and_Treatment(Dictionary<string, double> diagnosis)
         {
-            var max_value = diagnosis.Max().Value;
+            var max_value = diagnosis.Values.Max();
             if (max_value == 0)
                 return "The tests are normal and you are a healthy person.";
-            
+            var Main_diagnoses = diagnosis.Where(x => x.Value == max_value).Select(x => x.Key).ToList();
+            var Secondary_diagnoses = diagnosis
+                .Where(x => x.Value == max_value - 0.5 || x.Value == max_value - 1)
+                .Select(x => x.Key).ToList();
+            string ans = "";
+            foreach (var i in Main_diagnoses)
+            {
+                ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
+            }
+
+            if (Secondary_diagnoses.Count > 0)
+            {
+                ans += "\n In addition there are concerns:\n";
+                foreach (var i in Secondary_diagnoses)
+                {
+                    ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
+                }
+            }
+
+            return ans;
         }
 
-     
+        public string Treatment_according_to_diagnosis(string diagnosis)
+        {
+
+            Dictionary<string, string> dict = new Dictionary<string, string>
+            {
+                {"Anemia","Required to take two pills 10 mg each of B12 a day for a month"},{"Diet","Ask for an appointment with nutritionist"},{"Bleeding","To reach to the nearest hospital as soon as possible"},
+                {"Hyperlipidemia (blood lipids)", "schedule an appointment with a nutritionist, 5 mg of Simobil pill per day for a week"},
+                {"Disorder of blood formation / blood cells", "Required to take two pills of 10 mg of B12 a day for a month  and required to a 5 mg pill of a folic acid a day for a month"},
+                {"Hematologic disorder", "injection of a hormone to encourage red blood cell production"},
+                {"Iron poisoning", "reach to the nearest hospital as soon as possible"},{"Dehydration", "Required to lay down and rest + drink water"},{"Infection", "required a specific antibiotics"},
+                {"Vitamin deficiency", "required an invitation for blood test and vitamin test"},{"Viral disease", "home rest"},{"Bile duct diseases", "Invitation for a surgical treatment"},
+                {"Heart disease", "make an appointment with a nutritionist"},{"Blood disease", "a combination of cyclophosphamide and corticosteroids"},
+                {"Liver disease", "Invitation for a specific observation  in order to determine aa treatment"},{"Kidney disease", "balancing blood sugar levels"},{"Iron deficiency", "Required to take two pills of 10 mg of B12 a day for a month"},
+                {"Muscle diseases", "two 5 mg pills of Altman C3 turmeric a day for a month"},{"Smokers", "please quit smoking"},{"Lung disease", "please stop smoking / Invitation for an X-ray shot of the lungs"},
+                {"Overactive thyroid gland", "Propylthiouracil for shortening activity of  the Thyroid"},{"Adult diabetes", "Re-adjust insulin levels for the patient"},{"Cancer", "Entrectinib"},
+                {"Increased consumption of meat", "Ask for an appointment of a nutritionist"},{"Use of various drugs", "Invitation for a family doctor in order to get an approval between the medications"},
+                {"Malnutrition", "Ask for an appointment of a nutritionist"}
+            };
+
+            return dict[diagnosis];
+
+        }
+
     }
 }
