@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -7,19 +8,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using PatientCare360.Properties;
 
 namespace PatientCare360
 {
-    class Patient : DoctorUI
+    class Patient
     {
-        public int age;
-        public bool gender;
+      
 
 
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
+        private Dictionary<string, double> diagnosis = new Dictionary<string, double>();
 
-        public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string,string> dict)
+        public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string, string> dict)
         {
             var age = dict["age"];
             var gender = dict["gender"];
@@ -39,29 +39,34 @@ namespace PatientCare360
 
         }
 
-        public  int CheckDictionaryValues1(Dictionary<string, double> dict)
+        public double  ConvertToDouble(string str)
+        {
+            return double.Parse(str, CultureInfo.InstalledUICulture);
+        }
+
+        public int CheckDictionaryValues1(Dictionary<string, double> dict)
         {
             try
             {
-                dict["WBC"] = Convert.ToDouble(dict["WBC"]);
-                dict["Neut"] = Convert.ToDouble(dict["Neut"]);
-                dict["Lymph"] = Convert.ToDouble(dict["Lymph"]);
-                dict["RBC"] = Convert.ToDouble(dict["RBC"]);
-                dict["HCT"] = Convert.ToDouble(dict["HCT"]);
-                dict["Urea"] = Convert.ToDouble(dict["Urea"]);
-                dict["Hb"] = Convert.ToDouble(dict["Hb"]);
-                dict["Creatinine"] = Convert.ToDouble(dict["Creatinine"]);
-                dict["Iron"] = Convert.ToDouble(dict["Iron"]);
-                dict["HDL"] = Convert.ToDouble(dict["HDL"]);
-                dict["AP"] = Convert.ToDouble(dict["AP"]);
+
+                dict["WBC"] = ConvertToDouble(dict["WBC"].ToString());
+                dict["Neut"] = ConvertToDouble(dict["Neut"].ToString());
+                dict["Lymph"] = ConvertToDouble(dict["Lymph"].ToString());
+                dict["RBC"] = ConvertToDouble(dict["RBC"].ToString());
+                dict["HCT"] = ConvertToDouble(dict["HCT"].ToString());
+                dict["Urea"] = ConvertToDouble(dict["Urea"].ToString());
+                dict["Hb"] = ConvertToDouble(dict["Hb"].ToString());
+                dict["Creatinine"] = ConvertToDouble(dict["Creatinine"].ToString());
+                dict["Iron"] = ConvertToDouble(dict["Iron"].ToString());
+                dict["HDL"] = ConvertToDouble(dict["HDL"].ToString());
+                dict["AP"] = ConvertToDouble(dict["AP"].ToString());
             }
             catch (Exception e)
             {
                 System.Console.WriteLine(e.Message);
                 return 1;
             }
-
-            var lst = dict.Values.Where(x => x < 0).ToList();
+            var lst = dict.Values.Where(x => x < 0).ToList().ToList();
             if (lst.Count != 0)
             {
                 return 2;
@@ -212,7 +217,7 @@ namespace PatientCare360
                 a = 0.5;
                 b = 1;
             }
-            else if(age <= 59)
+            else if (age <= 59)
             {
                 a = 0.6;
                 b = 1;
@@ -302,7 +307,7 @@ namespace PatientCare360
             }
         }
 
-        public  void Nautdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
+        public void Nautdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["Neut"] == "HIGH")
             {
@@ -362,7 +367,6 @@ namespace PatientCare360
             }
         }
 
-        
         public void Ureadiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["Urea"] == "HIGH")
@@ -377,12 +381,6 @@ namespace PatientCare360
                 diagnosis["Diet"] += 1;
                 diagnosis["Liver disease"] += 1;
             }
-        }
-
-        public void ddd()
-        {
-            var wcb = 10 < 5 ? "High" : "Low";
-            var answer = Pateintdata.ResourceManager.GetString("wcb" + wcb);
         }
 
         public void Hbdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
@@ -465,7 +463,7 @@ namespace PatientCare360
                 {"Iron poisoning",0},{"Dehydration",0},{"Infection",0},{"Vitamin deficiency",0},{"Viral disease",0},
                 {"Bile duct diseases",0},{"Heart disease",0},{"Blood disease",0},{"Liver disease",0},
                 {"Kidney disease",0},{"Iron deficiency",0},{"Muscle diseases",0},{"Smokers",0},{"Lung disease",0},
-                {"Hypothyroidism",0},{"Adult diabetes",0},{"Cancer",0},{"Increased consumption of meat",0},{"Use of various drugs",0},{"Malnutrition",0}
+                {"Overactive thyroid gland",0},{"Adult diabetes",0},{"Cancer",0},{"Increased consumption of meat",0},{"Use of various drugs",0},{"Malnutrition",0}
             };
 
             WBCdiagnosis(patientInfo, diagnosis);
@@ -484,12 +482,53 @@ namespace PatientCare360
 
         public string get_string_of_diagnosis_and_Treatment(Dictionary<string, double> diagnosis)
         {
-            var max_value = diagnosis.Max().Value;
+            var max_value = diagnosis.Values.Max();
             if (max_value == 0)
                 return "The tests are normal and you are a healthy person.";
-            return null;
+            var Main_diagnoses = diagnosis.Where(x => x.Value == max_value).Select(x => x.Key).ToList();
+            var Secondary_diagnoses = diagnosis
+                .Where(x => x.Value == max_value - 0.5 || x.Value == max_value - 1)
+                .Select(x => x.Key).ToList();
+            string ans = "";
+            foreach (var i in Main_diagnoses)
+            {
+                ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
+            }
+
+            if (Secondary_diagnoses.Count > 0)
+            {
+                ans += "\n In addition there are concerns:\n";
+                foreach (var i in Secondary_diagnoses)
+                {
+                    ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
+                }
+            }
+
+            return ans;
         }
 
-     
+        public string Treatment_according_to_diagnosis(string diagnosis)
+        {
+
+            Dictionary<string, string> dict = new Dictionary<string, string>
+            {
+                {"Anemia","Required to take two pills 10 mg each of B12 a day for a month"},{"Diet","Ask for an appointment with nutritionist"},{"Bleeding","To reach to the nearest hospital as soon as possible"},
+                {"Hyperlipidemia (blood lipids)", "schedule an appointment with a nutritionist, 5 mg of Simobil pill per day for a week"},
+                {"Disorder of blood formation / blood cells", "Required to take two pills of 10 mg of B12 a day for a month  and required to a 5 mg pill of a folic acid a day for a month"},
+                {"Hematologic disorder", "injection of a hormone to encourage red blood cell production"},
+                {"Iron poisoning", "reach to the nearest hospital as soon as possible"},{"Dehydration", "Required to lay down and rest + drink water"},{"Infection", "required a specific antibiotics"},
+                {"Vitamin deficiency", "required an invitation for blood test and vitamin test"},{"Viral disease", "home rest"},{"Bile duct diseases", "Invitation for a surgical treatment"},
+                {"Heart disease", "make an appointment with a nutritionist"},{"Blood disease", "a combination of cyclophosphamide and corticosteroids"},
+                {"Liver disease", "Invitation for a specific observation  in order to determine aa treatment"},{"Kidney disease", "balancing blood sugar levels"},{"Iron deficiency", "Required to take two pills of 10 mg of B12 a day for a month"},
+                {"Muscle diseases", "two 5 mg pills of Altman C3 turmeric a day for a month"},{"Smokers", "please quit smoking"},{"Lung disease", "please stop smoking / Invitation for an X-ray shot of the lungs"},
+                {"Overactive thyroid gland", "Propylthiouracil for shortening activity of  the Thyroid"},{"Adult diabetes", "Re-adjust insulin levels for the patient"},{"Cancer", "Entrectinib"},
+                {"Increased consumption of meat", "Ask for an appointment of a nutritionist"},{"Use of various drugs", "Invitation for a family doctor in order to get an approval between the medications"},
+                {"Malnutrition", "Ask for an appointment of a nutritionist"}
+            };
+
+            return dict[diagnosis];
+
+        }
+
     }
 }
