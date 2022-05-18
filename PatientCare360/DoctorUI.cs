@@ -12,7 +12,7 @@ namespace PatientCare360
 {
     public partial class DoctorUI : Form
     {
-        Patient pal = new Patient();
+        Patient pal ;
         Dictionary<string, string> dict = new Dictionary<string, string>();
         public DoctorUI()
         {
@@ -174,20 +174,22 @@ namespace PatientCare360
             dict["gender"] = comboBox_gender.Text;
             dict["origin"] = comboBox_Eth_panel2.Text;
             dict["Fever"] = radioButton_Fever_Y.Checked ? "Yes" : "No";
-            dict["Smokes"] = radioButton_Smokes_Y.Checked ? "Yes" : "No";
-            dict["Diarrhea"] = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
-            dict["Vomiting"] = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
+            dict["Smokers"] = radioButton_Smokes_Y.Checked ? "Yes" : "No";
+            dict["diarrhea"] = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
+            dict["vomiting"] = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
             if (comboBox_gender.Text == "F")
-                dict["Pregnant"] = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
-            dict["Pregnant"] = "No";
+                dict["pregnancy"] = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
+            dict["pregnancy"] = "No";
             //TODO  : לעשות ככה שאם המשתמש זכר לא תופיעה השורה של הריון
 
 
 
-            pal.ConvertsValuesTo_LOW_HIGH_NORMAL(dict);
+            pal = new Patient(dict);
+
+            Console.WriteLine(pal.SavePatientfile());
 
 
-            
+
         }
 
         private void radioButton_Smokes_N_CheckedChanged(object sender, EventArgs e)
