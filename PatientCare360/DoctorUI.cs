@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,19 +24,13 @@ namespace PatientCare360
 
         private bool Check_ID(string ID)
         {
-            for (int i = 0; i < ID.Length; i++)
+         
+            if ( ID.Length != 9)
             {
-                if (!char.IsLetter(ID, i))
-                {
-                    MessageBox.Show("Age must between 0 to 120");
-                    return false;
-                }
-
-                if (ID.Length <= 0 || ID.Length > 9)
-                {
-                    MessageBox.Show("ID field must have exactly 9 numbers!");
-                }
+                MessageBox.Show("ID field must have exactly 9 numbers!");
+                return false;
             }
+            
             return true;
         }
 
@@ -152,202 +147,29 @@ namespace PatientCare360
 
         private void textBox_ID_panel2_TextChanged(object sender, EventArgs e)
         {
-            Check_ID(textBox_ID_panel2.Text);
+            
         }
 
         private void textBox_Age_panel2_TextChanged(object sender, EventArgs e)
         {
-            Check_Age(Convert.ToInt32(textBox_Age_panel2.Text));
+         
         }
 
-        private void panel_AddPatient_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void Slider_HCT_Scroll(object sender, EventArgs e)
-        {
 
-        }
 
-        private void Slider_Lymph_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_AP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_HDL_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox_iron_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox_HB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Texbox_Urea_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox_RBC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelLeft_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel_left_btn_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void radioButton_Pregnant_N_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Pregnant_Y_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Vomiting_N_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Vomiting_Y_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Diarrhea_N_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Diarrhea_Y_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Fever_N_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Fever_Y_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Smokes_Y_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button_Continue_Panel2_Click(object sender, EventArgs e)
         {
+            Check_ID(textBox_ID_panel2.Text);
+            Check_Age(Convert.ToInt32(textBox_Age_panel2.Text));
             //TODO: לאן הכפתור הזה מוביל ? מה עושים עם המידע שנשלח למילון ? 
             //TODO: לטפל ברדיו של הכן ולא 
             //TODO: להוסיף פאנל להיסטורי
             //TODO: הכפתור מוביל לפורם חדש עם פלט של הטיפול
             //TODO: מתן - לתקן את הבדיקות גואי ,להוסיף עוד 2 לבדיקות 
-            
+
             dict["age"] = textBox_Age_panel2.Text;
             dict["gender"] = comboBox_gender.Text;
             dict["origin"] = comboBox_Eth_panel2.Text;
@@ -363,6 +185,9 @@ namespace PatientCare360
 
 
             pal.ConvertsValuesTo_LOW_HIGH_NORMAL(dict);
+
+
+            
         }
 
         private void radioButton_Smokes_N_CheckedChanged(object sender, EventArgs e)

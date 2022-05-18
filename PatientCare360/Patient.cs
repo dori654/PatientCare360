@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -16,6 +17,7 @@ namespace PatientCare360
 
 
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
+        private Dictionary<string, double> diagnosis = new Dictionary<string, double>();
 
         public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string, string> dict)
         {
@@ -37,21 +39,27 @@ namespace PatientCare360
 
         }
 
+        public double  ConvertToDouble(string str)
+        {
+            return double.Parse(str, CultureInfo.InstalledUICulture);
+        }
+
         public int CheckDictionaryValues1(Dictionary<string, double> dict)
         {
             try
             {
-                dict["WBC"] = Convert.ToDouble(dict["WBC"]);
-                dict["Neut"] = Convert.ToDouble(dict["Neut"]);
-                dict["Lymph"] = Convert.ToDouble(dict["Lymph"]);
-                dict["RBC"] = Convert.ToDouble(dict["RBC"]);
-                dict["HCT"] = Convert.ToDouble(dict["HCT"]);
-                dict["Urea"] = Convert.ToDouble(dict["Urea"]);
-                dict["Hb"] = Convert.ToDouble(dict["Hb"]);
-                dict["Creatinine"] = Convert.ToDouble(dict["Creatinine"]);
-                dict["Iron"] = Convert.ToDouble(dict["Iron"]);
-                dict["HDL"] = Convert.ToDouble(dict["HDL"]);
-                dict["AP"] = Convert.ToDouble(dict["AP"]);
+
+                dict["WBC"] = ConvertToDouble(dict["WBC"].ToString());
+                dict["Neut"] = ConvertToDouble(dict["Neut"].ToString());
+                dict["Lymph"] = ConvertToDouble(dict["Lymph"].ToString());
+                dict["RBC"] = ConvertToDouble(dict["RBC"].ToString());
+                dict["HCT"] = ConvertToDouble(dict["HCT"].ToString());
+                dict["Urea"] = ConvertToDouble(dict["Urea"].ToString());
+                dict["Hb"] = ConvertToDouble(dict["Hb"].ToString());
+                dict["Creatinine"] = ConvertToDouble(dict["Creatinine"].ToString());
+                dict["Iron"] = ConvertToDouble(dict["Iron"].ToString());
+                dict["HDL"] = ConvertToDouble(dict["HDL"].ToString());
+                dict["AP"] = ConvertToDouble(dict["AP"].ToString());
             }
             catch (Exception e)
             {

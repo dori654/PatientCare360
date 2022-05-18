@@ -119,6 +119,12 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DoctorUI.dje-NE.resx">
+      <DependentUpon>DoctorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI.en.resx">
+      <DependentUpon>DoctorUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorUI.resx">
       <DependentUpon>DoctorUI.cs</DependentUpon>
     </EmbeddedResource>
