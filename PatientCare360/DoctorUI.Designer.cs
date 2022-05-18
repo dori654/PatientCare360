@@ -769,8 +769,8 @@
             // 
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel_left_btn);
-            this.panel1.Controls.Add(this.panel_AddPatient2);
             this.panel1.Controls.Add(this.panel_AddPatient);
+            this.panel1.Controls.Add(this.panel_AddPatient2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);

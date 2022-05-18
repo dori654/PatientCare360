@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Wordprocessing;
+using PatientCare360.Properties;
 
 namespace PatientCare360
 {
@@ -59,7 +60,8 @@ namespace PatientCare360
                 System.Console.WriteLine(e.Message);
                 return 1;
             }
-            var lst = dict.Values.Where(x => x < 0).ToList().ToList();
+
+            var lst = dict.Values.Where(x => x < 0).ToList();
             if (lst.Count != 0)
             {
                 return 2;
@@ -326,7 +328,7 @@ namespace PatientCare360
             }
         }
 
-        public void  RCdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
+        public void RCdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["RBC"] == "HIGH")
             {
@@ -360,6 +362,7 @@ namespace PatientCare360
             }
         }
 
+        
         public void Ureadiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["Urea"] == "HIGH")
@@ -374,6 +377,12 @@ namespace PatientCare360
                 diagnosis["Diet"] += 1;
                 diagnosis["Liver disease"] += 1;
             }
+        }
+
+        public void ddd()
+        {
+            var wcb = 10 < 5 ? "High" : "Low";
+            var answer = Pateintdata.ResourceManager.GetString("wcb" + wcb);
         }
 
         public void Hbdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
@@ -478,7 +487,7 @@ namespace PatientCare360
             var max_value = diagnosis.Max().Value;
             if (max_value == 0)
                 return "The tests are normal and you are a healthy person.";
-            
+            return null;
         }
 
      
