@@ -11,11 +11,14 @@ namespace PatientCare360
 {
     public partial class DoctorUI : Form
     {
+        Patient pal = new Patient();
+        Dictionary<string, string> dict = new Dictionary<string, string>();
         public DoctorUI()
         {
             InitializeComponent();
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
+            this.Size = new Size(this.Size.Width, Screen.PrimaryScreen.Bounds.Height);
         }
 
         private bool Check_ID(string ID)
@@ -339,7 +342,27 @@ namespace PatientCare360
 
         private void button_Continue_Panel2_Click(object sender, EventArgs e)
         {
+            //TODO: לאן הכפתור הזה מוביל ? מה עושים עם המידע שנשלח למילון ? 
+            //TODO: לטפל ברדיו של הכן ולא 
+            //TODO: להוסיף פאנל להיסטורי
+            //TODO: הכפתור מוביל לפורם חדש עם פלט של הטיפול
+            //TODO: מתן - לתקן את הבדיקות גואי ,להוסיף עוד 2 לבדיקות 
+            
+            dict["age"] = textBox_Age_panel2.Text;
+            dict["gender"] = comboBox_gender.Text;
+            dict["origin"] = comboBox_Eth_panel2.Text;
+            dict["Fever"] = radioButton_Fever_Y.Checked ? "Yes" : "No";
+            dict["Smokes"] = radioButton_Smokes_Y.Checked ? "Yes" : "No";
+            dict["Diarrhea"] = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
+            dict["Vomiting"] = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
+            if (comboBox_gender.Text == "F")
+                dict["Pregnant"] = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
+            dict["Pregnant"] = "No";
+            //TODO  : לעשות ככה שאם המשתמש זכר לא תופיעה השורה של הריון
 
+
+
+            pal.ConvertsValuesTo_LOW_HIGH_NORMAL(dict);
         }
 
         private void radioButton_Smokes_N_CheckedChanged(object sender, EventArgs e)
@@ -381,6 +404,31 @@ namespace PatientCare360
         {
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = true;
+
+            dict["WBC"] = TextBox_WBC.Text;
+            dict["Neut"] = "12";
+            dict["Lymph"] = "12";
+            dict["RBC"] = TextBox_RBC.Text;
+            dict["HCT"] = "12";
+            dict["Urea"] = Textbox_Urea.Text;
+            dict["Hb"] = TextBox_HB.Text;
+            dict["Creatinine"] = TextBox_Creatinine.Text;
+            dict["Iron"] = textbox_iron.Text;
+            dict["HDL"] = textBox_HDL.Text;
+            dict["AP"] = textBox_AP.Text;
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
