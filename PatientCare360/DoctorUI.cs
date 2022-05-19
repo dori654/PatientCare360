@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PatientCare360.Resources;
+
 namespace PatientCare360
 {
     public partial class DoctorUI : Form
@@ -182,12 +184,10 @@ namespace PatientCare360
             dict["Pregnant"] = "No";
             //TODO  : לעשות ככה שאם המשתמש זכר לא תופיעה השורה של הריון
 
-
-
             pal.ConvertsValuesTo_LOW_HIGH_NORMAL(dict);
+            Treatment treat1 = new Treatment();
+            treat1.Visible = true;
 
-
-            
         }
 
         private void radioButton_Smokes_N_CheckedChanged(object sender, EventArgs e)

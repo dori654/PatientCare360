@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using PatientCare360.Properties;
 
 namespace PatientCare360
 {
     class Patient
     {
-      
+
 
 
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
@@ -40,7 +39,7 @@ namespace PatientCare360
 
         }
 
-        public double  ConvertToDouble(string str)
+        public double ConvertToDouble(string str)
         {
             return double.Parse(str, CultureInfo.InstalledUICulture);
         }
@@ -67,8 +66,7 @@ namespace PatientCare360
                 System.Console.WriteLine(e.Message);
                 return 1;
             }
-
-            var lst = dict.Values.Where(x => x < 0).ToList();
+            var lst = dict.Values.Where(x => x < 0).ToList().ToList();
             if (lst.Count != 0)
             {
                 return 2;
@@ -369,7 +367,6 @@ namespace PatientCare360
             }
         }
 
-        
         public void Ureadiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
         {
             if (patientInfo["Urea"] == "HIGH")
@@ -384,12 +381,6 @@ namespace PatientCare360
                 diagnosis["Diet"] += 1;
                 diagnosis["Liver disease"] += 1;
             }
-        }
-
-        public void ddd()
-        {
-            var wcb = 10 < 5 ? "High" : "Low";
-            var answer = Pateintdata.ResourceManager.GetString("wcb" + wcb);
         }
 
         public void Hbdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
@@ -494,12 +485,30 @@ namespace PatientCare360
             var max_value = diagnosis.Values.Max();
             if (max_value == 0)
                 return "The tests are normal and you are a healthy person.";
-            
+            var Main_diagnoses = diagnosis.Where(x => x.Value == max_value).Select(x => x.Key).ToList();
+            var Secondary_diagnoses = diagnosis
+                .Where(x => x.Value == max_value - 0.5 || x.Value == max_value - 1)
+                .Select(x => x.Key).ToList();
+            string ans = "";
+            foreach (var i in Main_diagnoses)
+            {
+                ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
+            }
+
+            if (Secondary_diagnoses.Count > 0)
+            {
+                ans += "\n In addition there are concerns:\n";
+                foreach (var i in Secondary_diagnoses)
+                {
+                    ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
+                }
+            }
+
+            return ans;
         }
 
         public string Treatment_according_to_diagnosis(string diagnosis)
         {
-
             Dictionary<string, string> dict = new Dictionary<string, string>
             {
                 {"Anemia","Required to take two pills 10 mg each of B12 a day for a month"},{"Diet","Ask for an appointment with nutritionist"},{"Bleeding","To reach to the nearest hospital as soon as possible"},
@@ -515,10 +524,7 @@ namespace PatientCare360
                 {"Increased consumption of meat", "Ask for an appointment of a nutritionist"},{"Use of various drugs", "Invitation for a family doctor in order to get an approval between the medications"},
                 {"Malnutrition", "Ask for an appointment of a nutritionist"}
             };
-
             return dict[diagnosis];
-
         }
-
     }
 }
