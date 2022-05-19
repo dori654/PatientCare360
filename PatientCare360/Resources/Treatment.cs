@@ -16,5 +16,14 @@ namespace PatientCare360.Resources
         {
             InitializeComponent();
         }
+
+        public void info_Treatment(string text)
+        {
+            Treatment_info.Text=text;
+        }
+        private void Treatment_info_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

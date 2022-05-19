@@ -36,28 +36,31 @@ namespace PatientCare360.Resources
             // Treatment_info
             // 
             this.Treatment_info.AutoSize = true;
-            this.Treatment_info.Location = new System.Drawing.Point(44, 55);
+            this.Treatment_info.Location = new System.Drawing.Point(50, 69);
             this.Treatment_info.Name = "Treatment_info";
-            this.Treatment_info.Size = new System.Drawing.Size(39, 21);
+            this.Treatment_info.Size = new System.Drawing.Size(37, 20);
             this.Treatment_info.TabIndex = 0;
             this.Treatment_info.Text = "Info";
+            this.Treatment_info.Click += new System.EventHandler(this.Treatment_info_Click);
             // 
             // Final_Button_oK
             // 
-            this.Final_Button_oK.Location = new System.Drawing.Point(353, 197);
+            this.Final_Button_oK.Location = new System.Drawing.Point(397, 246);
+            this.Final_Button_oK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Final_Button_oK.Name = "Final_Button_oK";
-            this.Final_Button_oK.Size = new System.Drawing.Size(166, 58);
+            this.Final_Button_oK.Size = new System.Drawing.Size(187, 72);
             this.Final_Button_oK.TabIndex = 1;
             this.Final_Button_oK.Text = "Finish";
             this.Final_Button_oK.UseVisualStyleBackColor = true;
             // 
             // Treatment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 313);
+            this.ClientSize = new System.Drawing.Size(732, 391);
             this.Controls.Add(this.Final_Button_oK);
             this.Controls.Add(this.Treatment_info);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Treatment";
             this.Text = "Treatment";
             this.ResumeLayout(false);

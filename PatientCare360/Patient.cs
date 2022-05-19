@@ -30,23 +30,28 @@ namespace PatientCare360
             var gender = dict["gender"];
             var origin = dict["origin"];
 
-            dict["WBC"] = white_Blood_Cells(Convert.ToInt32(dict["WBC"]), Convert.ToInt32(age));
-            dict["Neut"] = Neutrophil(Convert.ToInt32(dict["Neut"]));
-            dict["Lymph"] = Lymphocytes(Convert.ToInt32(dict["Lymph"]));
-            dict["RBC"] = Red_Blood_Cells(Convert.ToInt32(dict["RBC"]));
-            dict["HCT"] = HCT(Convert.ToInt32(dict["HCT"]), gender);
-            dict["Urea"] = Urea(Convert.ToInt32(dict["Urea"]), origin);
-            dict["Hb"] = Hemoglobin(Convert.ToInt32(dict["Hb"]), Convert.ToInt32(age), gender);
-            dict["Creatinine"] = Criatin(Convert.ToInt32(dict["Creatinine"]), Convert.ToInt32(age));
-            dict["Iron"] = Iron(Convert.ToInt32(dict["Iron"]), gender);
-            dict["HDL"] = HDL(Convert.ToInt32(dict["HDL"]), gender, origin);
-            dict["AP"] = AP(Convert.ToInt32(dict["AP"]), origin);
+            dict["WBC"] = white_Blood_Cells(ConvertToInt(dict["WBC"]), ConvertToInt(age));
+            dict["Neut"] = Neutrophil(ConvertToInt(dict["Neut"]));
+            dict["Lymph"] = Lymphocytes(ConvertToInt(dict["Lymph"]));
+            dict["RBC"] = Red_Blood_Cells(ConvertToInt(dict["RBC"]));
+            dict["HCT"] = HCT(ConvertToInt(dict["HCT"]), gender);
+            dict["Urea"] = Urea(ConvertToInt(dict["Urea"]), origin);
+            dict["Hb"] = Hemoglobin(ConvertToInt(dict["Hb"]), ConvertToInt(age), gender);
+            dict["Creatinine"] = Criatin(ConvertToInt(dict["Creatinine"]), ConvertToInt(age));
+            dict["Iron"] = Iron(ConvertToInt(dict["Iron"]), gender);
+            dict["HDL"] = HDL(ConvertToInt(dict["HDL"]), gender, origin);
+            dict["AP"] = AP(ConvertToInt(dict["AP"]), origin);
 
         }
 
         public double ConvertToDouble(string str)
         {
             return double.Parse(str, CultureInfo.InstalledUICulture);
+        }
+        public int ConvertToInt(string str)
+        {
+            int x = Int32.Parse(str);
+            return x;
         }
 
         public int CheckDictionaryValues1(Dictionary<string, double> dict)

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PatientCare360.Resources;
+
 namespace PatientCare360
 {
     public partial class DoctorUI : Form
@@ -147,7 +149,12 @@ namespace PatientCare360
                 MessageBox.Show("Patient successfully added");
 
                 //TOOD: new form !
-                Console.WriteLine(pal.SavePatientfile());
+                this.Visible=false;
+                Treatment treatment = new Treatment();
+                treatment.Visible = true;
+                
+                treatment.info_Treatment(pal.SavePatientfile());
+                
 
 
             }
