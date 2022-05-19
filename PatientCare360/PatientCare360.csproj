@@ -118,6 +118,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Pateintdata.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Treatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Treatment.Designer.cs">
+      <DependentUpon>Treatment.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Treatment.resx">
+      <DependentUpon>Treatment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>

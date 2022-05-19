@@ -14,7 +14,7 @@ namespace PatientCare360
 {
     class Patient
     {
-      
+
 
 
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
@@ -44,7 +44,7 @@ namespace PatientCare360
 
         }
 
-        public double  ConvertToDouble(string str)
+        public double ConvertToDouble(string str)
         {
             return double.Parse(str, CultureInfo.InstalledUICulture);
         }
@@ -514,7 +514,6 @@ namespace PatientCare360
 
         public string Treatment_according_to_diagnosis(string diagnosis)
         {
-
             Dictionary<string, string> dict = new Dictionary<string, string>
             {
                 {"Anemia","Required to take two pills 10 mg each of B12 a day for a month"},{"Diet","Ask for an appointment with nutritionist"},{"Bleeding","To reach to the nearest hospital as soon as possible"},
@@ -530,11 +529,8 @@ namespace PatientCare360
                 {"Increased consumption of meat", "Ask for an appointment of a nutritionist"},{"Use of various drugs", "Invitation for a family doctor in order to get an approval between the medications"},
                 {"Malnutrition", "Ask for an appointment of a nutritionist"}
             };
-
             return dict[diagnosis];
-
         }
-
         public string SavePatientfile()
         {
             //TODO:save patient to file
