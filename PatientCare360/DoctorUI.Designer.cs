@@ -122,7 +122,6 @@
             this.panel_left_btn.Name = "panel_left_btn";
             this.panel_left_btn.Size = new System.Drawing.Size(248, 868);
             this.panel_left_btn.TabIndex = 1;
-            this.panel_left_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_left_btn_Paint);
             // 
             // btnLogOut
             // 
@@ -148,7 +147,6 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(15, 111);
             this.panelLeft.TabIndex = 3;
-            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
             // btnPatHistory
             // 
@@ -228,7 +226,6 @@
             this.panel_AddPatient2.Name = "panel_AddPatient2";
             this.panel_AddPatient2.Size = new System.Drawing.Size(901, 806);
             this.panel_AddPatient2.TabIndex = 31;
-            this.panel_AddPatient2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_AddPatient2_Paint);
             // 
             // groupBox3
             // 
@@ -240,7 +237,6 @@
             this.groupBox3.Size = new System.Drawing.Size(365, 40);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // radioButton_Diarrhea_N
             // 
@@ -252,7 +248,6 @@
             this.radioButton_Diarrhea_N.TabStop = true;
             this.radioButton_Diarrhea_N.Text = "No";
             this.radioButton_Diarrhea_N.UseVisualStyleBackColor = true;
-            this.radioButton_Diarrhea_N.CheckedChanged += new System.EventHandler(this.radioButton_Diarrhea_N_CheckedChanged);
             // 
             // radioButton_Diarrhea_Y
             // 
@@ -265,7 +260,6 @@
             this.radioButton_Diarrhea_Y.TabStop = true;
             this.radioButton_Diarrhea_Y.Text = "Yes";
             this.radioButton_Diarrhea_Y.UseVisualStyleBackColor = true;
-            this.radioButton_Diarrhea_Y.CheckedChanged += new System.EventHandler(this.radioButton_Diarrhea_Y_CheckedChanged);
             // 
             // groupBox5
             // 
@@ -277,7 +271,6 @@
             this.groupBox5.Size = new System.Drawing.Size(371, 45);
             this.groupBox5.TabIndex = 44;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // radioButton_Pregnant_N
             // 
@@ -291,7 +284,6 @@
             this.radioButton_Pregnant_N.TabStop = true;
             this.radioButton_Pregnant_N.Text = "No";
             this.radioButton_Pregnant_N.UseVisualStyleBackColor = true;
-            this.radioButton_Pregnant_N.CheckedChanged += new System.EventHandler(this.radioButton_Pregnant_N_CheckedChanged);
             // 
             // radioButton_Pregnant_Y
             // 
@@ -304,7 +296,6 @@
             this.radioButton_Pregnant_Y.TabStop = true;
             this.radioButton_Pregnant_Y.Text = "Yes";
             this.radioButton_Pregnant_Y.UseVisualStyleBackColor = true;
-            this.radioButton_Pregnant_Y.CheckedChanged += new System.EventHandler(this.radioButton_Pregnant_Y_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -316,7 +307,6 @@
             this.groupBox2.Size = new System.Drawing.Size(366, 50);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // radioButton_Fever_N
             // 
@@ -329,7 +319,6 @@
             this.radioButton_Fever_N.TabStop = true;
             this.radioButton_Fever_N.Text = "No";
             this.radioButton_Fever_N.UseVisualStyleBackColor = true;
-            this.radioButton_Fever_N.CheckedChanged += new System.EventHandler(this.radioButton_Fever_N_CheckedChanged);
             // 
             // radioButton_Fever_Y
             // 
@@ -341,7 +330,6 @@
             this.radioButton_Fever_Y.TabStop = true;
             this.radioButton_Fever_Y.Text = "Yes";
             this.radioButton_Fever_Y.UseVisualStyleBackColor = true;
-            this.radioButton_Fever_Y.CheckedChanged += new System.EventHandler(this.radioButton_Fever_Y_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -354,7 +342,6 @@
             this.groupBox1.Size = new System.Drawing.Size(366, 53);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton_Smokes_N
             // 
@@ -366,7 +353,6 @@
             this.radioButton_Smokes_N.TabStop = true;
             this.radioButton_Smokes_N.Text = "No";
             this.radioButton_Smokes_N.UseVisualStyleBackColor = true;
-            this.radioButton_Smokes_N.CheckedChanged += new System.EventHandler(this.radioButton_Smokes_N_CheckedChanged);
             // 
             // radioButton_Smokes_Y
             // 
@@ -380,7 +366,6 @@
             this.radioButton_Smokes_Y.TabStop = true;
             this.radioButton_Smokes_Y.Text = "Yes";
             this.radioButton_Smokes_Y.UseVisualStyleBackColor = true;
-            this.radioButton_Smokes_Y.CheckedChanged += new System.EventHandler(this.radioButton_Smokes_Y_CheckedChanged);
             // 
             // comboBox_gender
             // 
@@ -392,7 +377,6 @@
             this.comboBox_gender.Name = "comboBox_gender";
             this.comboBox_gender.Size = new System.Drawing.Size(182, 28);
             this.comboBox_gender.TabIndex = 46;
-            this.comboBox_gender.SelectedIndexChanged += new System.EventHandler(this.comboBox_gender_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -404,7 +388,6 @@
             this.label1.Size = new System.Drawing.Size(109, 32);
             this.label1.TabIndex = 45;
             this.label1.Text = "Gender";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox4
             // 
@@ -416,7 +399,6 @@
             this.groupBox4.Size = new System.Drawing.Size(370, 42);
             this.groupBox4.TabIndex = 43;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // radioButton_Vomiting_N
             // 
@@ -428,7 +410,6 @@
             this.radioButton_Vomiting_N.TabStop = true;
             this.radioButton_Vomiting_N.Text = "No";
             this.radioButton_Vomiting_N.UseVisualStyleBackColor = true;
-            this.radioButton_Vomiting_N.CheckedChanged += new System.EventHandler(this.radioButton_Vomiting_N_CheckedChanged);
             // 
             // radioButton_Vomiting_Y
             // 
@@ -441,7 +422,6 @@
             this.radioButton_Vomiting_Y.TabStop = true;
             this.radioButton_Vomiting_Y.Text = "Yes";
             this.radioButton_Vomiting_Y.UseVisualStyleBackColor = true;
-            this.radioButton_Vomiting_Y.CheckedChanged += new System.EventHandler(this.radioButton_Vomiting_Y_CheckedChanged);
             // 
             // label22
             // 
@@ -453,7 +433,6 @@
             this.label22.Size = new System.Drawing.Size(152, 32);
             this.label22.TabIndex = 29;
             this.label22.Text = "Pregnant : ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label23
             // 
@@ -465,7 +444,6 @@
             this.label23.Size = new System.Drawing.Size(155, 32);
             this.label23.TabIndex = 47;
             this.label23.Text = "Vomiting  : ";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label19
             // 
@@ -477,7 +455,6 @@
             this.label19.Size = new System.Drawing.Size(145, 32);
             this.label19.TabIndex = 27;
             this.label19.Text = "Diarrhea : ";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -488,7 +465,6 @@
             this.label20.Size = new System.Drawing.Size(105, 30);
             this.label20.TabIndex = 26;
             this.label20.Text = "Fever  : ";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
@@ -500,7 +476,6 @@
             this.label21.Size = new System.Drawing.Size(138, 32);
             this.label21.TabIndex = 25;
             this.label21.Text = "Smokes : ";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // button_Continue_Panel2
             // 
@@ -519,7 +494,6 @@
             this.textBox_Age_panel2.Name = "textBox_Age_panel2";
             this.textBox_Age_panel2.Size = new System.Drawing.Size(101, 26);
             this.textBox_Age_panel2.TabIndex = 23;
-            this.textBox_Age_panel2.TextChanged += new System.EventHandler(this.textBox_Age_panel2_TextChanged);
             // 
             // textBox_ID_panel2
             // 
@@ -527,7 +501,6 @@
             this.textBox_ID_panel2.Name = "textBox_ID_panel2";
             this.textBox_ID_panel2.Size = new System.Drawing.Size(349, 26);
             this.textBox_ID_panel2.TabIndex = 49;
-            this.textBox_ID_panel2.TextChanged += new System.EventHandler(this.textBox_ID_panel2_TextChanged);
             // 
             // button1
             // 
@@ -538,7 +511,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // comboBox_Eth_panel2
             // 
@@ -550,7 +522,6 @@
             this.comboBox_Eth_panel2.Name = "comboBox_Eth_panel2";
             this.comboBox_Eth_panel2.Size = new System.Drawing.Size(119, 28);
             this.comboBox_Eth_panel2.TabIndex = 50;
-            this.comboBox_Eth_panel2.SelectedIndexChanged += new System.EventHandler(this.comboBox_Eth_panel2_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -562,7 +533,6 @@
             this.label18.Size = new System.Drawing.Size(87, 32);
             this.label18.TabIndex = 3;
             this.label18.Text = "Age : ";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
@@ -574,7 +544,6 @@
             this.label17.Size = new System.Drawing.Size(123, 32);
             this.label17.TabIndex = 2;
             this.label17.Text = "Ethnicity";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -586,7 +555,6 @@
             this.label16.Size = new System.Drawing.Size(63, 32);
             this.label16.TabIndex = 1;
             this.label16.Text = "ID : ";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label15
             // 
@@ -597,7 +565,6 @@
             this.label15.Size = new System.Drawing.Size(283, 37);
             this.label15.TabIndex = 0;
             this.label15.Text = "Patient Questioner";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // Button_Submit
             // 
@@ -622,7 +589,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(198, 46);
             this.panel4.TabIndex = 0;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // MaxmizeBtn
             // 
