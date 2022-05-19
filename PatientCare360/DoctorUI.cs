@@ -105,36 +105,6 @@ namespace PatientCare360
 
 
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void panel_AddPatient2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-      
-        private void Textbox_WBC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private bool Check_Age(int age)
         {
             if (age < 0 ||  age > 120)
@@ -145,27 +115,12 @@ namespace PatientCare360
             return true;
         }
 
-        private void textBox_ID_panel2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox_Age_panel2_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-
-
-
-
 
         private void button_Continue_Panel2_Click(object sender, EventArgs e)
         {
-            Check_ID(textBox_ID_panel2.Text);
-            Check_Age(Convert.ToInt32(textBox_Age_panel2.Text));
-            //TODO: לאן הכפתור הזה מוביל ? מה עושים עם המידע שנשלח למילון ? 
-            //TODO: לטפל ברדיו של הכן ולא 
+            
+            
+
             //TODO: להוסיף פאנל להיסטורי
             //TODO: הכפתור מוביל לפורם חדש עם פלט של הטיפול
             //TODO: מתן - לתקן את הבדיקות גואי ,להוסיף עוד 2 לבדיקות 
@@ -184,48 +139,24 @@ namespace PatientCare360
 
 
 
-            pal = new Patient(dict);
+            if (Check_ID(textBox_ID_panel2.Text) && Check_Age(Convert.ToInt32(textBox_Age_panel2.Text)))
+            {
+                pal = new Patient(dict);
+                MessageBox.Show("Patient successfully added");
 
-            Console.WriteLine(pal.SavePatientfile());
+                //TOOD: new form !
+
+                
+            }
+
+            //Console.WriteLine(pal.SavePatientfile());
 
 
 
-        }
-
-        private void radioButton_Smokes_N_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox_Eth_panel2_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void Button_Submit_Click_1(object sender, EventArgs e)
         {
@@ -248,14 +179,6 @@ namespace PatientCare360
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

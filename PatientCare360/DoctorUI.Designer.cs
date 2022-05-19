@@ -154,7 +154,6 @@
             // 
             resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // Slider_HCT
             // 
@@ -170,7 +169,6 @@
             // 
             resources.ApplyResources(this.Slider_Neut, "Slider_Neut");
             this.Slider_Neut.Name = "Slider_Neut";
-            this.Slider_Neut.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // textBox_AP
             // 
@@ -201,7 +199,6 @@
             resources.ApplyResources(this.TextBox_Creatinine, "TextBox_Creatinine");
             this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_Creatinine.Name = "TextBox_Creatinine";
-            this.TextBox_Creatinine.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // Textbox_Urea
             // 
@@ -220,7 +217,6 @@
             resources.ApplyResources(this.TextBox_WBC, "TextBox_WBC");
             this.TextBox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_WBC.Name = "TextBox_WBC";
-            this.TextBox_WBC.TextChanged += new System.EventHandler(this.Textbox_WBC_TextChanged);
             // 
             // label12
             // 
@@ -354,7 +350,6 @@
             this.panel_AddPatient2.Controls.Add(this.label16);
             this.panel_AddPatient2.Controls.Add(this.label15);
             this.panel_AddPatient2.Name = "panel_AddPatient2";
-            this.panel_AddPatient2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_AddPatient2_Paint);
             // 
             // comboBox_gender
             // 
@@ -364,13 +359,11 @@
             resources.GetString("comboBox_gender.Items"),
             resources.GetString("comboBox_gender.Items1")});
             this.comboBox_gender.Name = "comboBox_gender";
-            this.comboBox_gender.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox5
             // 
@@ -520,20 +513,17 @@
             // 
             resources.ApplyResources(this.textBox_Age_panel2, "textBox_Age_panel2");
             this.textBox_Age_panel2.Name = "textBox_Age_panel2";
-            this.textBox_Age_panel2.TextChanged += new System.EventHandler(this.textBox_Age_panel2_TextChanged);
             // 
             // textBox_ID_panel2
             // 
             resources.ApplyResources(this.textBox_ID_panel2, "textBox_ID_panel2");
             this.textBox_ID_panel2.Name = "textBox_ID_panel2";
-            this.textBox_ID_panel2.TextChanged += new System.EventHandler(this.textBox_ID_panel2_TextChanged);
             // 
             // button1
             // 
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // comboBox_Eth_panel2
             // 
@@ -545,31 +535,26 @@
             resources.GetString("comboBox_Eth_panel2.Items2"),
             resources.GetString("comboBox_Eth_panel2.Items3")});
             this.comboBox_Eth_panel2.Name = "comboBox_Eth_panel2";
-            this.comboBox_Eth_panel2.SelectedIndexChanged += new System.EventHandler(this.comboBox_Eth_panel2_SelectedIndexChanged);
             // 
             // label18
             // 
             resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
             resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // panel4
             // 
@@ -578,7 +563,6 @@
             this.panel4.Controls.Add(this.ExitButton);
             this.panel4.Controls.Add(this.minimizeBtn);
             this.panel4.Name = "panel4";
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // MaxmizeBtn
             // 
@@ -617,20 +601,18 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Name = "panel1";
             this.panel1.AutoSizeChanged += new System.EventHandler(this.DoctorUI_Load);
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_AddPatient2_Paint);
             this.panel1.Resize += new System.EventHandler(this.DoctorUI_Load);
             // 
             // DoctorUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "DoctorUI";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DoctorUI_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DoctorUI_MouseDown);

@@ -35,8 +35,15 @@ namespace PatientCare360.Excel
             Worksheet["C" + i].Value = id;
             workBook.SaveAs(ExcelPafh1);
         }
+        public static void ReadFile(string pafh)
+        {
+            var workbook = new WorkBook(ExcelFileFormat.XLSX);
+            var worksheet = workbook.CreateWorkSheet("Sheet1");
 
+        }
     }
+
+
     // public void writeToCell(int i ,int j, string s)
     // {
     //     
