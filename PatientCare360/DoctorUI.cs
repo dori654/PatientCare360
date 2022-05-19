@@ -174,10 +174,10 @@ namespace PatientCare360
             panel_AddPatient2.Visible = true;
 
             dict["WBC"] = TextBox_WBC.Text;
-            dict["Neut"] = "12";
-            dict["Lymph"] = "12";
+            dict["Neut"] = Slider_Neut.Value.ToString();
+            dict["Lymph"] = Slider_Lymph.Value.ToString();
             dict["RBC"] = TextBox_RBC.Text;
-            dict["HCT"] = "12";
+            dict["HCT"] = Slider_HCT.Value.ToString();
             dict["Urea"] = Textbox_Urea.Text;
             dict["Hb"] = TextBox_HB.Text;
             dict["Creatinine"] = TextBox_Creatinine.Text;
