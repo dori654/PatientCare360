@@ -12,7 +12,7 @@ namespace PatientCare360
 {
     public partial class DoctorUI : Form
     {
-        Patient pal ;
+        Patient pal;
         Dictionary<string, string> dict = new Dictionary<string, string>();
         public DoctorUI()
         {
@@ -24,13 +24,13 @@ namespace PatientCare360
 
         private bool Check_ID(string ID)
         {
-         
-            if ( ID.Length != 9)
+
+            if (ID.Length != 9)
             {
                 MessageBox.Show("ID field must have exactly 9 numbers!");
                 return false;
             }
-            
+
             return true;
         }
 
@@ -52,7 +52,7 @@ namespace PatientCare360
         {
             panelLeft.Height = btnNewPat.Height;
             panelLeft.Top = btnNewPat.Top;
-            panel_AddPatient.Visible=true;
+            panel_AddPatient.Visible = true;
         }
 
         private void btnPatHistory_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace PatientCare360
 
         private bool Check_Age(int age)
         {
-            if (age < 0 ||  age > 120)
+            if (age < 0 || age > 120)
             {
                 MessageBox.Show("Age field must be between 0 to 120!");
                 return false;
@@ -118,8 +118,8 @@ namespace PatientCare360
 
         private void button_Continue_Panel2_Click(object sender, EventArgs e)
         {
-            
-            
+
+
 
             //TODO: להוסיף פאנל להיסטורי
             //TODO: הכפתור מוביל לפורם חדש עם פלט של הטיפול
@@ -146,7 +146,7 @@ namespace PatientCare360
 
                 //TOOD: new form !
 
-                
+
             }
 
             //Console.WriteLine(pal.SavePatientfile());
@@ -156,7 +156,7 @@ namespace PatientCare360
 
         }
 
-      
+
 
         private void Button_Submit_Click_1(object sender, EventArgs e)
         {
@@ -179,6 +179,6 @@ namespace PatientCare360
 
         }
 
-    
+
     }
 }
