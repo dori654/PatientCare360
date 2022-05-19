@@ -46,8 +46,7 @@ namespace PatientCare360
             panelLeft.Top = btnHome.Top;
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
-
-
+            Patient_History_Panel.Visible = false;
         }
 
         private void btnNewPat_Click(object sender, EventArgs e)
@@ -55,12 +54,17 @@ namespace PatientCare360
             panelLeft.Height = btnNewPat.Height;
             panelLeft.Top = btnNewPat.Top;
             panel_AddPatient.Visible = true;
+            Patient_History_Panel.Visible = false;
+            panel_AddPatient2.Visible = false;
         }
 
         private void btnPatHistory_Click(object sender, EventArgs e)
         {
             panelLeft.Height = btnPatHistory.Height;
             panelLeft.Top = btnPatHistory.Top;
+            Patient_History_Panel.Visible = true;
+            panel_AddPatient.Visible = false;
+            panel_AddPatient2.Visible = false;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -102,10 +106,7 @@ namespace PatientCare360
         {
             Point lastPoint = new Point();
             lastPoint = new Point(e.X, e.Y);
-
         }
-
-
 
         private bool Check_Age(int age)
         {
@@ -116,7 +117,6 @@ namespace PatientCare360
             }
             return true;
         }
-
 
         private void button_Continue_Panel2_Click(object sender, EventArgs e)
         {
@@ -182,6 +182,24 @@ namespace PatientCare360
 
         }
 
-       
+        private void Slider_Neut_Scroll(object sender, EventArgs e)
+        {
+            Track_bar_precentage1_label.Text = Slider_Neut.Value.ToString() + "%";
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Slider_Lymph_Scroll(object sender, EventArgs e)
+        {
+            Track_bar_precentage2_label.Text = Slider_Lymph.Value.ToString() + "%";
+        }
+
+        private void Slider_HCT_Scroll(object sender, EventArgs e)
+        {
+            Track_bar_precentage3_label.Text = Slider_HCT.Value.ToString() + "%";
+        }
     }
 }

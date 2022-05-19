@@ -97,6 +97,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TextBox_RBC = new System.Windows.Forms.TextBox();
             this.TextBox_WBC = new System.Windows.Forms.TextBox();
+            this.Track_bar_precentage1_label = new System.Windows.Forms.Label();
+            this.Track_bar_precentage2_label = new System.Windows.Forms.Label();
+            this.Track_bar_precentage3_label = new System.Windows.Forms.Label();
+            this.Patient_History_Panel = new System.Windows.Forms.Panel();
+            this.Search_Patient_TextBox = new System.Windows.Forms.TextBox();
+            this.Search_Patient_label = new System.Windows.Forms.Label();
             this.panel_left_btn.SuspendLayout();
             this.panel_AddPatient2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,6 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).BeginInit();
+            this.Patient_History_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_left_btn
@@ -255,7 +262,7 @@
             this.radioButton_Diarrhea_Y.ImeMode = System.Windows.Forms.ImeMode.On;
             this.radioButton_Diarrhea_Y.Location = new System.Drawing.Point(2, 10);
             this.radioButton_Diarrhea_Y.Name = "radioButton_Diarrhea_Y";
-            this.radioButton_Diarrhea_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Diarrhea_Y.Size = new System.Drawing.Size(58, 24);
             this.radioButton_Diarrhea_Y.TabIndex = 36;
             this.radioButton_Diarrhea_Y.TabStop = true;
             this.radioButton_Diarrhea_Y.Text = "Yes";
@@ -279,7 +286,7 @@
             this.radioButton_Pregnant_N.ImeMode = System.Windows.Forms.ImeMode.On;
             this.radioButton_Pregnant_N.Location = new System.Drawing.Point(296, 12);
             this.radioButton_Pregnant_N.Name = "radioButton_Pregnant_N";
-            this.radioButton_Pregnant_N.Size = new System.Drawing.Size(62, 29);
+            this.radioButton_Pregnant_N.Size = new System.Drawing.Size(51, 24);
             this.radioButton_Pregnant_N.TabIndex = 41;
             this.radioButton_Pregnant_N.TabStop = true;
             this.radioButton_Pregnant_N.Text = "No";
@@ -291,7 +298,7 @@
             this.radioButton_Pregnant_Y.ImeMode = System.Windows.Forms.ImeMode.On;
             this.radioButton_Pregnant_Y.Location = new System.Drawing.Point(6, 13);
             this.radioButton_Pregnant_Y.Name = "radioButton_Pregnant_Y";
-            this.radioButton_Pregnant_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Pregnant_Y.Size = new System.Drawing.Size(58, 24);
             this.radioButton_Pregnant_Y.TabIndex = 40;
             this.radioButton_Pregnant_Y.TabStop = true;
             this.radioButton_Pregnant_Y.Text = "Yes";
@@ -314,7 +321,7 @@
             this.radioButton_Fever_N.ImeMode = System.Windows.Forms.ImeMode.On;
             this.radioButton_Fever_N.Location = new System.Drawing.Point(289, 18);
             this.radioButton_Fever_N.Name = "radioButton_Fever_N";
-            this.radioButton_Fever_N.Size = new System.Drawing.Size(62, 29);
+            this.radioButton_Fever_N.Size = new System.Drawing.Size(51, 24);
             this.radioButton_Fever_N.TabIndex = 0;
             this.radioButton_Fever_N.TabStop = true;
             this.radioButton_Fever_N.Text = "No";
@@ -361,7 +368,7 @@
             this.radioButton_Smokes_Y.ImeMode = System.Windows.Forms.ImeMode.On;
             this.radioButton_Smokes_Y.Location = new System.Drawing.Point(9, 17);
             this.radioButton_Smokes_Y.Name = "radioButton_Smokes_Y";
-            this.radioButton_Smokes_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Smokes_Y.Size = new System.Drawing.Size(58, 24);
             this.radioButton_Smokes_Y.TabIndex = 32;
             this.radioButton_Smokes_Y.TabStop = true;
             this.radioButton_Smokes_Y.Text = "Yes";
@@ -375,7 +382,7 @@
             "M"});
             this.comboBox_gender.Location = new System.Drawing.Point(401, 159);
             this.comboBox_gender.Name = "comboBox_gender";
-            this.comboBox_gender.Size = new System.Drawing.Size(182, 28);
+            this.comboBox_gender.Size = new System.Drawing.Size(182, 24);
             this.comboBox_gender.TabIndex = 46;
             // 
             // label1
@@ -385,7 +392,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label1.Location = new System.Drawing.Point(21, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 32);
+            this.label1.Size = new System.Drawing.Size(94, 29);
             this.label1.TabIndex = 45;
             this.label1.Text = "Gender";
             // 
@@ -417,7 +424,7 @@
             this.radioButton_Vomiting_Y.ImeMode = System.Windows.Forms.ImeMode.On;
             this.radioButton_Vomiting_Y.Location = new System.Drawing.Point(7, 12);
             this.radioButton_Vomiting_Y.Name = "radioButton_Vomiting_Y";
-            this.radioButton_Vomiting_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Vomiting_Y.Size = new System.Drawing.Size(58, 24);
             this.radioButton_Vomiting_Y.TabIndex = 40;
             this.radioButton_Vomiting_Y.TabStop = true;
             this.radioButton_Vomiting_Y.Text = "Yes";
@@ -430,7 +437,7 @@
             this.label22.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label22.Location = new System.Drawing.Point(26, 678);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(152, 32);
+            this.label22.Size = new System.Drawing.Size(128, 29);
             this.label22.TabIndex = 29;
             this.label22.Text = "Pregnant : ";
             // 
@@ -441,7 +448,7 @@
             this.label23.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label23.Location = new System.Drawing.Point(24, 593);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(155, 32);
+            this.label23.Size = new System.Drawing.Size(131, 29);
             this.label23.TabIndex = 47;
             this.label23.Text = "Vomiting  : ";
             // 
@@ -452,7 +459,7 @@
             this.label19.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label19.Location = new System.Drawing.Point(21, 524);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(145, 32);
+            this.label19.Size = new System.Drawing.Size(123, 29);
             this.label19.TabIndex = 27;
             this.label19.Text = "Diarrhea : ";
             // 
@@ -473,7 +480,7 @@
             this.label21.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label21.Location = new System.Drawing.Point(21, 383);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(138, 32);
+            this.label21.Size = new System.Drawing.Size(119, 29);
             this.label21.TabIndex = 25;
             this.label21.Text = "Smokes : ";
             // 
@@ -492,14 +499,14 @@
             // 
             this.textBox_Age_panel2.Location = new System.Drawing.Point(401, 299);
             this.textBox_Age_panel2.Name = "textBox_Age_panel2";
-            this.textBox_Age_panel2.Size = new System.Drawing.Size(101, 26);
+            this.textBox_Age_panel2.Size = new System.Drawing.Size(101, 22);
             this.textBox_Age_panel2.TabIndex = 23;
             // 
             // textBox_ID_panel2
             // 
             this.textBox_ID_panel2.Location = new System.Drawing.Point(402, 102);
             this.textBox_ID_panel2.Name = "textBox_ID_panel2";
-            this.textBox_ID_panel2.Size = new System.Drawing.Size(349, 26);
+            this.textBox_ID_panel2.Size = new System.Drawing.Size(349, 22);
             this.textBox_ID_panel2.TabIndex = 49;
             // 
             // button1
@@ -520,7 +527,7 @@
             "Middle-Eastren"});
             this.comboBox_Eth_panel2.Location = new System.Drawing.Point(401, 226);
             this.comboBox_Eth_panel2.Name = "comboBox_Eth_panel2";
-            this.comboBox_Eth_panel2.Size = new System.Drawing.Size(119, 28);
+            this.comboBox_Eth_panel2.Size = new System.Drawing.Size(119, 24);
             this.comboBox_Eth_panel2.TabIndex = 50;
             // 
             // label18
@@ -530,7 +537,7 @@
             this.label18.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label18.Location = new System.Drawing.Point(21, 299);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(87, 32);
+            this.label18.Size = new System.Drawing.Size(74, 29);
             this.label18.TabIndex = 3;
             this.label18.Text = "Age : ";
             // 
@@ -541,7 +548,7 @@
             this.label17.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label17.Location = new System.Drawing.Point(26, 228);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(123, 32);
+            this.label17.Size = new System.Drawing.Size(102, 29);
             this.label17.TabIndex = 2;
             this.label17.Text = "Ethnicity";
             // 
@@ -552,7 +559,7 @@
             this.label16.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label16.Location = new System.Drawing.Point(22, 102);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 32);
+            this.label16.Size = new System.Drawing.Size(54, 29);
             this.label16.TabIndex = 1;
             this.label16.Text = "ID : ";
             // 
@@ -634,6 +641,10 @@
             // 
             // panel_AddPatient
             // 
+            this.panel_AddPatient.Controls.Add(this.Patient_History_Panel);
+            this.panel_AddPatient.Controls.Add(this.Track_bar_precentage3_label);
+            this.panel_AddPatient.Controls.Add(this.Track_bar_precentage2_label);
+            this.panel_AddPatient.Controls.Add(this.Track_bar_precentage1_label);
             this.panel_AddPatient.Controls.Add(this.label2);
             this.panel_AddPatient.Controls.Add(this.label14);
             this.panel_AddPatient.Controls.Add(this.label4);
@@ -671,7 +682,7 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label2.Location = new System.Drawing.Point(49, 462);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 32);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 56;
             this.label2.Text = "Hb(mg):";
             // 
@@ -699,9 +710,11 @@
             // 
             this.Slider_HCT.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Slider_HCT.Location = new System.Drawing.Point(245, 316);
+            this.Slider_HCT.Maximum = 100;
             this.Slider_HCT.Name = "Slider_HCT";
-            this.Slider_HCT.Size = new System.Drawing.Size(379, 69);
+            this.Slider_HCT.Size = new System.Drawing.Size(379, 56);
             this.Slider_HCT.TabIndex = 53;
+            this.Slider_HCT.Scroll += new System.EventHandler(this.Slider_HCT_Scroll);
             // 
             // label5
             // 
@@ -710,7 +723,7 @@
             this.label5.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label5.Location = new System.Drawing.Point(49, 94);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 32);
+            this.label5.Size = new System.Drawing.Size(108, 29);
             this.label5.TabIndex = 34;
             this.label5.Text = "Neut(%):";
             // 
@@ -718,9 +731,11 @@
             // 
             this.Slider_Lymph.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Slider_Lymph.Location = new System.Drawing.Point(245, 174);
+            this.Slider_Lymph.Maximum = 100;
             this.Slider_Lymph.Name = "Slider_Lymph";
-            this.Slider_Lymph.Size = new System.Drawing.Size(379, 69);
+            this.Slider_Lymph.Size = new System.Drawing.Size(379, 56);
             this.Slider_Lymph.TabIndex = 51;
+            this.Slider_Lymph.Scroll += new System.EventHandler(this.Slider_Lymph_Scroll);
             // 
             // label6
             // 
@@ -729,7 +744,7 @@
             this.label6.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label6.Location = new System.Drawing.Point(49, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 32);
+            this.label6.Size = new System.Drawing.Size(74, 29);
             this.label6.TabIndex = 35;
             this.label6.Text = "WBC:";
             // 
@@ -738,9 +753,11 @@
             this.Slider_Neut.AutoSize = false;
             this.Slider_Neut.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Slider_Neut.Location = new System.Drawing.Point(245, 94);
+            this.Slider_Neut.Maximum = 100;
             this.Slider_Neut.Name = "Slider_Neut";
             this.Slider_Neut.Size = new System.Drawing.Size(379, 56);
             this.Slider_Neut.TabIndex = 50;
+            this.Slider_Neut.Scroll += new System.EventHandler(this.Slider_Neut_Scroll);
             // 
             // label7
             // 
@@ -749,7 +766,7 @@
             this.label7.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label7.Location = new System.Drawing.Point(45, 316);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 32);
+            this.label7.Size = new System.Drawing.Size(107, 29);
             this.label7.TabIndex = 36;
             this.label7.Text = "HCT(%):";
             // 
@@ -760,7 +777,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label3.Location = new System.Drawing.Point(45, 217);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 32);
+            this.label3.Size = new System.Drawing.Size(0, 29);
             this.label3.TabIndex = 55;
             // 
             // textBox_AP
@@ -768,7 +785,7 @@
             this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox_AP.Location = new System.Drawing.Point(245, 741);
             this.textBox_AP.Name = "textBox_AP";
-            this.textBox_AP.Size = new System.Drawing.Size(379, 26);
+            this.textBox_AP.Size = new System.Drawing.Size(379, 22);
             this.textBox_AP.TabIndex = 49;
             // 
             // label9
@@ -778,7 +795,7 @@
             this.label9.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label9.Location = new System.Drawing.Point(53, 536);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 32);
+            this.label9.Size = new System.Drawing.Size(0, 29);
             this.label9.TabIndex = 37;
             // 
             // textBox_HDL
@@ -786,7 +803,7 @@
             this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox_HDL.Location = new System.Drawing.Point(245, 682);
             this.textBox_HDL.Name = "textBox_HDL";
-            this.textBox_HDL.Size = new System.Drawing.Size(379, 26);
+            this.textBox_HDL.Size = new System.Drawing.Size(379, 22);
             this.textBox_HDL.TabIndex = 48;
             // 
             // label8
@@ -796,7 +813,7 @@
             this.label8.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label8.Location = new System.Drawing.Point(45, 394);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 32);
+            this.label8.Size = new System.Drawing.Size(121, 29);
             this.label8.TabIndex = 38;
             this.label8.Text = "Urea(mg):";
             // 
@@ -805,7 +822,7 @@
             this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textbox_iron.Location = new System.Drawing.Point(245, 600);
             this.textbox_iron.Name = "textbox_iron";
-            this.textbox_iron.Size = new System.Drawing.Size(379, 26);
+            this.textbox_iron.Size = new System.Drawing.Size(379, 22);
             this.textbox_iron.TabIndex = 47;
             // 
             // label11
@@ -823,7 +840,7 @@
             this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_HB.Location = new System.Drawing.Point(245, 463);
             this.TextBox_HB.Name = "TextBox_HB";
-            this.TextBox_HB.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_HB.Size = new System.Drawing.Size(379, 22);
             this.TextBox_HB.TabIndex = 46;
             // 
             // label10
@@ -833,7 +850,7 @@
             this.label10.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label10.Location = new System.Drawing.Point(49, 530);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(153, 32);
+            this.label10.Size = new System.Drawing.Size(129, 29);
             this.label10.TabIndex = 40;
             this.label10.Text = "Creatinine:";
             // 
@@ -842,7 +859,7 @@
             this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_Creatinine.Location = new System.Drawing.Point(245, 537);
             this.TextBox_Creatinine.Name = "TextBox_Creatinine";
-            this.TextBox_Creatinine.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_Creatinine.Size = new System.Drawing.Size(379, 22);
             this.TextBox_Creatinine.TabIndex = 45;
             // 
             // label13
@@ -852,7 +869,7 @@
             this.label13.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label13.Location = new System.Drawing.Point(60, 741);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 32);
+            this.label13.Size = new System.Drawing.Size(50, 29);
             this.label13.TabIndex = 41;
             this.label13.Text = "AP:";
             // 
@@ -861,7 +878,7 @@
             this.Textbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Textbox_Urea.Location = new System.Drawing.Point(245, 394);
             this.Textbox_Urea.Name = "Textbox_Urea";
-            this.Textbox_Urea.Size = new System.Drawing.Size(379, 26);
+            this.Textbox_Urea.Size = new System.Drawing.Size(379, 22);
             this.Textbox_Urea.TabIndex = 54;
             // 
             // label12
@@ -871,7 +888,7 @@
             this.label12.ImeMode = System.Windows.Forms.ImeMode.On;
             this.label12.Location = new System.Drawing.Point(45, 676);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 32);
+            this.label12.Size = new System.Drawing.Size(116, 29);
             this.label12.TabIndex = 42;
             this.label12.Text = "HDL(mg):";
             // 
@@ -880,7 +897,7 @@
             this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_RBC.Location = new System.Drawing.Point(245, 252);
             this.TextBox_RBC.Name = "TextBox_RBC";
-            this.TextBox_RBC.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_RBC.Size = new System.Drawing.Size(379, 22);
             this.TextBox_RBC.TabIndex = 44;
             // 
             // TextBox_WBC
@@ -888,8 +905,65 @@
             this.TextBox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_WBC.Location = new System.Drawing.Point(245, 30);
             this.TextBox_WBC.Name = "TextBox_WBC";
-            this.TextBox_WBC.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_WBC.Size = new System.Drawing.Size(379, 22);
             this.TextBox_WBC.TabIndex = 43;
+            // 
+            // Track_bar_precentage1_label
+            // 
+            this.Track_bar_precentage1_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Track_bar_precentage1_label.Location = new System.Drawing.Point(618, 94);
+            this.Track_bar_precentage1_label.Name = "Track_bar_precentage1_label";
+            this.Track_bar_precentage1_label.Size = new System.Drawing.Size(91, 56);
+            this.Track_bar_precentage1_label.TabIndex = 57;
+            this.Track_bar_precentage1_label.Text = "%";
+            this.Track_bar_precentage1_label.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // Track_bar_precentage2_label
+            // 
+            this.Track_bar_precentage2_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Track_bar_precentage2_label.Location = new System.Drawing.Point(617, 174);
+            this.Track_bar_precentage2_label.Name = "Track_bar_precentage2_label";
+            this.Track_bar_precentage2_label.Size = new System.Drawing.Size(110, 40);
+            this.Track_bar_precentage2_label.TabIndex = 58;
+            this.Track_bar_precentage2_label.Text = "%";
+            // 
+            // Track_bar_precentage3_label
+            // 
+            this.Track_bar_precentage3_label.AutoSize = true;
+            this.Track_bar_precentage3_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Track_bar_precentage3_label.Location = new System.Drawing.Point(617, 313);
+            this.Track_bar_precentage3_label.Name = "Track_bar_precentage3_label";
+            this.Track_bar_precentage3_label.Size = new System.Drawing.Size(40, 32);
+            this.Track_bar_precentage3_label.TabIndex = 59;
+            this.Track_bar_precentage3_label.Text = "%";
+            // 
+            // Patient_History_Panel
+            // 
+            this.Patient_History_Panel.Controls.Add(this.Search_Patient_label);
+            this.Patient_History_Panel.Controls.Add(this.Search_Patient_TextBox);
+            this.Patient_History_Panel.Location = new System.Drawing.Point(0, 3);
+            this.Patient_History_Panel.Name = "Patient_History_Panel";
+            this.Patient_History_Panel.Size = new System.Drawing.Size(898, 794);
+            this.Patient_History_Panel.TabIndex = 60;
+            this.Patient_History_Panel.Visible = false;
+            // 
+            // Search_Patient_TextBox
+            // 
+            this.Search_Patient_TextBox.Location = new System.Drawing.Point(282, 33);
+            this.Search_Patient_TextBox.Name = "Search_Patient_TextBox";
+            this.Search_Patient_TextBox.Size = new System.Drawing.Size(238, 22);
+            this.Search_Patient_TextBox.TabIndex = 0;
+            // 
+            // Search_Patient_label
+            // 
+            this.Search_Patient_label.AutoSize = true;
+            this.Search_Patient_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Search_Patient_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Patient_label.Location = new System.Drawing.Point(13, 29);
+            this.Search_Patient_label.Name = "Search_Patient_label";
+            this.Search_Patient_label.Size = new System.Drawing.Size(249, 27);
+            this.Search_Patient_label.TabIndex = 1;
+            this.Search_Patient_label.Text = "Search Patient\'s history:";
             // 
             // DoctorUI
             // 
@@ -901,8 +975,8 @@
             this.ClientSize = new System.Drawing.Size(1152, 860);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel_left_btn);
-            this.Controls.Add(this.panel_AddPatient2);
             this.Controls.Add(this.panel_AddPatient);
+            this.Controls.Add(this.panel_AddPatient2);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -931,6 +1005,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).EndInit();
+            this.Patient_History_Panel.ResumeLayout(false);
+            this.Patient_History_Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1005,5 +1081,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TextBox_RBC;
         private System.Windows.Forms.TextBox TextBox_WBC;
+        private System.Windows.Forms.Label Track_bar_precentage2_label;
+        private System.Windows.Forms.Label Track_bar_precentage1_label;
+        private System.Windows.Forms.Label Track_bar_precentage3_label;
+        private System.Windows.Forms.Panel Patient_History_Panel;
+        private System.Windows.Forms.Label Search_Patient_label;
+        private System.Windows.Forms.TextBox Search_Patient_TextBox;
     }
 }
