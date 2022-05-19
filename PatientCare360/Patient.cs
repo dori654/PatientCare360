@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -19,6 +20,10 @@ namespace PatientCare360
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
         private Dictionary<string, double> diagnosis = new Dictionary<string, double>();
 
+        public Patient(Dictionary<string, string> patientInfo)
+        {
+            this.patientInfo = patientInfo;
+        }
         public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string, string> dict)
         {
             var age = dict["age"];
@@ -339,7 +344,7 @@ namespace PatientCare360
             {
                 diagnosis["Disorder of blood formation / blood cells"] += 1;
                 diagnosis["Lung disease"] += 1;
-                if (patientInfo["smoker"] == "Yes")
+                if (patientInfo["Smokers"] == "Yes")
                 {
                     diagnosis["Smokers"] += 1;
                 }
@@ -355,7 +360,7 @@ namespace PatientCare360
         {
             if (patientInfo["HCT"] == "HIGH")
             {
-                if (patientInfo["smoker"] == "Yes")
+                if (patientInfo["Smokers"] == "Yes")
                 {
                     diagnosis["Smokers"] += 1;
                 }
@@ -444,7 +449,7 @@ namespace PatientCare360
             {
                 diagnosis["Liver disease"] += 1;
                 diagnosis["Bile duct diseases"] += 1;
-                diagnosis["Hypothyroidism"] += 1;
+                diagnosis["Overactive thyroid gland"] += 1;
                 diagnosis["Use of various drugs"] += 1;
             }
             else if (patientInfo["AP"] == "LOW")
@@ -526,5 +531,6 @@ namespace PatientCare360
             };
             return dict[diagnosis];
         }
+
     }
 }
