@@ -29,31 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorUI));
-            this.panel_AddPatient = new System.Windows.Forms.Panel();
-            this.Button_Submit = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Slider_HCT = new System.Windows.Forms.TrackBar();
-            this.Slider_Lymph = new System.Windows.Forms.TrackBar();
-            this.Slider_Neut = new System.Windows.Forms.TrackBar();
-            this.textBox_AP = new System.Windows.Forms.TextBox();
-            this.textBox_HDL = new System.Windows.Forms.TextBox();
-            this.textbox_iron = new System.Windows.Forms.TextBox();
-            this.TextBox_HB = new System.Windows.Forms.TextBox();
-            this.TextBox_Creatinine = new System.Windows.Forms.TextBox();
-            this.Textbox_Urea = new System.Windows.Forms.TextBox();
-            this.TextBox_RBC = new System.Windows.Forms.TextBox();
-            this.TextBox_WBC = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel_left_btn = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
@@ -61,23 +36,23 @@
             this.btnNewPat = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel_AddPatient2 = new System.Windows.Forms.Panel();
-            this.comboBox_gender = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Pregnant_N = new System.Windows.Forms.RadioButton();
-            this.radioButton_Pregnant_Y = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Vomiting_N = new System.Windows.Forms.RadioButton();
-            this.radioButton_Vomiting_Y = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton_Diarrhea_N = new System.Windows.Forms.RadioButton();
             this.radioButton_Diarrhea_Y = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Pregnant_N = new System.Windows.Forms.RadioButton();
+            this.radioButton_Pregnant_Y = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton_Fever_N = new System.Windows.Forms.RadioButton();
             this.radioButton_Fever_Y = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton_Smokes_N = new System.Windows.Forms.RadioButton();
             this.radioButton_Smokes_Y = new System.Windows.Forms.RadioButton();
+            this.comboBox_gender = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Vomiting_N = new System.Windows.Forms.RadioButton();
+            this.radioButton_Vomiting_Y = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -92,249 +67,149 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.Button_Submit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.MaxmizeBtn = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_AddPatient = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Slider_HCT = new System.Windows.Forms.TrackBar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Slider_Lymph = new System.Windows.Forms.TrackBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Slider_Neut = new System.Windows.Forms.TrackBar();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox_AP = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox_HDL = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textbox_iron = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TextBox_HB = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TextBox_Creatinine = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Textbox_Urea = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TextBox_RBC = new System.Windows.Forms.TextBox();
+            this.TextBox_WBC = new System.Windows.Forms.TextBox();
+            this.panel_left_btn.SuspendLayout();
+            this.panel_AddPatient2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel_AddPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).BeginInit();
-            this.panel_left_btn.SuspendLayout();
-            this.panel_AddPatient2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel_AddPatient
-            // 
-            resources.ApplyResources(this.panel_AddPatient, "panel_AddPatient");
-            this.panel_AddPatient.Controls.Add(this.Button_Submit);
-            this.panel_AddPatient.Controls.Add(this.label14);
-            this.panel_AddPatient.Controls.Add(this.Slider_HCT);
-            this.panel_AddPatient.Controls.Add(this.Slider_Lymph);
-            this.panel_AddPatient.Controls.Add(this.Slider_Neut);
-            this.panel_AddPatient.Controls.Add(this.textBox_AP);
-            this.panel_AddPatient.Controls.Add(this.textBox_HDL);
-            this.panel_AddPatient.Controls.Add(this.textbox_iron);
-            this.panel_AddPatient.Controls.Add(this.TextBox_HB);
-            this.panel_AddPatient.Controls.Add(this.TextBox_Creatinine);
-            this.panel_AddPatient.Controls.Add(this.Textbox_Urea);
-            this.panel_AddPatient.Controls.Add(this.TextBox_RBC);
-            this.panel_AddPatient.Controls.Add(this.TextBox_WBC);
-            this.panel_AddPatient.Controls.Add(this.label12);
-            this.panel_AddPatient.Controls.Add(this.label13);
-            this.panel_AddPatient.Controls.Add(this.label10);
-            this.panel_AddPatient.Controls.Add(this.label11);
-            this.panel_AddPatient.Controls.Add(this.label8);
-            this.panel_AddPatient.Controls.Add(this.label9);
-            this.panel_AddPatient.Controls.Add(this.label3);
-            this.panel_AddPatient.Controls.Add(this.label7);
-            this.panel_AddPatient.Controls.Add(this.label6);
-            this.panel_AddPatient.Controls.Add(this.label5);
-            this.panel_AddPatient.Controls.Add(this.label4);
-            this.panel_AddPatient.Name = "panel_AddPatient";
-            // 
-            // Button_Submit
-            // 
-            resources.ApplyResources(this.Button_Submit, "Button_Submit");
-            this.Button_Submit.BackColor = System.Drawing.Color.Silver;
-            this.Button_Submit.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Button_Submit.Name = "Button_Submit";
-            this.Button_Submit.UseVisualStyleBackColor = false;
-            this.Button_Submit.Click += new System.EventHandler(this.Button_Submit_Click_1);
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // Slider_HCT
-            // 
-            resources.ApplyResources(this.Slider_HCT, "Slider_HCT");
-            this.Slider_HCT.Name = "Slider_HCT";
-            // 
-            // Slider_Lymph
-            // 
-            resources.ApplyResources(this.Slider_Lymph, "Slider_Lymph");
-            this.Slider_Lymph.Name = "Slider_Lymph";
-            // 
-            // Slider_Neut
-            // 
-            resources.ApplyResources(this.Slider_Neut, "Slider_Neut");
-            this.Slider_Neut.Name = "Slider_Neut";
-            // 
-            // textBox_AP
-            // 
-            resources.ApplyResources(this.textBox_AP, "textBox_AP");
-            this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_AP.Name = "textBox_AP";
-            // 
-            // textBox_HDL
-            // 
-            resources.ApplyResources(this.textBox_HDL, "textBox_HDL");
-            this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_HDL.Name = "textBox_HDL";
-            // 
-            // textbox_iron
-            // 
-            resources.ApplyResources(this.textbox_iron, "textbox_iron");
-            this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textbox_iron.Name = "textbox_iron";
-            // 
-            // TextBox_HB
-            // 
-            resources.ApplyResources(this.TextBox_HB, "TextBox_HB");
-            this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_HB.Name = "TextBox_HB";
-            // 
-            // TextBox_Creatinine
-            // 
-            resources.ApplyResources(this.TextBox_Creatinine, "TextBox_Creatinine");
-            this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_Creatinine.Name = "TextBox_Creatinine";
-            // 
-            // Textbox_Urea
-            // 
-            resources.ApplyResources(this.Textbox_Urea, "Textbox_Urea");
-            this.Textbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Textbox_Urea.Name = "Textbox_Urea";
-            // 
-            // TextBox_RBC
-            // 
-            resources.ApplyResources(this.TextBox_RBC, "TextBox_RBC");
-            this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_RBC.Name = "TextBox_RBC";
-            // 
-            // TextBox_WBC
-            // 
-            resources.ApplyResources(this.TextBox_WBC, "TextBox_WBC");
-            this.TextBox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_WBC.Name = "TextBox_WBC";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
             // 
             // panel_left_btn
             // 
-            resources.ApplyResources(this.panel_left_btn, "panel_left_btn");
             this.panel_left_btn.Controls.Add(this.btnLogOut);
             this.panel_left_btn.Controls.Add(this.panelLeft);
             this.panel_left_btn.Controls.Add(this.btnPatHistory);
             this.panel_left_btn.Controls.Add(this.btnNewPat);
             this.panel_left_btn.Controls.Add(this.btnHome);
+            this.panel_left_btn.Location = new System.Drawing.Point(0, 5);
             this.panel_left_btn.Name = "panel_left_btn";
+            this.panel_left_btn.Size = new System.Drawing.Size(248, 868);
+            this.panel_left_btn.TabIndex = 1;
+            this.panel_left_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_left_btn_Paint);
             // 
             // btnLogOut
             // 
-            resources.ApplyResources(this.btnLogOut, "btnLogOut");
             this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.btnLogOut.Location = new System.Drawing.Point(16, 758);
             this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(236, 110);
+            this.btnLogOut.TabIndex = 6;
+            this.btnLogOut.Text = "Log out";
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // panelLeft
             // 
-            resources.ApplyResources(this.panelLeft, "panelLeft");
             this.panelLeft.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(15, 111);
+            this.panelLeft.TabIndex = 3;
+            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
             // btnPatHistory
             // 
-            resources.ApplyResources(this.btnPatHistory, "btnPatHistory");
             this.btnPatHistory.FlatAppearance.BorderSize = 0;
+            this.btnPatHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatHistory.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btnPatHistory.ForeColor = System.Drawing.Color.White;
+            this.btnPatHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnPatHistory.Image")));
+            this.btnPatHistory.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.btnPatHistory.Location = new System.Drawing.Point(21, 220);
             this.btnPatHistory.Name = "btnPatHistory";
+            this.btnPatHistory.Size = new System.Drawing.Size(218, 108);
+            this.btnPatHistory.TabIndex = 5;
+            this.btnPatHistory.Text = "Patient History";
+            this.btnPatHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPatHistory.UseVisualStyleBackColor = true;
             this.btnPatHistory.Click += new System.EventHandler(this.btnPatHistory_Click);
             // 
             // btnNewPat
             // 
-            resources.ApplyResources(this.btnNewPat, "btnNewPat");
             this.btnNewPat.FlatAppearance.BorderSize = 0;
+            this.btnNewPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewPat.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btnNewPat.ForeColor = System.Drawing.Color.White;
+            this.btnNewPat.Image = ((System.Drawing.Image)(resources.GetObject("btnNewPat.Image")));
+            this.btnNewPat.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.btnNewPat.Location = new System.Drawing.Point(12, 111);
             this.btnNewPat.Name = "btnNewPat";
+            this.btnNewPat.Size = new System.Drawing.Size(227, 103);
+            this.btnNewPat.TabIndex = 4;
+            this.btnNewPat.Text = "New Patient";
+            this.btnNewPat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNewPat.UseVisualStyleBackColor = true;
             this.btnNewPat.Click += new System.EventHandler(this.btnNewPat_Click);
             // 
             // btnHome
             // 
-            resources.ApplyResources(this.btnHome, "btnHome");
             this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.btnHome.Location = new System.Drawing.Point(18, 3);
             this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(221, 108);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel_AddPatient2
             // 
-            resources.ApplyResources(this.panel_AddPatient2, "panel_AddPatient2");
-            this.panel_AddPatient2.Controls.Add(this.comboBox_gender);
-            this.panel_AddPatient2.Controls.Add(this.label1);
-            this.panel_AddPatient2.Controls.Add(this.groupBox5);
-            this.panel_AddPatient2.Controls.Add(this.groupBox4);
             this.panel_AddPatient2.Controls.Add(this.groupBox3);
+            this.panel_AddPatient2.Controls.Add(this.groupBox5);
             this.panel_AddPatient2.Controls.Add(this.groupBox2);
             this.panel_AddPatient2.Controls.Add(this.groupBox1);
+            this.panel_AddPatient2.Controls.Add(this.comboBox_gender);
+            this.panel_AddPatient2.Controls.Add(this.label1);
+            this.panel_AddPatient2.Controls.Add(this.groupBox4);
             this.panel_AddPatient2.Controls.Add(this.label22);
             this.panel_AddPatient2.Controls.Add(this.label23);
             this.panel_AddPatient2.Controls.Add(this.label19);
@@ -349,323 +224,753 @@
             this.panel_AddPatient2.Controls.Add(this.label17);
             this.panel_AddPatient2.Controls.Add(this.label16);
             this.panel_AddPatient2.Controls.Add(this.label15);
+            this.panel_AddPatient2.Location = new System.Drawing.Point(254, 49);
             this.panel_AddPatient2.Name = "panel_AddPatient2";
-            // 
-            // comboBox_gender
-            // 
-            resources.ApplyResources(this.comboBox_gender, "comboBox_gender");
-            this.comboBox_gender.FormattingEnabled = true;
-            this.comboBox_gender.Items.AddRange(new object[] {
-            resources.GetString("comboBox_gender.Items"),
-            resources.GetString("comboBox_gender.Items1")});
-            this.comboBox_gender.Name = "comboBox_gender";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // groupBox5
-            // 
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Controls.Add(this.radioButton_Pregnant_N);
-            this.groupBox5.Controls.Add(this.radioButton_Pregnant_Y);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // radioButton_Pregnant_N
-            // 
-            resources.ApplyResources(this.radioButton_Pregnant_N, "radioButton_Pregnant_N");
-            this.radioButton_Pregnant_N.Name = "radioButton_Pregnant_N";
-            this.radioButton_Pregnant_N.TabStop = true;
-            this.radioButton_Pregnant_N.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_Pregnant_Y
-            // 
-            resources.ApplyResources(this.radioButton_Pregnant_Y, "radioButton_Pregnant_Y");
-            this.radioButton_Pregnant_Y.Name = "radioButton_Pregnant_Y";
-            this.radioButton_Pregnant_Y.TabStop = true;
-            this.radioButton_Pregnant_Y.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Controls.Add(this.radioButton_Vomiting_N);
-            this.groupBox4.Controls.Add(this.radioButton_Vomiting_Y);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // radioButton_Vomiting_N
-            // 
-            resources.ApplyResources(this.radioButton_Vomiting_N, "radioButton_Vomiting_N");
-            this.radioButton_Vomiting_N.Name = "radioButton_Vomiting_N";
-            this.radioButton_Vomiting_N.TabStop = true;
-            this.radioButton_Vomiting_N.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_Vomiting_Y
-            // 
-            resources.ApplyResources(this.radioButton_Vomiting_Y, "radioButton_Vomiting_Y");
-            this.radioButton_Vomiting_Y.Name = "radioButton_Vomiting_Y";
-            this.radioButton_Vomiting_Y.TabStop = true;
-            this.radioButton_Vomiting_Y.UseVisualStyleBackColor = true;
+            this.panel_AddPatient2.Size = new System.Drawing.Size(901, 806);
+            this.panel_AddPatient2.TabIndex = 31;
+            this.panel_AddPatient2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_AddPatient2_Paint);
             // 
             // groupBox3
             // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.radioButton_Diarrhea_N);
             this.groupBox3.Controls.Add(this.radioButton_Diarrhea_Y);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox3.Location = new System.Drawing.Point(384, 524);
             this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(365, 40);
+            this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // radioButton_Diarrhea_N
             // 
-            resources.ApplyResources(this.radioButton_Diarrhea_N, "radioButton_Diarrhea_N");
+            this.radioButton_Diarrhea_N.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Diarrhea_N.Location = new System.Drawing.Point(289, 9);
             this.radioButton_Diarrhea_N.Name = "radioButton_Diarrhea_N";
+            this.radioButton_Diarrhea_N.Size = new System.Drawing.Size(70, 31);
+            this.radioButton_Diarrhea_N.TabIndex = 37;
             this.radioButton_Diarrhea_N.TabStop = true;
+            this.radioButton_Diarrhea_N.Text = "No";
             this.radioButton_Diarrhea_N.UseVisualStyleBackColor = true;
+            this.radioButton_Diarrhea_N.CheckedChanged += new System.EventHandler(this.radioButton_Diarrhea_N_CheckedChanged);
             // 
             // radioButton_Diarrhea_Y
             // 
-            resources.ApplyResources(this.radioButton_Diarrhea_Y, "radioButton_Diarrhea_Y");
+            this.radioButton_Diarrhea_Y.AutoSize = true;
+            this.radioButton_Diarrhea_Y.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Diarrhea_Y.Location = new System.Drawing.Point(2, 10);
             this.radioButton_Diarrhea_Y.Name = "radioButton_Diarrhea_Y";
+            this.radioButton_Diarrhea_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Diarrhea_Y.TabIndex = 36;
             this.radioButton_Diarrhea_Y.TabStop = true;
+            this.radioButton_Diarrhea_Y.Text = "Yes";
             this.radioButton_Diarrhea_Y.UseVisualStyleBackColor = true;
+            this.radioButton_Diarrhea_Y.CheckedChanged += new System.EventHandler(this.radioButton_Diarrhea_Y_CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton_Pregnant_N);
+            this.groupBox5.Controls.Add(this.radioButton_Pregnant_Y);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox5.Location = new System.Drawing.Point(380, 674);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(371, 45);
+            this.groupBox5.TabIndex = 44;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // radioButton_Pregnant_N
+            // 
+            this.radioButton_Pregnant_N.AutoSize = true;
+            this.radioButton_Pregnant_N.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioButton_Pregnant_N.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Pregnant_N.Location = new System.Drawing.Point(296, 12);
+            this.radioButton_Pregnant_N.Name = "radioButton_Pregnant_N";
+            this.radioButton_Pregnant_N.Size = new System.Drawing.Size(62, 29);
+            this.radioButton_Pregnant_N.TabIndex = 41;
+            this.radioButton_Pregnant_N.TabStop = true;
+            this.radioButton_Pregnant_N.Text = "No";
+            this.radioButton_Pregnant_N.UseVisualStyleBackColor = true;
+            this.radioButton_Pregnant_N.CheckedChanged += new System.EventHandler(this.radioButton_Pregnant_N_CheckedChanged);
+            // 
+            // radioButton_Pregnant_Y
+            // 
+            this.radioButton_Pregnant_Y.AutoSize = true;
+            this.radioButton_Pregnant_Y.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Pregnant_Y.Location = new System.Drawing.Point(6, 13);
+            this.radioButton_Pregnant_Y.Name = "radioButton_Pregnant_Y";
+            this.radioButton_Pregnant_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Pregnant_Y.TabIndex = 40;
+            this.radioButton_Pregnant_Y.TabStop = true;
+            this.radioButton_Pregnant_Y.Text = "Yes";
+            this.radioButton_Pregnant_Y.UseVisualStyleBackColor = true;
+            this.radioButton_Pregnant_Y.CheckedChanged += new System.EventHandler(this.radioButton_Pregnant_Y_CheckedChanged);
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.radioButton_Fever_N);
             this.groupBox2.Controls.Add(this.radioButton_Fever_Y);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox2.Location = new System.Drawing.Point(384, 455);
             this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(366, 50);
+            this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // radioButton_Fever_N
             // 
-            resources.ApplyResources(this.radioButton_Fever_N, "radioButton_Fever_N");
+            this.radioButton_Fever_N.AutoSize = true;
+            this.radioButton_Fever_N.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Fever_N.Location = new System.Drawing.Point(289, 18);
             this.radioButton_Fever_N.Name = "radioButton_Fever_N";
+            this.radioButton_Fever_N.Size = new System.Drawing.Size(62, 29);
+            this.radioButton_Fever_N.TabIndex = 0;
             this.radioButton_Fever_N.TabStop = true;
+            this.radioButton_Fever_N.Text = "No";
             this.radioButton_Fever_N.UseVisualStyleBackColor = true;
+            this.radioButton_Fever_N.CheckedChanged += new System.EventHandler(this.radioButton_Fever_N_CheckedChanged);
             // 
             // radioButton_Fever_Y
             // 
-            resources.ApplyResources(this.radioButton_Fever_Y, "radioButton_Fever_Y");
+            this.radioButton_Fever_Y.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Fever_Y.Location = new System.Drawing.Point(6, 15);
             this.radioButton_Fever_Y.Name = "radioButton_Fever_Y";
+            this.radioButton_Fever_Y.Size = new System.Drawing.Size(86, 35);
+            this.radioButton_Fever_Y.TabIndex = 34;
             this.radioButton_Fever_Y.TabStop = true;
+            this.radioButton_Fever_Y.Text = "Yes";
             this.radioButton_Fever_Y.UseVisualStyleBackColor = true;
+            this.radioButton_Fever_Y.CheckedChanged += new System.EventHandler(this.radioButton_Fever_Y_CheckedChanged);
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.radioButton_Smokes_N);
             this.groupBox1.Controls.Add(this.radioButton_Smokes_Y);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(383, 364);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(366, 53);
+            this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton_Smokes_N
             // 
-            resources.ApplyResources(this.radioButton_Smokes_N, "radioButton_Smokes_N");
+            this.radioButton_Smokes_N.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Smokes_N.Location = new System.Drawing.Point(290, 15);
             this.radioButton_Smokes_N.Name = "radioButton_Smokes_N";
+            this.radioButton_Smokes_N.Size = new System.Drawing.Size(70, 36);
+            this.radioButton_Smokes_N.TabIndex = 33;
             this.radioButton_Smokes_N.TabStop = true;
+            this.radioButton_Smokes_N.Text = "No";
             this.radioButton_Smokes_N.UseVisualStyleBackColor = true;
+            this.radioButton_Smokes_N.CheckedChanged += new System.EventHandler(this.radioButton_Smokes_N_CheckedChanged);
             // 
             // radioButton_Smokes_Y
             // 
-            resources.ApplyResources(this.radioButton_Smokes_Y, "radioButton_Smokes_Y");
+            this.radioButton_Smokes_Y.AutoSize = true;
             this.radioButton_Smokes_Y.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButton_Smokes_Y.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Smokes_Y.Location = new System.Drawing.Point(9, 17);
             this.radioButton_Smokes_Y.Name = "radioButton_Smokes_Y";
+            this.radioButton_Smokes_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Smokes_Y.TabIndex = 32;
             this.radioButton_Smokes_Y.TabStop = true;
+            this.radioButton_Smokes_Y.Text = "Yes";
             this.radioButton_Smokes_Y.UseVisualStyleBackColor = true;
+            this.radioButton_Smokes_Y.CheckedChanged += new System.EventHandler(this.radioButton_Smokes_Y_CheckedChanged);
+            // 
+            // comboBox_gender
+            // 
+            this.comboBox_gender.FormattingEnabled = true;
+            this.comboBox_gender.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.comboBox_gender.Location = new System.Drawing.Point(401, 159);
+            this.comboBox_gender.Name = "comboBox_gender";
+            this.comboBox_gender.Size = new System.Drawing.Size(182, 28);
+            this.comboBox_gender.TabIndex = 46;
+            this.comboBox_gender.SelectedIndexChanged += new System.EventHandler(this.comboBox_gender_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label1.Location = new System.Drawing.Point(21, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 32);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Gender";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton_Vomiting_N);
+            this.groupBox4.Controls.Add(this.radioButton_Vomiting_Y);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox4.Location = new System.Drawing.Point(379, 595);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(370, 42);
+            this.groupBox4.TabIndex = 43;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // radioButton_Vomiting_N
+            // 
+            this.radioButton_Vomiting_N.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Vomiting_N.Location = new System.Drawing.Point(294, 9);
+            this.radioButton_Vomiting_N.Name = "radioButton_Vomiting_N";
+            this.radioButton_Vomiting_N.Size = new System.Drawing.Size(57, 27);
+            this.radioButton_Vomiting_N.TabIndex = 39;
+            this.radioButton_Vomiting_N.TabStop = true;
+            this.radioButton_Vomiting_N.Text = "No";
+            this.radioButton_Vomiting_N.UseVisualStyleBackColor = true;
+            this.radioButton_Vomiting_N.CheckedChanged += new System.EventHandler(this.radioButton_Vomiting_N_CheckedChanged);
+            // 
+            // radioButton_Vomiting_Y
+            // 
+            this.radioButton_Vomiting_Y.AutoSize = true;
+            this.radioButton_Vomiting_Y.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.radioButton_Vomiting_Y.Location = new System.Drawing.Point(7, 12);
+            this.radioButton_Vomiting_Y.Name = "radioButton_Vomiting_Y";
+            this.radioButton_Vomiting_Y.Size = new System.Drawing.Size(71, 29);
+            this.radioButton_Vomiting_Y.TabIndex = 40;
+            this.radioButton_Vomiting_Y.TabStop = true;
+            this.radioButton_Vomiting_Y.Text = "Yes";
+            this.radioButton_Vomiting_Y.UseVisualStyleBackColor = true;
+            this.radioButton_Vomiting_Y.CheckedChanged += new System.EventHandler(this.radioButton_Vomiting_Y_CheckedChanged);
             // 
             // label22
             // 
-            resources.ApplyResources(this.label22, "label22");
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label22.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label22.Location = new System.Drawing.Point(26, 678);
             this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(152, 32);
+            this.label22.TabIndex = 29;
+            this.label22.Text = "Pregnant : ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label23
             // 
-            resources.ApplyResources(this.label23, "label23");
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label23.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label23.Location = new System.Drawing.Point(24, 593);
             this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(155, 32);
+            this.label23.TabIndex = 47;
+            this.label23.Text = "Vomiting  : ";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label19
             // 
-            resources.ApplyResources(this.label19, "label19");
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label19.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label19.Location = new System.Drawing.Point(21, 524);
             this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(145, 32);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "Diarrhea : ";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
-            resources.ApplyResources(this.label20, "label20");
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label20.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label20.Location = new System.Drawing.Point(21, 455);
             this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(105, 30);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "Fever  : ";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
-            resources.ApplyResources(this.label21, "label21");
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label21.Location = new System.Drawing.Point(21, 383);
             this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(138, 32);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "Smokes : ";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // button_Continue_Panel2
             // 
-            resources.ApplyResources(this.button_Continue_Panel2, "button_Continue_Panel2");
+            this.button_Continue_Panel2.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.button_Continue_Panel2.Location = new System.Drawing.Point(703, 284);
             this.button_Continue_Panel2.Name = "button_Continue_Panel2";
+            this.button_Continue_Panel2.Size = new System.Drawing.Size(115, 56);
+            this.button_Continue_Panel2.TabIndex = 48;
+            this.button_Continue_Panel2.Text = "Submit";
             this.button_Continue_Panel2.UseVisualStyleBackColor = true;
             this.button_Continue_Panel2.Click += new System.EventHandler(this.button_Continue_Panel2_Click);
             // 
             // textBox_Age_panel2
             // 
-            resources.ApplyResources(this.textBox_Age_panel2, "textBox_Age_panel2");
+            this.textBox_Age_panel2.Location = new System.Drawing.Point(401, 299);
             this.textBox_Age_panel2.Name = "textBox_Age_panel2";
+            this.textBox_Age_panel2.Size = new System.Drawing.Size(101, 26);
+            this.textBox_Age_panel2.TabIndex = 23;
+            this.textBox_Age_panel2.TextChanged += new System.EventHandler(this.textBox_Age_panel2_TextChanged);
             // 
             // textBox_ID_panel2
             // 
-            resources.ApplyResources(this.textBox_ID_panel2, "textBox_ID_panel2");
+            this.textBox_ID_panel2.Location = new System.Drawing.Point(402, 102);
             this.textBox_ID_panel2.Name = "textBox_ID_panel2";
+            this.textBox_ID_panel2.Size = new System.Drawing.Size(349, 26);
+            this.textBox_ID_panel2.TabIndex = 49;
+            this.textBox_ID_panel2.TextChanged += new System.EventHandler(this.textBox_ID_panel2_TextChanged);
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.button1.Location = new System.Drawing.Point(53, 1217);
             this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(258, 92);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // comboBox_Eth_panel2
             // 
-            resources.ApplyResources(this.comboBox_Eth_panel2, "comboBox_Eth_panel2");
-            this.comboBox_Eth_panel2.FormattingEnabled = true;
             this.comboBox_Eth_panel2.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Eth_panel2.Items"),
-            resources.GetString("comboBox_Eth_panel2.Items1"),
-            resources.GetString("comboBox_Eth_panel2.Items2"),
-            resources.GetString("comboBox_Eth_panel2.Items3")});
+            "Other",
+            "Ethiopian",
+            "Middle-Eastren"});
+            this.comboBox_Eth_panel2.Location = new System.Drawing.Point(401, 226);
             this.comboBox_Eth_panel2.Name = "comboBox_Eth_panel2";
+            this.comboBox_Eth_panel2.Size = new System.Drawing.Size(119, 28);
+            this.comboBox_Eth_panel2.TabIndex = 50;
+            this.comboBox_Eth_panel2.SelectedIndexChanged += new System.EventHandler(this.comboBox_Eth_panel2_SelectedIndexChanged);
             // 
             // label18
             // 
-            resources.ApplyResources(this.label18, "label18");
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label18.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label18.Location = new System.Drawing.Point(21, 299);
             this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(87, 32);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Age : ";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
-            resources.ApplyResources(this.label17, "label17");
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label17.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label17.Location = new System.Drawing.Point(26, 228);
             this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(123, 32);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Ethnicity";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
-            resources.ApplyResources(this.label16, "label16");
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label16.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label16.Location = new System.Drawing.Point(22, 102);
             this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 32);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "ID : ";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label15
             // 
-            resources.ApplyResources(this.label15, "label15");
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label15.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label15.Location = new System.Drawing.Point(284, 11);
             this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(283, 37);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Patient Questioner";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // Button_Submit
+            // 
+            this.Button_Submit.BackColor = System.Drawing.Color.Silver;
+            this.Button_Submit.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold);
+            this.Button_Submit.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Button_Submit.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Button_Submit.Location = new System.Drawing.Point(672, 685);
+            this.Button_Submit.Name = "Button_Submit";
+            this.Button_Submit.Size = new System.Drawing.Size(123, 64);
+            this.Button_Submit.TabIndex = 28;
+            this.Button_Submit.Text = "Submit";
+            this.Button_Submit.UseVisualStyleBackColor = false;
+            this.Button_Submit.Click += new System.EventHandler(this.Button_Submit_Click_1);
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Controls.Add(this.MaxmizeBtn);
             this.panel4.Controls.Add(this.ExitButton);
             this.panel4.Controls.Add(this.minimizeBtn);
+            this.panel4.Location = new System.Drawing.Point(953, 2);
             this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(198, 46);
+            this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // MaxmizeBtn
             // 
-            resources.ApplyResources(this.MaxmizeBtn, "MaxmizeBtn");
             this.MaxmizeBtn.BackgroundImage = global::PatientCare360.Properties.Resources.icon_maximize;
+            this.MaxmizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.MaxmizeBtn.FlatAppearance.BorderSize = 0;
+            this.MaxmizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaxmizeBtn.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.MaxmizeBtn.Location = new System.Drawing.Point(84, 3);
             this.MaxmizeBtn.Name = "MaxmizeBtn";
+            this.MaxmizeBtn.Size = new System.Drawing.Size(59, 38);
+            this.MaxmizeBtn.TabIndex = 0;
             this.MaxmizeBtn.UseVisualStyleBackColor = true;
             this.MaxmizeBtn.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // ExitButton
             // 
-            resources.ApplyResources(this.ExitButton, "ExitButton");
             this.ExitButton.BackgroundImage = global::PatientCare360.Properties.Resources.icon_close;
+            this.ExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.ExitButton.Location = new System.Drawing.Point(138, -2);
             this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(67, 43);
+            this.ExitButton.TabIndex = 11;
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // minimizeBtn
             // 
-            resources.ApplyResources(this.minimizeBtn, "minimizeBtn");
             this.minimizeBtn.BackgroundImage = global::PatientCare360.Properties.Resources.icon_minimize;
+            this.minimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.minimizeBtn.FlatAppearance.BorderSize = 0;
+            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeBtn.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.minimizeBtn.Location = new System.Drawing.Point(3, 0);
             this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.Size = new System.Drawing.Size(74, 43);
+            this.minimizeBtn.TabIndex = 9;
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
-            // panel1
+            // panel_AddPatient
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel_left_btn);
-            this.panel1.Controls.Add(this.panel_AddPatient2);
-            this.panel1.Controls.Add(this.panel_AddPatient);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel1.Name = "panel1";
-            this.panel1.AutoSizeChanged += new System.EventHandler(this.DoctorUI_Load);
-            this.panel1.Resize += new System.EventHandler(this.DoctorUI_Load);
+            this.panel_AddPatient.Controls.Add(this.label2);
+            this.panel_AddPatient.Controls.Add(this.label14);
+            this.panel_AddPatient.Controls.Add(this.label4);
+            this.panel_AddPatient.Controls.Add(this.Button_Submit);
+            this.panel_AddPatient.Controls.Add(this.Slider_HCT);
+            this.panel_AddPatient.Controls.Add(this.label5);
+            this.panel_AddPatient.Controls.Add(this.Slider_Lymph);
+            this.panel_AddPatient.Controls.Add(this.label6);
+            this.panel_AddPatient.Controls.Add(this.Slider_Neut);
+            this.panel_AddPatient.Controls.Add(this.label7);
+            this.panel_AddPatient.Controls.Add(this.label3);
+            this.panel_AddPatient.Controls.Add(this.textBox_AP);
+            this.panel_AddPatient.Controls.Add(this.label9);
+            this.panel_AddPatient.Controls.Add(this.textBox_HDL);
+            this.panel_AddPatient.Controls.Add(this.label8);
+            this.panel_AddPatient.Controls.Add(this.textbox_iron);
+            this.panel_AddPatient.Controls.Add(this.label11);
+            this.panel_AddPatient.Controls.Add(this.TextBox_HB);
+            this.panel_AddPatient.Controls.Add(this.label10);
+            this.panel_AddPatient.Controls.Add(this.TextBox_Creatinine);
+            this.panel_AddPatient.Controls.Add(this.label13);
+            this.panel_AddPatient.Controls.Add(this.Textbox_Urea);
+            this.panel_AddPatient.Controls.Add(this.label12);
+            this.panel_AddPatient.Controls.Add(this.TextBox_RBC);
+            this.panel_AddPatient.Controls.Add(this.TextBox_WBC);
+            this.panel_AddPatient.Location = new System.Drawing.Point(254, 38);
+            this.panel_AddPatient.Name = "panel_AddPatient";
+            this.panel_AddPatient.Size = new System.Drawing.Size(894, 800);
+            this.panel_AddPatient.TabIndex = 33;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label2.Location = new System.Drawing.Point(49, 462);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 32);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Hb(mg):";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label14.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label14.Location = new System.Drawing.Point(53, 245);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 38);
+            this.label14.TabIndex = 52;
+            this.label14.Text = "RBC:";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label4.Location = new System.Drawing.Point(49, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(163, 41);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Lymph(%):";
+            // 
+            // Slider_HCT
+            // 
+            this.Slider_HCT.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Slider_HCT.Location = new System.Drawing.Point(245, 316);
+            this.Slider_HCT.Name = "Slider_HCT";
+            this.Slider_HCT.Size = new System.Drawing.Size(379, 69);
+            this.Slider_HCT.TabIndex = 53;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label5.Location = new System.Drawing.Point(49, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 32);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Neut(%):";
+            // 
+            // Slider_Lymph
+            // 
+            this.Slider_Lymph.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Slider_Lymph.Location = new System.Drawing.Point(245, 174);
+            this.Slider_Lymph.Name = "Slider_Lymph";
+            this.Slider_Lymph.Size = new System.Drawing.Size(379, 69);
+            this.Slider_Lymph.TabIndex = 51;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label6.Location = new System.Drawing.Point(49, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 32);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "WBC:";
+            // 
+            // Slider_Neut
+            // 
+            this.Slider_Neut.AutoSize = false;
+            this.Slider_Neut.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Slider_Neut.Location = new System.Drawing.Point(245, 94);
+            this.Slider_Neut.Name = "Slider_Neut";
+            this.Slider_Neut.Size = new System.Drawing.Size(379, 56);
+            this.Slider_Neut.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label7.Location = new System.Drawing.Point(45, 316);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 32);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "HCT(%):";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label3.Location = new System.Drawing.Point(45, 217);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 32);
+            this.label3.TabIndex = 55;
+            // 
+            // textBox_AP
+            // 
+            this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox_AP.Location = new System.Drawing.Point(245, 741);
+            this.textBox_AP.Name = "textBox_AP";
+            this.textBox_AP.Size = new System.Drawing.Size(379, 26);
+            this.textBox_AP.TabIndex = 49;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label9.Location = new System.Drawing.Point(53, 536);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 32);
+            this.label9.TabIndex = 37;
+            // 
+            // textBox_HDL
+            // 
+            this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox_HDL.Location = new System.Drawing.Point(245, 682);
+            this.textBox_HDL.Name = "textBox_HDL";
+            this.textBox_HDL.Size = new System.Drawing.Size(379, 26);
+            this.textBox_HDL.TabIndex = 48;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label8.Location = new System.Drawing.Point(45, 394);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 32);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Urea(mg):";
+            // 
+            // textbox_iron
+            // 
+            this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textbox_iron.Location = new System.Drawing.Point(245, 600);
+            this.textbox_iron.Name = "textbox_iron";
+            this.textbox_iron.Size = new System.Drawing.Size(379, 26);
+            this.textbox_iron.TabIndex = 47;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label11.Location = new System.Drawing.Point(60, 600);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 29);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Iron:";
+            // 
+            // TextBox_HB
+            // 
+            this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_HB.Location = new System.Drawing.Point(245, 463);
+            this.TextBox_HB.Name = "TextBox_HB";
+            this.TextBox_HB.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_HB.TabIndex = 46;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label10.Location = new System.Drawing.Point(49, 530);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(153, 32);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Creatinine:";
+            // 
+            // TextBox_Creatinine
+            // 
+            this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_Creatinine.Location = new System.Drawing.Point(245, 537);
+            this.TextBox_Creatinine.Name = "TextBox_Creatinine";
+            this.TextBox_Creatinine.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_Creatinine.TabIndex = 45;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label13.Location = new System.Drawing.Point(60, 741);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 32);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "AP:";
+            // 
+            // Textbox_Urea
+            // 
+            this.Textbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Textbox_Urea.Location = new System.Drawing.Point(245, 394);
+            this.Textbox_Urea.Name = "Textbox_Urea";
+            this.Textbox_Urea.Size = new System.Drawing.Size(379, 26);
+            this.Textbox_Urea.TabIndex = 54;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.label12.Location = new System.Drawing.Point(45, 676);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 32);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "HDL(mg):";
+            // 
+            // TextBox_RBC
+            // 
+            this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_RBC.Location = new System.Drawing.Point(245, 252);
+            this.TextBox_RBC.Name = "TextBox_RBC";
+            this.TextBox_RBC.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_RBC.TabIndex = 44;
+            // 
+            // TextBox_WBC
+            // 
+            this.TextBox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox_WBC.Location = new System.Drawing.Point(245, 30);
+            this.TextBox_WBC.Name = "TextBox_WBC";
+            this.TextBox_WBC.Size = new System.Drawing.Size(379, 26);
+            this.TextBox_WBC.TabIndex = 43;
             // 
             // DoctorUI
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.Controls.Add(this.panel1);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1152, 860);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel_left_btn);
+            this.Controls.Add(this.panel_AddPatient2);
+            this.Controls.Add(this.panel_AddPatient);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "DoctorUI";
+            this.Text = "DoctorUI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DoctorUI_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DoctorUI_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DoctorUI_MouseMove);
+            this.panel_left_btn.ResumeLayout(false);
+            this.panel_AddPatient2.ResumeLayout(false);
+            this.panel_AddPatient2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.panel_AddPatient.ResumeLayout(false);
             this.panel_AddPatient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).EndInit();
-            this.panel_left_btn.ResumeLayout(false);
-            this.panel_AddPatient2.ResumeLayout(false);
-            this.panel_AddPatient2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_AddPatient;
-        private System.Windows.Forms.TrackBar Slider_HCT;
-        private System.Windows.Forms.TrackBar Slider_Lymph;
-        private System.Windows.Forms.TrackBar Slider_Neut;
-        private System.Windows.Forms.TextBox textBox_AP;
-        private System.Windows.Forms.TextBox textBox_HDL;
-        private System.Windows.Forms.TextBox textbox_iron;
-        private System.Windows.Forms.TextBox TextBox_HB;
-        private System.Windows.Forms.TextBox TextBox_Creatinine;
-        private System.Windows.Forms.TextBox Textbox_Urea;
-        private System.Windows.Forms.TextBox TextBox_RBC;
-        private System.Windows.Forms.TextBox TextBox_WBC;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label14;
+
         private System.Windows.Forms.Panel panel_left_btn;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel panelLeft;
@@ -673,6 +978,24 @@
         private System.Windows.Forms.Button btnNewPat;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel_AddPatient2;
+        private System.Windows.Forms.ComboBox comboBox_gender;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Button_Submit;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton_Pregnant_N;
+        private System.Windows.Forms.RadioButton radioButton_Pregnant_Y;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButton_Vomiting_N;
+        private System.Windows.Forms.RadioButton radioButton_Vomiting_Y;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radioButton_Diarrhea_N;
+        private System.Windows.Forms.RadioButton radioButton_Diarrhea_Y;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton_Fever_N;
+        private System.Windows.Forms.RadioButton radioButton_Fever_Y;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton_Smokes_N;
+        private System.Windows.Forms.RadioButton radioButton_Smokes_Y;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label19;
@@ -691,24 +1014,30 @@
         private System.Windows.Forms.Button MaxmizeBtn;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button minimizeBtn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton_Smokes_N;
-        private System.Windows.Forms.RadioButton radioButton_Smokes_Y;
-        private System.Windows.Forms.Button Button_Submit;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton_Pregnant_N;
-        private System.Windows.Forms.RadioButton radioButton_Pregnant_Y;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton_Vomiting_N;
-        private System.Windows.Forms.RadioButton radioButton_Vomiting_Y;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton_Diarrhea_N;
-        private System.Windows.Forms.RadioButton radioButton_Diarrhea_Y;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton_Fever_N;
-        private System.Windows.Forms.RadioButton radioButton_Fever_Y;
-        private System.Windows.Forms.ComboBox comboBox_gender;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel_AddPatient;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar Slider_HCT;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TrackBar Slider_Lymph;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TrackBar Slider_Neut;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox_AP;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox_HDL;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textbox_iron;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox TextBox_HB;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TextBox_Creatinine;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox Textbox_Urea;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox TextBox_RBC;
+        private System.Windows.Forms.TextBox TextBox_WBC;
     }
 }
