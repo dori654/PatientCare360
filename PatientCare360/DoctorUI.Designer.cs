@@ -73,6 +73,15 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.panel_AddPatient = new System.Windows.Forms.Panel();
+            this.Patient_History_Panel = new System.Windows.Forms.Panel();
+            this.richTextBox_history = new System.Windows.Forms.RichTextBox();
+            this.button_history_find = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Search_Patient_label = new System.Windows.Forms.Label();
+            this.TextBox_Search_Patient = new System.Windows.Forms.TextBox();
+            this.Track_bar_precentage3_label = new System.Windows.Forms.Label();
+            this.Track_bar_precentage2_label = new System.Windows.Forms.Label();
+            this.Track_bar_precentage1_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -97,12 +106,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TextBox_RBC = new System.Windows.Forms.TextBox();
             this.TextBox_WBC = new System.Windows.Forms.TextBox();
-            this.Track_bar_precentage1_label = new System.Windows.Forms.Label();
-            this.Track_bar_precentage2_label = new System.Windows.Forms.Label();
-            this.Track_bar_precentage3_label = new System.Windows.Forms.Label();
-            this.Patient_History_Panel = new System.Windows.Forms.Panel();
-            this.Search_Patient_TextBox = new System.Windows.Forms.TextBox();
-            this.Search_Patient_label = new System.Windows.Forms.Label();
             this.panel_left_btn.SuspendLayout();
             this.panel_AddPatient2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -112,10 +115,10 @@
             this.groupBox4.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel_AddPatient.SuspendLayout();
+            this.Patient_History_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).BeginInit();
-            this.Patient_History_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_left_btn
@@ -138,7 +141,7 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.btnLogOut.Location = new System.Drawing.Point(16, 758);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 740);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(236, 110);
             this.btnLogOut.TabIndex = 6;
@@ -382,7 +385,7 @@
             "M"});
             this.comboBox_gender.Location = new System.Drawing.Point(401, 159);
             this.comboBox_gender.Name = "comboBox_gender";
-            this.comboBox_gender.Size = new System.Drawing.Size(182, 24);
+            this.comboBox_gender.Size = new System.Drawing.Size(182, 28);
             this.comboBox_gender.TabIndex = 46;
             // 
             // label1
@@ -499,14 +502,14 @@
             // 
             this.textBox_Age_panel2.Location = new System.Drawing.Point(401, 299);
             this.textBox_Age_panel2.Name = "textBox_Age_panel2";
-            this.textBox_Age_panel2.Size = new System.Drawing.Size(101, 22);
+            this.textBox_Age_panel2.Size = new System.Drawing.Size(101, 26);
             this.textBox_Age_panel2.TabIndex = 23;
             // 
             // textBox_ID_panel2
             // 
             this.textBox_ID_panel2.Location = new System.Drawing.Point(402, 102);
             this.textBox_ID_panel2.Name = "textBox_ID_panel2";
-            this.textBox_ID_panel2.Size = new System.Drawing.Size(349, 22);
+            this.textBox_ID_panel2.Size = new System.Drawing.Size(349, 26);
             this.textBox_ID_panel2.TabIndex = 49;
             // 
             // button1
@@ -527,7 +530,7 @@
             "Middle-Eastren"});
             this.comboBox_Eth_panel2.Location = new System.Drawing.Point(401, 226);
             this.comboBox_Eth_panel2.Name = "comboBox_Eth_panel2";
-            this.comboBox_Eth_panel2.Size = new System.Drawing.Size(119, 24);
+            this.comboBox_Eth_panel2.Size = new System.Drawing.Size(119, 28);
             this.comboBox_Eth_panel2.TabIndex = 50;
             // 
             // label18
@@ -675,6 +678,94 @@
             this.panel_AddPatient.Size = new System.Drawing.Size(894, 800);
             this.panel_AddPatient.TabIndex = 33;
             // 
+            // Patient_History_Panel
+            // 
+            this.Patient_History_Panel.Controls.Add(this.richTextBox_history);
+            this.Patient_History_Panel.Controls.Add(this.button_history_find);
+            this.Patient_History_Panel.Controls.Add(this.label24);
+            this.Patient_History_Panel.Controls.Add(this.Search_Patient_label);
+            this.Patient_History_Panel.Controls.Add(this.TextBox_Search_Patient);
+            this.Patient_History_Panel.Location = new System.Drawing.Point(0, 3);
+            this.Patient_History_Panel.Name = "Patient_History_Panel";
+            this.Patient_History_Panel.Size = new System.Drawing.Size(898, 794);
+            this.Patient_History_Panel.TabIndex = 60;
+            this.Patient_History_Panel.Visible = false;
+            // 
+            // richTextBox_history
+            // 
+            this.richTextBox_history.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox_history.Location = new System.Drawing.Point(31, 178);
+            this.richTextBox_history.Name = "richTextBox_history";
+            this.richTextBox_history.Size = new System.Drawing.Size(809, 596);
+            this.richTextBox_history.TabIndex = 4;
+            this.richTextBox_history.Text = "";
+            // 
+            // button_history_find
+            // 
+            this.button_history_find.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_history_find.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_history_find.Location = new System.Drawing.Point(731, 82);
+            this.button_history_find.Name = "button_history_find";
+            this.button_history_find.Size = new System.Drawing.Size(109, 53);
+            this.button_history_find.TabIndex = 3;
+            this.button_history_find.Text = "Find";
+            this.button_history_find.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label24.Location = new System.Drawing.Point(25, 96);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 32);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "ID: ";
+            // 
+            // Search_Patient_label
+            // 
+            this.Search_Patient_label.AutoSize = true;
+            this.Search_Patient_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Patient_label.Location = new System.Drawing.Point(274, 19);
+            this.Search_Patient_label.Name = "Search_Patient_label";
+            this.Search_Patient_label.Size = new System.Drawing.Size(247, 25);
+            this.Search_Patient_label.TabIndex = 1;
+            this.Search_Patient_label.Text = "Search Patient\'s history:";
+            // 
+            // TextBox_Search_Patient
+            // 
+            this.TextBox_Search_Patient.Location = new System.Drawing.Point(134, 98);
+            this.TextBox_Search_Patient.Name = "TextBox_Search_Patient";
+            this.TextBox_Search_Patient.Size = new System.Drawing.Size(270, 26);
+            this.TextBox_Search_Patient.TabIndex = 0;
+            // 
+            // Track_bar_precentage3_label
+            // 
+            this.Track_bar_precentage3_label.AutoSize = true;
+            this.Track_bar_precentage3_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Track_bar_precentage3_label.Location = new System.Drawing.Point(617, 313);
+            this.Track_bar_precentage3_label.Name = "Track_bar_precentage3_label";
+            this.Track_bar_precentage3_label.Size = new System.Drawing.Size(39, 32);
+            this.Track_bar_precentage3_label.TabIndex = 59;
+            this.Track_bar_precentage3_label.Text = "%";
+            // 
+            // Track_bar_precentage2_label
+            // 
+            this.Track_bar_precentage2_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Track_bar_precentage2_label.Location = new System.Drawing.Point(617, 174);
+            this.Track_bar_precentage2_label.Name = "Track_bar_precentage2_label";
+            this.Track_bar_precentage2_label.Size = new System.Drawing.Size(110, 40);
+            this.Track_bar_precentage2_label.TabIndex = 58;
+            this.Track_bar_precentage2_label.Text = "%";
+            // 
+            // Track_bar_precentage1_label
+            // 
+            this.Track_bar_precentage1_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Track_bar_precentage1_label.Location = new System.Drawing.Point(618, 94);
+            this.Track_bar_precentage1_label.Name = "Track_bar_precentage1_label";
+            this.Track_bar_precentage1_label.Size = new System.Drawing.Size(91, 56);
+            this.Track_bar_precentage1_label.TabIndex = 57;
+            this.Track_bar_precentage1_label.Text = "%";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -785,7 +876,7 @@
             this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox_AP.Location = new System.Drawing.Point(245, 741);
             this.textBox_AP.Name = "textBox_AP";
-            this.textBox_AP.Size = new System.Drawing.Size(379, 22);
+            this.textBox_AP.Size = new System.Drawing.Size(379, 26);
             this.textBox_AP.TabIndex = 49;
             // 
             // label9
@@ -803,7 +894,7 @@
             this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox_HDL.Location = new System.Drawing.Point(245, 682);
             this.textBox_HDL.Name = "textBox_HDL";
-            this.textBox_HDL.Size = new System.Drawing.Size(379, 22);
+            this.textBox_HDL.Size = new System.Drawing.Size(379, 26);
             this.textBox_HDL.TabIndex = 48;
             // 
             // label8
@@ -822,7 +913,7 @@
             this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textbox_iron.Location = new System.Drawing.Point(245, 600);
             this.textbox_iron.Name = "textbox_iron";
-            this.textbox_iron.Size = new System.Drawing.Size(379, 22);
+            this.textbox_iron.Size = new System.Drawing.Size(379, 26);
             this.textbox_iron.TabIndex = 47;
             // 
             // label11
@@ -840,7 +931,7 @@
             this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_HB.Location = new System.Drawing.Point(245, 463);
             this.TextBox_HB.Name = "TextBox_HB";
-            this.TextBox_HB.Size = new System.Drawing.Size(379, 22);
+            this.TextBox_HB.Size = new System.Drawing.Size(379, 26);
             this.TextBox_HB.TabIndex = 46;
             // 
             // label10
@@ -859,7 +950,7 @@
             this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_Creatinine.Location = new System.Drawing.Point(245, 537);
             this.TextBox_Creatinine.Name = "TextBox_Creatinine";
-            this.TextBox_Creatinine.Size = new System.Drawing.Size(379, 22);
+            this.TextBox_Creatinine.Size = new System.Drawing.Size(379, 26);
             this.TextBox_Creatinine.TabIndex = 45;
             // 
             // label13
@@ -878,7 +969,7 @@
             this.Textbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Textbox_Urea.Location = new System.Drawing.Point(245, 394);
             this.Textbox_Urea.Name = "Textbox_Urea";
-            this.Textbox_Urea.Size = new System.Drawing.Size(379, 22);
+            this.Textbox_Urea.Size = new System.Drawing.Size(379, 26);
             this.Textbox_Urea.TabIndex = 54;
             // 
             // label12
@@ -897,7 +988,7 @@
             this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_RBC.Location = new System.Drawing.Point(245, 252);
             this.TextBox_RBC.Name = "TextBox_RBC";
-            this.TextBox_RBC.Size = new System.Drawing.Size(379, 22);
+            this.TextBox_RBC.Size = new System.Drawing.Size(379, 26);
             this.TextBox_RBC.TabIndex = 44;
             // 
             // TextBox_WBC
@@ -905,65 +996,8 @@
             this.TextBox_WBC.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TextBox_WBC.Location = new System.Drawing.Point(245, 30);
             this.TextBox_WBC.Name = "TextBox_WBC";
-            this.TextBox_WBC.Size = new System.Drawing.Size(379, 22);
+            this.TextBox_WBC.Size = new System.Drawing.Size(379, 26);
             this.TextBox_WBC.TabIndex = 43;
-            // 
-            // Track_bar_precentage1_label
-            // 
-            this.Track_bar_precentage1_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Track_bar_precentage1_label.Location = new System.Drawing.Point(618, 94);
-            this.Track_bar_precentage1_label.Name = "Track_bar_precentage1_label";
-            this.Track_bar_precentage1_label.Size = new System.Drawing.Size(91, 56);
-            this.Track_bar_precentage1_label.TabIndex = 57;
-            this.Track_bar_precentage1_label.Text = "%";
-            this.Track_bar_precentage1_label.Click += new System.EventHandler(this.label24_Click);
-            // 
-            // Track_bar_precentage2_label
-            // 
-            this.Track_bar_precentage2_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Track_bar_precentage2_label.Location = new System.Drawing.Point(617, 174);
-            this.Track_bar_precentage2_label.Name = "Track_bar_precentage2_label";
-            this.Track_bar_precentage2_label.Size = new System.Drawing.Size(110, 40);
-            this.Track_bar_precentage2_label.TabIndex = 58;
-            this.Track_bar_precentage2_label.Text = "%";
-            // 
-            // Track_bar_precentage3_label
-            // 
-            this.Track_bar_precentage3_label.AutoSize = true;
-            this.Track_bar_precentage3_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Track_bar_precentage3_label.Location = new System.Drawing.Point(617, 313);
-            this.Track_bar_precentage3_label.Name = "Track_bar_precentage3_label";
-            this.Track_bar_precentage3_label.Size = new System.Drawing.Size(40, 32);
-            this.Track_bar_precentage3_label.TabIndex = 59;
-            this.Track_bar_precentage3_label.Text = "%";
-            // 
-            // Patient_History_Panel
-            // 
-            this.Patient_History_Panel.Controls.Add(this.Search_Patient_label);
-            this.Patient_History_Panel.Controls.Add(this.Search_Patient_TextBox);
-            this.Patient_History_Panel.Location = new System.Drawing.Point(0, 3);
-            this.Patient_History_Panel.Name = "Patient_History_Panel";
-            this.Patient_History_Panel.Size = new System.Drawing.Size(898, 794);
-            this.Patient_History_Panel.TabIndex = 60;
-            this.Patient_History_Panel.Visible = false;
-            // 
-            // Search_Patient_TextBox
-            // 
-            this.Search_Patient_TextBox.Location = new System.Drawing.Point(282, 33);
-            this.Search_Patient_TextBox.Name = "Search_Patient_TextBox";
-            this.Search_Patient_TextBox.Size = new System.Drawing.Size(238, 22);
-            this.Search_Patient_TextBox.TabIndex = 0;
-            // 
-            // Search_Patient_label
-            // 
-            this.Search_Patient_label.AutoSize = true;
-            this.Search_Patient_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Search_Patient_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_Patient_label.Location = new System.Drawing.Point(13, 29);
-            this.Search_Patient_label.Name = "Search_Patient_label";
-            this.Search_Patient_label.Size = new System.Drawing.Size(249, 27);
-            this.Search_Patient_label.TabIndex = 1;
-            this.Search_Patient_label.Text = "Search Patient\'s history:";
             // 
             // DoctorUI
             // 
@@ -1002,11 +1036,11 @@
             this.panel4.ResumeLayout(false);
             this.panel_AddPatient.ResumeLayout(false);
             this.panel_AddPatient.PerformLayout();
+            this.Patient_History_Panel.ResumeLayout(false);
+            this.Patient_History_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_HCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Lymph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slider_Neut)).EndInit();
-            this.Patient_History_Panel.ResumeLayout(false);
-            this.Patient_History_Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1086,6 +1120,9 @@
         private System.Windows.Forms.Label Track_bar_precentage3_label;
         private System.Windows.Forms.Panel Patient_History_Panel;
         private System.Windows.Forms.Label Search_Patient_label;
-        private System.Windows.Forms.TextBox Search_Patient_TextBox;
+        private System.Windows.Forms.TextBox TextBox_Search_Patient;
+        private System.Windows.Forms.RichTextBox richTextBox_history;
+        private System.Windows.Forms.Button button_history_find;
+        private System.Windows.Forms.Label label24;
     }
 }

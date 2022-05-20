@@ -122,91 +122,79 @@ namespace PatientCare360
 
         private void button_Continue_Panel2_Click(object sender, EventArgs e)
         {
-
-
-
-            //TODO: להוסיף פאנל להיסטורי
-            //TODO: הכפתור מוביל לפורם חדש עם פלט של הטיפול
-            //TODO: מתן - לתקן את הבדיקות גואי ,להוסיף עוד 2 לבדיקות 
-
-            dict["age"] = textBox_Age_panel2.Text;
-            dict["gender"] = comboBox_gender.Text;
-            dict["origin"] = comboBox_Eth_panel2.Text;
-            dict["Fever"] = radioButton_Fever_Y.Checked ? "Yes" : "No";
-            dict["Smokers"] = radioButton_Smokes_Y.Checked ? "Yes" : "No";
-            dict["diarrhea"] = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
-            dict["vomiting"] = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
-            if (comboBox_gender.Text == "F")
-                dict["pregnancy"] = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
-            dict["pregnancy"] = "No";
-            //TODO  : לעשות ככה שאם המשתמש זכר לא תופיעה השורה של הריון
-
-
-
+            if (comboBox_gender.Text == "M")
+            {
+                radioButton_Pregnant_Y.Visible=false;
+            }
             if (Check_ID(textBox_ID_panel2.Text) && Check_Age(Convert.ToInt32(textBox_Age_panel2.Text)))
             {
+                dict["age"] = textBox_Age_panel2.Text;
+                dict["gender"] = comboBox_gender.Text;
+                dict["origin"] = comboBox_Eth_panel2.Text;
+                dict["Fever"] = radioButton_Fever_Y.Checked ? "Yes" : "No";
+                dict["Smokers"] = radioButton_Smokes_Y.Checked ? "Yes" : "No";
+                dict["diarrhea"] = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
+                dict["vomiting"] = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
+                if (comboBox_gender.Text == "F")
+                    dict["pregnancy"] = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
+                dict["pregnancy"] = "No";
+
                 pal = new Patient(dict);
                 MessageBox.Show("Patient successfully added");
-
-                //TOOD: new form !
                 this.Visible=false;
                 Treatment treatment = new Treatment();
                 treatment.Visible = true;
                 
                 treatment.info_Treatment(pal.SavePatientfile());
-                
-
-
             }
 
-
-
-
-
-
+           
         }
-
-
-
         private void Button_Submit_Click_1(object sender, EventArgs e)
         {
-            panel_AddPatient.Visible = false;
-            panel_AddPatient2.Visible = true;
-
-            dict["WBC"] = TextBox_WBC.Text;
-            dict["Neut"] = Slider_Neut.Value.ToString();
-            dict["Lymph"] = Slider_Lymph.Value.ToString();
-            dict["RBC"] = TextBox_RBC.Text;
-            dict["HCT"] = Slider_HCT.Value.ToString();
-            dict["Urea"] = Textbox_Urea.Text;
-            dict["Hb"] = TextBox_HB.Text;
-            dict["Creatinine"] = TextBox_Creatinine.Text;
-            dict["Iron"] = textbox_iron.Text;
-            dict["HDL"] = textBox_HDL.Text;
-            dict["AP"] = textBox_AP.Text;
-
-
-
+            if (!isNumeric(TextBox_WBC.Text, TextBox_RBC.Text, Textbox_Urea.Text, TextBox_Creatinine.Text,
+                    textbox_iron.Text, textBox_HDL.Text, textBox_AP.Text))
+            {
+                MessageBox.Show("Enter only numeric values");
+            }
+            else
+            {
+                panel_AddPatient.Visible = false;
+                panel_AddPatient2.Visible = true;
+                dict["WBC"] = TextBox_WBC.Text;
+                dict["Neut"] = Slider_Neut.Value.ToString();
+                dict["Lymph"] = Slider_Lymph.Value.ToString();
+                dict["RBC"] = TextBox_RBC.Text;
+                dict["HCT"] = Slider_HCT.Value.ToString();
+                dict["Urea"] = Textbox_Urea.Text;
+                dict["Hb"] = TextBox_HB.Text;
+                dict["Creatinine"] = TextBox_Creatinine.Text;
+                dict["Iron"] = textbox_iron.Text;
+                dict["HDL"] = textBox_HDL.Text;
+                dict["AP"] = textBox_AP.Text;
+            }
         }
-
+        private bool isNumeric(string text, string s, string text1, string s1, string text2, string s2, string text3)
+        {
+            if(text.All(char.IsNumber)&& s.All(char.IsNumber) && text1.All(char.IsNumber) && s1.All(char.IsNumber) &&
+               text2.All(char.IsNumber) && s2.All(char.IsNumber) && text3.All(char.IsNumber))
+            {
+                return true;
+            }
+            return false;
+        }
         private void Slider_Neut_Scroll(object sender, EventArgs e)
         {
             Track_bar_precentage1_label.Text = Slider_Neut.Value.ToString() + "%";
         }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Slider_Lymph_Scroll(object sender, EventArgs e)
         {
             Track_bar_precentage2_label.Text = Slider_Lymph.Value.ToString() + "%";
         }
-
         private void Slider_HCT_Scroll(object sender, EventArgs e)
         {
             Track_bar_precentage3_label.Text = Slider_HCT.Value.ToString() + "%";
         }
+
     }
 }

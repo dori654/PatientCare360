@@ -52,6 +52,7 @@ namespace PatientCare360.Resources
             this.Final_Button_oK.TabIndex = 1;
             this.Final_Button_oK.Text = "Finish";
             this.Final_Button_oK.UseVisualStyleBackColor = true;
+            this.Final_Button_oK.Click += new System.EventHandler(this.Final_Button_oK_Click);
             // 
             // Treatment
             // 

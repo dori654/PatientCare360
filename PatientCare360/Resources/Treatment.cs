@@ -25,5 +25,13 @@ namespace PatientCare360.Resources
         {
 
         }
+
+        private void Final_Button_oK_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DoctorUI Doctor = new DoctorUI();
+
+            Doctor.Visible = true;
+        }
     }
 }
