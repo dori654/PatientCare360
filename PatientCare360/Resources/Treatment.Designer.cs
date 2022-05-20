@@ -1,5 +1,4 @@
-﻿
-namespace PatientCare360.Resources
+﻿namespace PatientCare360.Resources
 {
     partial class Treatment
     {
@@ -36,19 +35,20 @@ namespace PatientCare360.Resources
             // Treatment_info
             // 
             this.Treatment_info.AutoSize = true;
-            this.Treatment_info.Location = new System.Drawing.Point(22, 29);
+            this.Treatment_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Treatment_info.Location = new System.Drawing.Point(12, 9);
             this.Treatment_info.Name = "Treatment_info";
-            this.Treatment_info.Size = new System.Drawing.Size(37, 20);
+            this.Treatment_info.Size = new System.Drawing.Size(63, 29);
             this.Treatment_info.TabIndex = 0;
-            this.Treatment_info.Text = "Info";
+            this.Treatment_info.Text = "Info:";
             this.Treatment_info.Click += new System.EventHandler(this.Treatment_info_Click);
             // 
             // Final_Button_oK
             // 
-            this.Final_Button_oK.Location = new System.Drawing.Point(533, 306);
-            this.Final_Button_oK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Final_Button_oK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Final_Button_oK.Location = new System.Drawing.Point(690, 665);
             this.Final_Button_oK.Name = "Final_Button_oK";
-            this.Final_Button_oK.Size = new System.Drawing.Size(187, 72);
+            this.Final_Button_oK.Size = new System.Drawing.Size(175, 58);
             this.Final_Button_oK.TabIndex = 1;
             this.Final_Button_oK.Text = "Finish";
             this.Final_Button_oK.UseVisualStyleBackColor = true;
@@ -56,12 +56,15 @@ namespace PatientCare360.Resources
             // 
             // Treatment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 391);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(877, 735);
             this.Controls.Add(this.Final_Button_oK);
             this.Controls.Add(this.Treatment_info);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Name = "Treatment";
             this.Text = "Treatment";
             this.ResumeLayout(false);
