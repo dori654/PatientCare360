@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeOpenXml.ExternalReferences;
 using PatientCare360.Resources;
 
 namespace PatientCare360
@@ -22,6 +23,7 @@ namespace PatientCare360
             
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
+            Patient_History_Panel.Visible=false;
             this.Size = new Size(this.Size.Width, Screen.PrimaryScreen.Bounds.Height);
         }
 
@@ -64,9 +66,10 @@ namespace PatientCare360
         {
             panelLeft.Height = btnPatHistory.Height;
             panelLeft.Top = btnPatHistory.Top;
+            Patient_History_Panel.Visible = true;
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
-            Patient_History_Panel.Visible = true;
+       
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -148,6 +151,15 @@ namespace PatientCare360
                 treatment.info_Treatment(pal.SavePatientfile());
             }
 
+            string fever = radioButton_Fever_Y.Checked ? "Yes" : "No";
+            string smokes = radioButton_Smokes_Y.Checked ? "Yes" : "No";
+            string diarrhea = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
+            string vomiting = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
+            string pregnancy = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
+
+
+            Excel.Excel.AddPatient("Moshe","Davidian",textBox_ID_panel2.Text,textBox_Age_panel2.Text,smokes,fever,diarrhea,vomiting,pregnancy,TextBox_WBC.Text,Slider_Neut.Value.ToString(),Slider_Lymph.Value.ToString(),TextBox_RBC.Text,
+                Slider_HCT.Value.ToString(),Textbox_Urea.Text,TextBox_HB.Text,TextBox_Creatinine.Text,textbox_iron.Text,textBox_HDL.Text,textBox_AP.Text,pal.diagnosis1);
            
         }
         private void Button_Submit_Click_1(object sender, EventArgs e)
@@ -176,12 +188,23 @@ namespace PatientCare360
         }
         private bool isNumeric(string text, string s, string text1, string s1, string text2, string s2, string text3)
         {
-            if(text.All(char.IsNumber)&& s.All(char.IsNumber) && text1.All(char.IsNumber) && s1.All(char.IsNumber) &&
-               text2.All(char.IsNumber) && s2.All(char.IsNumber) && text3.All(char.IsNumber))
+            
+            try
             {
-                return true;
+                double d = double.Parse(text);
+                double a = double.Parse(s);
+                double b = double.Parse(text1);
+                double c = double.Parse(s1);
+                double d1 = double.Parse(text2);
+                double e = double.Parse(s2);
+                double f = double.Parse(text3);
             }
-            return false;
+            catch (FormatException)
+            {
+                return false;
+            }
+            return true;
+
         }
         private void Slider_Neut_Scroll(object sender, EventArgs e)
         {
@@ -196,5 +219,9 @@ namespace PatientCare360
             Track_bar_precentage3_label.Text = Slider_HCT.Value.ToString() + "%";
         }
 
+        private void panel_AddPatient_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

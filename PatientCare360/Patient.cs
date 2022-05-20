@@ -14,11 +14,13 @@ namespace PatientCare360
 {
     class Patient
     {
-
-
-
+        
         Dictionary<string, string> patientInfo = new Dictionary<string, string>();
         private Dictionary<string, double> diagnosis = new Dictionary<string, double>();
+        public string diagnosis1;
+
+
+
 
         public Patient(Dictionary<string, string> patientInfo)
         {
@@ -30,17 +32,17 @@ namespace PatientCare360
             var gender = dict["gender"];
             var origin = dict["origin"];
 
-            dict["WBC"] = white_Blood_Cells(ConvertToInt(dict["WBC"]), ConvertToInt(age));
-            dict["Neut"] = Neutrophil(ConvertToInt(dict["Neut"]));
-            dict["Lymph"] = Lymphocytes(ConvertToInt(dict["Lymph"]));
-            dict["RBC"] = Red_Blood_Cells(ConvertToInt(dict["RBC"]));
-            dict["HCT"] = HCT(ConvertToInt(dict["HCT"]), gender);
-            dict["Urea"] = Urea(ConvertToInt(dict["Urea"]), origin);
-            dict["Hb"] = Hemoglobin(ConvertToInt(dict["Hb"]), ConvertToInt(age), gender);
-            dict["Creatinine"] = Criatin(ConvertToInt(dict["Creatinine"]), ConvertToInt(age));
-            dict["Iron"] = Iron(ConvertToInt(dict["Iron"]), gender);
-            dict["HDL"] = HDL(ConvertToInt(dict["HDL"]), gender, origin);
-            dict["AP"] = AP(ConvertToInt(dict["AP"]), origin);
+            dict["WBC"] = white_Blood_Cells(ConvertToDouble(dict["WBC"]), ConvertToInt(age));
+            dict["Neut"] = Neutrophil(ConvertToDouble(dict["Neut"]));
+            dict["Lymph"] = Lymphocytes(ConvertToDouble(dict["Lymph"]));
+            dict["RBC"] = Red_Blood_Cells(ConvertToDouble(dict["RBC"]));
+            dict["HCT"] = HCT(ConvertToDouble(dict["HCT"]), gender);
+            dict["Urea"] = Urea(ConvertToDouble(dict["Urea"]), origin);
+            dict["Hb"] = Hemoglobin(ConvertToDouble(dict["Hb"]), ConvertToInt(age), gender);
+            dict["Creatinine"] = Criatin(ConvertToDouble(dict["Creatinine"]), ConvertToInt(age));
+            dict["Iron"] = Iron(ConvertToDouble(dict["Iron"]), gender);
+            dict["HDL"] = HDL(ConvertToDouble(dict["HDL"]), gender, origin);
+            dict["AP"] = AP(ConvertToDouble(dict["AP"]), origin);
 
         }
 
@@ -109,7 +111,7 @@ namespace PatientCare360
 
 
 
-        public string Return_LOWorHIGHorNORMAL(double a, double b, int val)
+        public string Return_LOWorHIGHorNORMAL(double a, double b, double val)
         {
             if (val < a)
             {
@@ -124,7 +126,7 @@ namespace PatientCare360
             return "Normal";
         }
 
-        public string white_Blood_Cells(int val, int age)
+        public string white_Blood_Cells(double val, int age)
         {
             double a = 0, b = 0;
             if (age >= 18)
@@ -145,21 +147,21 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string Neutrophil(int val)
+        public string Neutrophil(double val)
         {
             return Return_LOWorHIGHorNORMAL(28, 54, val);
         }
 
-        public string Lymphocytes(int val)
+        public string Lymphocytes(double val)
         {
             return Return_LOWorHIGHorNORMAL(36, 52, val);
         }
-        public string Red_Blood_Cells(int val)
+        public string Red_Blood_Cells(double val)
         {
             return Return_LOWorHIGHorNORMAL(4.5, 6, val);
         }
 
-        public string HCT(int val, string gender)
+        public string HCT(double val, string gender)
         {
             double a = 0, b = 0;
             if (gender == "F")
@@ -176,7 +178,7 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string Urea(int val, string origin)
+        public string Urea(double val, string origin)
         {
             double a = 0, b = 0;
             if (origin == "Middle-Eastern")
@@ -192,7 +194,7 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string Hemoglobin(int val, int age, string gender)
+        public string Hemoglobin(double val, int age, string gender)
         {
             double a = 0, b = 0;
             if (age <= 17)
@@ -214,7 +216,7 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string Criatin(int val, int age)
+        public string Criatin(double val, int age)
         {
             double a = 0, b = 0;
             if (age <= 2)
@@ -241,7 +243,7 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string Iron(int val, string gender)
+        public string Iron(double val, string gender)
         {
             double a = 0, b = 0;
             if (gender == "F")
@@ -258,7 +260,7 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string HDL(int val, string gender, string origin)
+        public string HDL(double val, string gender, string origin)
         {
             double a = 0, b = 0;
             if (gender == "F")
@@ -281,7 +283,7 @@ namespace PatientCare360
             return Return_LOWorHIGHorNORMAL(a, b, val);
         }
 
-        public string AP(int val, string origin)
+        public string AP(double val, string origin)
         {
             double a = 0, b = 0;
             if (origin == "Middle-Eastern")
@@ -505,6 +507,8 @@ namespace PatientCare360
                 ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
             }
 
+            
+
             if (Secondary_diagnoses.Count > 0)
             {
                 ans += "\n In addition there are concerns:\n";
@@ -512,7 +516,9 @@ namespace PatientCare360
                 {
                     ans += "Diagnoses " + i + "\n" + "Treatment: " + Treatment_according_to_diagnosis(i) + "\n";
                 }
+                
             }
+
 
             return ans;
         }
@@ -541,10 +547,12 @@ namespace PatientCare360
             //TODO:save patient to file
 
             ConvertsValuesTo_LOW_HIGH_NORMAL(patientInfo);
+            diagnosis1 = get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
             var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            string diagnosis = patientInfo.ToString() + "\n";
+            string diagnosis =  "\n";
             diagnosis = "\n\nDate: " + current_time + "\n" + diagnosis + "\n" +
                         get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
+            
             return diagnosis;
         }
     }

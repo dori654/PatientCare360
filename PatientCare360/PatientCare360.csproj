@@ -162,6 +162,7 @@
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Excel\Patients.xlsx" />
     <None Include="Excel\Users.xlsx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

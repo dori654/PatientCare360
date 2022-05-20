@@ -12,7 +12,7 @@ namespace PatientCare360
 {
     public partial class LoginForm : Form
     {
-        public string Username;
+        public string Username ;
         public string Password;
         public LoginForm()
         {
@@ -41,6 +41,8 @@ namespace PatientCare360
                 DoctorUI Doctor = new DoctorUI();
 
                 Doctor.Visible = true;
+                Username = TextBoxUsername.Text;
+
             }
 
             else

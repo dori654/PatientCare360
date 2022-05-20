@@ -232,9 +232,9 @@
             this.panel_AddPatient2.Controls.Add(this.label17);
             this.panel_AddPatient2.Controls.Add(this.label16);
             this.panel_AddPatient2.Controls.Add(this.label15);
-            this.panel_AddPatient2.Location = new System.Drawing.Point(254, 49);
+            this.panel_AddPatient2.Location = new System.Drawing.Point(252, 44);
             this.panel_AddPatient2.Name = "panel_AddPatient2";
-            this.panel_AddPatient2.Size = new System.Drawing.Size(901, 806);
+            this.panel_AddPatient2.Size = new System.Drawing.Size(901, 814);
             this.panel_AddPatient2.TabIndex = 31;
             // 
             // groupBox3
@@ -595,7 +595,7 @@
             this.panel4.Controls.Add(this.MaxmizeBtn);
             this.panel4.Controls.Add(this.ExitButton);
             this.panel4.Controls.Add(this.minimizeBtn);
-            this.panel4.Location = new System.Drawing.Point(953, 2);
+            this.panel4.Location = new System.Drawing.Point(955, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(198, 46);
             this.panel4.TabIndex = 0;
@@ -644,7 +644,6 @@
             // 
             // panel_AddPatient
             // 
-            this.panel_AddPatient.Controls.Add(this.Patient_History_Panel);
             this.panel_AddPatient.Controls.Add(this.Track_bar_precentage3_label);
             this.panel_AddPatient.Controls.Add(this.Track_bar_precentage2_label);
             this.panel_AddPatient.Controls.Add(this.Track_bar_precentage1_label);
@@ -673,10 +672,11 @@
             this.panel_AddPatient.Controls.Add(this.label12);
             this.panel_AddPatient.Controls.Add(this.TextBox_RBC);
             this.panel_AddPatient.Controls.Add(this.TextBox_WBC);
-            this.panel_AddPatient.Location = new System.Drawing.Point(254, 38);
+            this.panel_AddPatient.Location = new System.Drawing.Point(252, 41);
             this.panel_AddPatient.Name = "panel_AddPatient";
-            this.panel_AddPatient.Size = new System.Drawing.Size(894, 800);
+            this.panel_AddPatient.Size = new System.Drawing.Size(901, 814);
             this.panel_AddPatient.TabIndex = 33;
+            this.panel_AddPatient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_AddPatient_Paint);
             // 
             // Patient_History_Panel
             // 
@@ -685,16 +685,15 @@
             this.Patient_History_Panel.Controls.Add(this.label24);
             this.Patient_History_Panel.Controls.Add(this.Search_Patient_label);
             this.Patient_History_Panel.Controls.Add(this.TextBox_Search_Patient);
-            this.Patient_History_Panel.Location = new System.Drawing.Point(0, 3);
+            this.Patient_History_Panel.Location = new System.Drawing.Point(248, 41);
             this.Patient_History_Panel.Name = "Patient_History_Panel";
-            this.Patient_History_Panel.Size = new System.Drawing.Size(898, 794);
+            this.Patient_History_Panel.Size = new System.Drawing.Size(898, 817);
             this.Patient_History_Panel.TabIndex = 60;
-            this.Patient_History_Panel.Visible = false;
             // 
             // richTextBox_history
             // 
             this.richTextBox_history.BackColor = System.Drawing.Color.LightGray;
-            this.richTextBox_history.Location = new System.Drawing.Point(31, 178);
+            this.richTextBox_history.Location = new System.Drawing.Point(26, 172);
             this.richTextBox_history.Name = "richTextBox_history";
             this.richTextBox_history.Size = new System.Drawing.Size(809, 596);
             this.richTextBox_history.TabIndex = 4;
@@ -1009,8 +1008,9 @@
             this.ClientSize = new System.Drawing.Size(1152, 860);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel_left_btn);
-            this.Controls.Add(this.panel_AddPatient);
             this.Controls.Add(this.panel_AddPatient2);
+            this.Controls.Add(this.Patient_History_Panel);
+            this.Controls.Add(this.panel_AddPatient);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
