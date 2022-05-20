@@ -36,7 +36,7 @@ namespace PatientCare360.Resources
             // Treatment_info
             // 
             this.Treatment_info.AutoSize = true;
-            this.Treatment_info.Location = new System.Drawing.Point(50, 69);
+            this.Treatment_info.Location = new System.Drawing.Point(22, 29);
             this.Treatment_info.Name = "Treatment_info";
             this.Treatment_info.Size = new System.Drawing.Size(37, 20);
             this.Treatment_info.TabIndex = 0;
@@ -45,7 +45,7 @@ namespace PatientCare360.Resources
             // 
             // Final_Button_oK
             // 
-            this.Final_Button_oK.Location = new System.Drawing.Point(397, 246);
+            this.Final_Button_oK.Location = new System.Drawing.Point(533, 306);
             this.Final_Button_oK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Final_Button_oK.Name = "Final_Button_oK";
             this.Final_Button_oK.Size = new System.Drawing.Size(187, 72);

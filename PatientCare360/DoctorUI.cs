@@ -64,9 +64,9 @@ namespace PatientCare360
         {
             panelLeft.Height = btnPatHistory.Height;
             panelLeft.Top = btnPatHistory.Top;
-            Patient_History_Panel.Visible = true;
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
+            Patient_History_Panel.Visible = true;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
