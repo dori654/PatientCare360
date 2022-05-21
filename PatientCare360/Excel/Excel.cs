@@ -2,6 +2,7 @@
 using  IronXL;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Microsoft.Office.Interop.Excel;
 
 
 namespace PatientCare360.Excel
@@ -18,6 +19,10 @@ namespace PatientCare360.Excel
 
         public static WorkBook workBook1 = WorkBook.Load(ExcelPafh2);
         public static WorkSheet Worksheet1 = workBook1.DefaultWorkSheet;
+
+        public static int index;
+        //For readFile
+        public static string wbc, neut, lymph, rbc, hct, urea, hb, crtn, iron, hdl, ap;
 
         public static Boolean SearchUser(string UserName, string Pass)
         {
@@ -70,40 +75,50 @@ namespace PatientCare360.Excel
             
 
         }
+
+        public static bool CheckId(string ID)
+        {
+            for (int i = 1; i <= Worksheet1.Rows.Length; i++)
+            {
+
+                if (ID == Worksheet["C" + i].Value.ToString())
+                {
+                    index = i;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static string printDiagnosis(int index)
+        {
+            return Worksheet1["U" + index].Value.ToString();
+        }
+
         public static void ReadFile(string pafh)
         {
-           WorkBook workBook = WorkBook.Load(pafh);
-           WorkSheet Worksheet = workBook.DefaultWorkSheet;
+            WorkBook workBook = WorkBook.Load(pafh);
+            WorkSheet Worksheet = workBook.DefaultWorkSheet;
 
-           
+            int i = Worksheet.Rows.Length;
+
+            wbc = Worksheet["A" + i].Value.ToString();
+            neut = Worksheet["B" + i].Value.ToString();
+            lymph = Worksheet["C" + i].Value.ToString();
+            rbc = Worksheet["D" + i].Value.ToString();
+            hct = Worksheet["E" + i].Value.ToString();
+            urea = Worksheet["F" + i].Value.ToString();
+            hb = Worksheet["G" + i].Value.ToString();
+            crtn = Worksheet["H" + i].Value.ToString();
+            iron = Worksheet["I" + i].Value.ToString();
+            hdl = Worksheet["J" + i].Value.ToString();
+            ap = Worksheet["K" + i].Value.ToString();
+
+        }
 
     }
     }
 
 
-    // public void writeToCell(int i ,int j, string s)
-    // {
-    //     
-    //
-    //
-    //     // string filePath = "C:\\Users\\dori6\\source\\repos\\PatientCare360\\PatientCare360\\Users.xlsx";
-    //     // Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-    //     // Workbook wb;
-    //     // Worksheet ws;
-    //     //
-    //     // wb = excel.Workbooks.Open(filePath);
-    //     // ws = wb.Worksheets[1];
-    //     //
-    //     // Range cell = ws.Range["A2:C2"];
-    //     //
-    //     // string[] User = new[] {form.Username,cExcel.Fullname,cExcel.Password};
-    //     //
-    //     // cell.Value[XlRangeValueDataType.xlRangeValueDefault] = User;
-    //     //
-    //     // wb.SaveAs(filePath);
-    //     // wb.Close();
-    //
-    // }
 
-}
 

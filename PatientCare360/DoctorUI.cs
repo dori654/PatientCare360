@@ -21,6 +21,7 @@ namespace PatientCare360
         {
             InitializeComponent();
             
+            importExcel.Reset();
             panel_AddPatient.Visible = false;
             panel_AddPatient2.Visible = false;
             Patient_History_Panel.Visible=false;
@@ -158,8 +159,10 @@ namespace PatientCare360
             string pregnancy = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
 
 
-            Excel.Excel.AddPatient("Moshe","Davidian",textBox_ID_panel2.Text,textBox_Age_panel2.Text,smokes,fever,diarrhea,vomiting,pregnancy,TextBox_WBC.Text,Slider_Neut.Value.ToString(),Slider_Lymph.Value.ToString(),TextBox_RBC.Text,
-                Slider_HCT.Value.ToString(),Textbox_Urea.Text,TextBox_HB.Text,TextBox_Creatinine.Text,textbox_iron.Text,textBox_HDL.Text,textBox_AP.Text,pal.diagnosis1);
+            Excel.Excel.AddPatient("Moshe","Davidian",textBox_ID_panel2.Text,textBox_Age_panel2.Text,smokes,fever,diarrhea,vomiting,pregnancy,
+                TextBox_WBC.Text,Slider_Neut.Value.ToString(),Slider_Lymph.Value.ToString(),TextBox_RBC.Text,
+                Slider_HCT.Value.ToString(),Textbox_Urea.Text,TextBox_HB.Text,
+                TextBox_Creatinine.Text,textbox_iron.Text,textBox_HDL.Text,textBox_AP.Text,pal.diagnosis1);
            
         }
         private void Button_Submit_Click_1(object sender, EventArgs e)
@@ -172,6 +175,7 @@ namespace PatientCare360
             else
             {
                 panel_AddPatient.Visible = false;
+              
                 panel_AddPatient2.Visible = true;
                 dict["WBC"] = TextBox_WBC.Text;
                 dict["Neut"] = Slider_Neut.Value.ToString();
@@ -219,9 +223,42 @@ namespace PatientCare360
             Track_bar_precentage3_label.Text = Slider_HCT.Value.ToString() + "%";
         }
 
-        private void panel_AddPatient_Paint(object sender, PaintEventArgs e)
-        {
+    
 
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            Excel.Excel.ReadFile(importExcel.FileName);
+
+
+
+
+            TextBox_WBC.Text = Excel.Excel.wbc;
+            Slider_Neut.Value = Convert.ToInt32(Excel.Excel.neut);
+            Slider_Lymph.Value= Convert.ToInt32(Excel.Excel.lymph);
+            TextBox_RBC.Text= Excel.Excel.rbc;
+            Slider_HCT.Value = Convert.ToInt32(Excel.Excel.hct);
+            Textbox_Urea.Text= Excel.Excel.urea;
+            TextBox_HB.Text = Excel.Excel.hb;
+            TextBox_Creatinine.Text = Excel.Excel.crtn;
+            textbox_iron.Text = Excel.Excel.iron;
+            textBox_HDL.Text = Excel.Excel.hdl;
+            textBox_AP.Text = Excel.Excel.ap;
+
+            btnNewPat_Click(sender, e);
+
+
+        }
+
+        private void btn_import_Click(object sender, EventArgs e)
+        {
+            panelLeft.Height = btnLogOut.Height;
+            panelLeft.Top = btnLogOut.Top;
+            importExcel.ShowDialog();
+        }
+
+        private void button_history_find_Click(object sender, EventArgs e)
+        {
+            //TODO: בודק אם הת.ז קיים בקובץ ומקשר בין הטקסטים שבקובץ
         }
     }
 }
