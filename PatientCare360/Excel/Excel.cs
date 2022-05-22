@@ -24,6 +24,8 @@ namespace PatientCare360.Excel
         //For readFile
         public static string wbc, neut, lymph, rbc, hct, urea, hb, crtn, iron, hdl, ap;
 
+ 
+
         public static Boolean SearchUser(string UserName, string Pass)
         {
             for (int i = 1; i <= Worksheet.Rows.Length; i++)
@@ -77,13 +79,12 @@ namespace PatientCare360.Excel
         }
         public static bool CheckID_User(string ID)
         {
-            for (int i = 1; i <= Worksheet.Rows.Length + 1; i++)
+            
+            for (int i = 1; i <= Worksheet.Rows.Length; i++)
             {
 
                 if (ID == Worksheet["C" + i].Value.ToString())
-                {
                     return true;
-                }
             }
             return false;
         }

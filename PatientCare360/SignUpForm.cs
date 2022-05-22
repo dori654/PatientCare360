@@ -47,39 +47,38 @@ namespace PatientCare360
             Fullname = textBoxFuname.Text;
             id = textBoxID.Text;
             ConfPassword = textBoxConfPassword.Text;
-            bool flag = false;
 
             if (CheckUserName(Username))
             {
                 MessageBox.Show("User Name Needs to be between 6 - 8 charcters and contains max 2 number");
-                flag = false;
+                
             }
 
-            else if (Password != ConfPassword)
+            if (Password != ConfPassword)
             {
                 MessageBox.Show("Passwords don't match");
-                flag=false;
+                
             }
 
-            else if (!CheckPassword(Password))
+            if (!CheckPassword(Password))
             {
                 MessageBox.Show(
                     "Password Length must be 8-10 contain at least 1 number  and 1 special charcter and 1 letter");
-                flag = false;
+                
             }
 
-            else if (!CheckID(id))
+            if (!CheckID(id))
             {
                 MessageBox.Show("User's id must have a length of 9 characters!");
-                flag = false;
+                
             }
-            else if (Excel.Excel.CheckID_User(id))
+            if (Excel.Excel.CheckID_User(id))
             {
                 MessageBox.Show("User's ID already exists in the database!");
+                
             }
-            else  
-            flag = true;
-            if (flag)
+
+            else
             {
                 Username = textBoxUsername.Text;
                 Password = textBoxPassword.Text;
@@ -92,6 +91,8 @@ namespace PatientCare360
                 this.Visible = false;
                 log.Visible = true;
             }
+
+
         }
 
         private bool CheckUserName(string username)
