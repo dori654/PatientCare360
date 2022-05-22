@@ -15,7 +15,7 @@ namespace PatientCare360
 {
     public partial class DoctorUI : Form
     {
-        Patient pal;
+        Patient pal = new Patient();
         Dictionary<string, string> dict = new Dictionary<string, string>();
         public DoctorUI()
         {

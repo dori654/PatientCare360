@@ -20,7 +20,48 @@ namespace PatientCare360
         public string diagnosis1;
 
 
+        public Patient()
+        {
+            patientInfo.Add("f_name", "");
+            patientInfo.Add("l_name", "");
+            patientInfo.Add("id", "");
+            patientInfo.Add("age", "");
+            patientInfo.Add("smokes", "");
+            patientInfo.Add("fever", "");
+            patientInfo.Add("diarrhea", "");
+            patientInfo.Add("vomiting", "");
+            patientInfo.Add("pregnant", "");
+            patientInfo.Add("wbc", "");
+            patientInfo.Add("neut", "");
+            patientInfo.Add("rbc", "");
+            patientInfo.Add("hct", "");
+            patientInfo.Add("urea", "");
+            patientInfo.Add("hb", "");
+            patientInfo.Add("crtn", "");
+            patientInfo.Add("iron", "");
+            patientInfo.Add("hdl", "");
+            patientInfo.Add("ap", "");
+            patientInfo.Add("diagnosis", "");
+            patientInfo.Add("recommends", "");
 
+            diagnosis.Add("fever", 0);
+            diagnosis.Add("diarrhea", 0);
+            diagnosis.Add("vomiting", 0);
+            diagnosis.Add("pregnant", 0);
+            diagnosis.Add("wbc", 0);
+            diagnosis.Add("neut", 0);
+            diagnosis.Add("rbc", 0);
+            diagnosis.Add("hct", 0);
+            diagnosis.Add("urea", 0);
+            diagnosis.Add("hb", 0);
+            diagnosis.Add("crtn", 0);
+            diagnosis.Add("iron", 0);
+            diagnosis.Add("hdl", 0);
+            diagnosis.Add("ap", 0);
+            diagnosis.Add("diagnosis", 0);
+            diagnosis.Add("recommends", 0); 
+
+        }
 
         public Patient(Dictionary<string, string> patientInfo)
         {
@@ -111,7 +152,7 @@ namespace PatientCare360
 
 
 
-        public string Return_LOWorHIGHorNORMAL(double a, double b, double val)
+        public string deter_high_low_normal_fields(double a, double b, double val)
         {
             if (val < a)
             {
@@ -144,21 +185,21 @@ namespace PatientCare360
                 a = 6000;
                 b = 17500;
             }
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string Neutrophil(double val)
         {
-            return Return_LOWorHIGHorNORMAL(28, 54, val);
+            return deter_high_low_normal_fields(28, 54, val);
         }
 
         public string Lymphocytes(double val)
         {
-            return Return_LOWorHIGHorNORMAL(36, 52, val);
+            return deter_high_low_normal_fields(36, 52, val);
         }
         public string Red_Blood_Cells(double val)
         {
-            return Return_LOWorHIGHorNORMAL(4.5, 6, val);
+            return deter_high_low_normal_fields(4.5, 6, val);
         }
 
         public string HCT(double val, string gender)
@@ -175,7 +216,7 @@ namespace PatientCare360
                 b = 54;
             }
 
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string Urea(double val, string origin)
@@ -191,7 +232,7 @@ namespace PatientCare360
                 a = 17;
                 b = 43;
             }
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string Hemoglobin(double val, int age, string gender)
@@ -213,7 +254,7 @@ namespace PatientCare360
                 b = 18;
             }
 
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string Criatin(double val, int age)
@@ -240,7 +281,7 @@ namespace PatientCare360
                 b = 1.2;
             }
 
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string Iron(double val, string gender)
@@ -257,7 +298,7 @@ namespace PatientCare360
                 b = 160;
             }
 
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string HDL(double val, string gender, string origin)
@@ -280,7 +321,7 @@ namespace PatientCare360
                 b *= 1.2;
             }
 
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public string AP(double val, string origin)
@@ -297,7 +338,7 @@ namespace PatientCare360
                 b = 90;
             }
 
-            return Return_LOWorHIGHorNORMAL(a, b, val);
+            return deter_high_low_normal_fields(a, b, val);
         }
 
         public void WBCdiagnosis(Dictionary<string, string> patientInfo, Dictionary<string, double> diagnosis)
@@ -492,7 +533,7 @@ namespace PatientCare360
             return diagnosis;
         }
 
-        public string get_string_of_diagnosis_and_Treatment(Dictionary<string, double> diagnosis)
+        public string diagnosis_and_Treatment_info(Dictionary<string, double> diagnosis)
         {
             var max_value = diagnosis.Values.Max();
             if (max_value == 0)
@@ -547,11 +588,11 @@ namespace PatientCare360
             //TODO:save patient to file
 
             ConvertsValuesTo_LOW_HIGH_NORMAL(patientInfo);
-            diagnosis1 = get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
+            diagnosis1 = diagnosis_and_Treatment_info(get_diagnosis_dict(patientInfo));
             var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             string diagnosis =  "\n";
             diagnosis = "\n\nDate: " + current_time + "\n" + diagnosis + "\n" +
-                        get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
+                        diagnosis_and_Treatment_info(get_diagnosis_dict(patientInfo));
             
             return diagnosis;
         }
