@@ -534,11 +534,7 @@ namespace PatientCare360
         }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
         public string diagnosis_and_Treatment_info(Dictionary<string, double> diagnosis)
-=======
-        public string diagnosis_and_treatment_info(Dictionary<string, double> diagnosis)
->>>>>>> a2e457fc5d387bd08c946d5a7b0a4f577b791063
 =======
         public string diagnosis_and_treatment_info(Dictionary<string, double> diagnosis)
 >>>>>>> a2e457fc5d387bd08c946d5a7b0a4f577b791063
@@ -597,19 +593,11 @@ namespace PatientCare360
 
             ConvertsValuesTo_LOW_HIGH_NORMAL(patientInfo);
 <<<<<<< HEAD
-<<<<<<< HEAD
             diagnosis1 = diagnosis_and_Treatment_info(get_diagnosis_dict(patientInfo));
             var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             string diagnosis =  "\n";
             diagnosis = "\n\nDate: " + current_time + "\n" + diagnosis + "\n" +
                         diagnosis_and_Treatment_info(get_diagnosis_dict(patientInfo));
-=======
-            diagnosis1 = diagnosis_and_treatment_info(get_diagnosis_dict(patientInfo));
-            var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            string diagnosis =  "\n";
-            diagnosis = "\n\nDate: " + current_time + "\n" + diagnosis + "\n" +
-                        diagnosis_and_treatment_info(get_diagnosis_dict(patientInfo));
->>>>>>> a2e457fc5d387bd08c946d5a7b0a4f577b791063
 =======
             diagnosis1 = diagnosis_and_treatment_info(get_diagnosis_dict(patientInfo));
             var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
