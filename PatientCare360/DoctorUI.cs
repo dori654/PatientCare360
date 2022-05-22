@@ -223,15 +223,17 @@ namespace PatientCare360
             Track_bar_precentage3_label.Text = Slider_HCT.Value.ToString() + "%";
         }
 
-    
+
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            Excel.Excel.ReadFile(importExcel.FileName);
-
-
-
-
+            try {
+                Excel.Excel.ReadFile(importExcel.FileName);
+                }
+            catch (System.FormatException)
+            {
+                MessageBox.Show("File must be xlsx type only!");
+            }
             TextBox_WBC.Text = Excel.Excel.wbc;
             Slider_Neut.Value = Convert.ToInt32(Excel.Excel.neut);
             Slider_Lymph.Value= Convert.ToInt32(Excel.Excel.lymph);
@@ -245,8 +247,6 @@ namespace PatientCare360
             textBox_AP.Text = Excel.Excel.ap;
 
             btnNewPat_Click(sender, e);
-
-
         }
 
         private void btn_import_Click(object sender, EventArgs e)
