@@ -533,7 +533,7 @@ namespace PatientCare360
             return diagnosis;
         }
 
-        public string diagnosis_and_Treatment_info(Dictionary<string, double> diagnosis)
+        public string diagnosis_and_treatment_info(Dictionary<string, double> diagnosis)
         {
             var max_value = diagnosis.Values.Max();
             if (max_value == 0)
@@ -588,11 +588,11 @@ namespace PatientCare360
             //TODO:save patient to file
 
             ConvertsValuesTo_LOW_HIGH_NORMAL(patientInfo);
-            diagnosis1 = diagnosis_and_Treatment_info(get_diagnosis_dict(patientInfo));
+            diagnosis1 = get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
             var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             string diagnosis =  "\n";
             diagnosis = "\n\nDate: " + current_time + "\n" + diagnosis + "\n" +
-                        diagnosis_and_Treatment_info(get_diagnosis_dict(patientInfo));
+                        get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
             
             return diagnosis;
         }
