@@ -75,18 +75,7 @@ namespace PatientCare360.Excel
             
 
         }
-        public static bool CheckID_User(string ID)
-        {
-            for (int i = 1; i <= Worksheet.Rows.Length + 1; i++)
-            {
 
-                if (ID == Worksheet["C" + i].Value.ToString())
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
         public static bool CheckId(string ID)
         {
             for (int i = 1; i <= Worksheet1.Rows.Length+1; i++)
