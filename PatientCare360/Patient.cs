@@ -67,7 +67,7 @@ namespace PatientCare360
         {
             this.patientInfo = patientInfo;
         }
-        public void ConvertsValuesTo_LOW_HIGH_NORMAL(Dictionary<string, string> dict)
+        public void deter_High_Low_Normal_State(Dictionary<string, string> dict)
         {
             var age = dict["age"];
             var gender = dict["gender"];
@@ -587,12 +587,12 @@ namespace PatientCare360
         {
             //TODO:save patient to file
 
-            ConvertsValuesTo_LOW_HIGH_NORMAL(patientInfo);
-            diagnosis1 = get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
+            deter_High_Low_Normal_State(patientInfo);
+            diagnosis1 = diagnosis_and_treatment_info(get_diagnosis_dict(patientInfo));
             var current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             string diagnosis =  "\n";
             diagnosis = "\n\nDate: " + current_time + "\n" + diagnosis + "\n" +
-                        get_string_of_diagnosis_and_Treatment(get_diagnosis_dict(patientInfo));
+                        diagnosis_and_treatment_info(get_diagnosis_dict(patientInfo));
             
             return diagnosis;
         }
