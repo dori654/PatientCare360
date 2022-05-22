@@ -16,7 +16,7 @@ namespace PatientCare360
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorUI());
+            Application.Run(new LoginForm());
         }
     }
 }

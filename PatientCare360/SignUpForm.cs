@@ -55,37 +55,37 @@ namespace PatientCare360
                 flag = false;
             }
 
-
-            if (Password != ConfPassword)
+            else if (Password != ConfPassword)
             {
-                MessageBox.Show("Passwords Don't match");
+                MessageBox.Show("Passwords don't match");
                 flag=false;
             }
 
-            if (!CheckPassword(Password))
+            else if (!CheckPassword(Password))
             {
                 MessageBox.Show(
                     "Password Length must be 8-10 contain at least 1 number  and 1 special charcter and 1 letter");
                 flag = false;
             }
 
-            if (!CheckID(id))
+            else if (!CheckID(id))
             {
-                MessageBox.Show("Invalid User id: length 9 character only numbers or Id already registered.");
+                MessageBox.Show("User's id must have a length of 9 characters!");
                 flag = false;
             }
-
+            else if (Excel.Excel.CheckID_User(id))
+            {
+                MessageBox.Show("User's ID already exists in the database!");
+            }
+            else  
             flag = true;
             if (flag)
             {
-
                 Username = textBoxUsername.Text;
                 Password = textBoxPassword.Text;
                 Fullname = textBoxFuname.Text;
                 id = textBoxID.Text;
                 ConfPassword = textBoxConfPassword.Text;
-
-
                 Excel.Excel.AddUser(textBoxUsername.Text, textBoxPassword.Text, textBoxID.Text);
                 MessageBox.Show("Registration completed");
                 LoginForm log = new LoginForm();
