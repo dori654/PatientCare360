@@ -259,6 +259,15 @@ namespace PatientCare360
         private void button_history_find_Click(object sender, EventArgs e)
         {
             //TODO: בודק אם הת.ז קיים בקובץ ומקשר בין הטקסטים שבקובץ
+            if (Excel.Excel.CheckId(TextBox_Search_Patient.Text))
+            {
+                richTextBox_history.Text = Excel.Excel.printDiagnosis(Excel.Excel.index+1);
+            }
+            else
+            {
+                MessageBox.Show("ID not found");
+            }
+            
         }
     }
 }
