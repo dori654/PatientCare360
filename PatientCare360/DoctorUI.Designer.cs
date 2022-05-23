@@ -163,7 +163,7 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 740);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 642);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(236, 110);
             this.btnLogOut.TabIndex = 6;
@@ -638,7 +638,7 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label24.Location = new System.Drawing.Point(25, 96);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(57, 32);
+            this.label24.Size = new System.Drawing.Size(56, 32);
             this.label24.TabIndex = 2;
             this.label24.Text = "ID: ";
             // 
@@ -696,18 +696,17 @@
             // 
             // Track_bar_precentage3_label
             // 
-            this.Track_bar_precentage3_label.AutoSize = true;
             this.Track_bar_precentage3_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Track_bar_precentage3_label.Location = new System.Drawing.Point(617, 313);
+            this.Track_bar_precentage3_label.Location = new System.Drawing.Point(630, 276);
             this.Track_bar_precentage3_label.Name = "Track_bar_precentage3_label";
-            this.Track_bar_precentage3_label.Size = new System.Drawing.Size(40, 32);
+            this.Track_bar_precentage3_label.Size = new System.Drawing.Size(110, 40);
             this.Track_bar_precentage3_label.TabIndex = 59;
             this.Track_bar_precentage3_label.Text = "%";
             // 
             // Track_bar_precentage2_label
             // 
             this.Track_bar_precentage2_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Track_bar_precentage2_label.Location = new System.Drawing.Point(617, 174);
+            this.Track_bar_precentage2_label.Location = new System.Drawing.Point(620, 157);
             this.Track_bar_precentage2_label.Name = "Track_bar_precentage2_label";
             this.Track_bar_precentage2_label.Size = new System.Drawing.Size(110, 40);
             this.Track_bar_precentage2_label.TabIndex = 58;
@@ -716,9 +715,9 @@
             // Track_bar_precentage1_label
             // 
             this.Track_bar_precentage1_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Track_bar_precentage1_label.Location = new System.Drawing.Point(618, 94);
+            this.Track_bar_precentage1_label.Location = new System.Drawing.Point(620, 85);
             this.Track_bar_precentage1_label.Name = "Track_bar_precentage1_label";
-            this.Track_bar_precentage1_label.Size = new System.Drawing.Size(91, 56);
+            this.Track_bar_precentage1_label.Size = new System.Drawing.Size(129, 50);
             this.Track_bar_precentage1_label.TabIndex = 57;
             this.Track_bar_precentage1_label.Text = "%";
             // 
@@ -727,7 +726,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label2.Location = new System.Drawing.Point(49, 462);
+            this.label2.Location = new System.Drawing.Point(56, 399);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 56;
@@ -737,7 +736,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label14.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label14.Location = new System.Drawing.Point(53, 245);
+            this.label14.Location = new System.Drawing.Point(56, 216);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 38);
             this.label14.TabIndex = 52;
@@ -747,7 +746,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label4.Location = new System.Drawing.Point(49, 173);
+            this.label4.Location = new System.Drawing.Point(53, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 41);
             this.label4.TabIndex = 33;
@@ -770,7 +769,7 @@
             // Slider_HCT
             // 
             this.Slider_HCT.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Slider_HCT.Location = new System.Drawing.Point(245, 316);
+            this.Slider_HCT.Location = new System.Drawing.Point(245, 276);
             this.Slider_HCT.Maximum = 100;
             this.Slider_HCT.Name = "Slider_HCT";
             this.Slider_HCT.Size = new System.Drawing.Size(379, 56);
@@ -782,7 +781,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label5.Location = new System.Drawing.Point(49, 94);
+            this.label5.Location = new System.Drawing.Point(53, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 29);
             this.label5.TabIndex = 34;
@@ -791,7 +790,7 @@
             // Slider_Lymph
             // 
             this.Slider_Lymph.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Slider_Lymph.Location = new System.Drawing.Point(245, 174);
+            this.Slider_Lymph.Location = new System.Drawing.Point(245, 158);
             this.Slider_Lymph.Maximum = 100;
             this.Slider_Lymph.Name = "Slider_Lymph";
             this.Slider_Lymph.Size = new System.Drawing.Size(379, 56);
@@ -803,7 +802,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label6.Location = new System.Drawing.Point(49, 24);
+            this.label6.Location = new System.Drawing.Point(56, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 29);
             this.label6.TabIndex = 35;
@@ -813,7 +812,7 @@
             // 
             this.Slider_Neut.AutoSize = false;
             this.Slider_Neut.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Slider_Neut.Location = new System.Drawing.Point(245, 94);
+            this.Slider_Neut.Location = new System.Drawing.Point(245, 82);
             this.Slider_Neut.Maximum = 100;
             this.Slider_Neut.Name = "Slider_Neut";
             this.Slider_Neut.Size = new System.Drawing.Size(379, 56);
@@ -825,7 +824,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label7.Location = new System.Drawing.Point(45, 316);
+            this.label7.Location = new System.Drawing.Point(56, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 29);
             this.label7.TabIndex = 36;
@@ -844,7 +843,7 @@
             // textBox_AP
             // 
             this.textBox_AP.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_AP.Location = new System.Drawing.Point(245, 741);
+            this.textBox_AP.Location = new System.Drawing.Point(245, 677);
             this.textBox_AP.Name = "textBox_AP";
             this.textBox_AP.Size = new System.Drawing.Size(379, 22);
             this.textBox_AP.TabIndex = 49;
@@ -854,7 +853,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label9.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label9.Location = new System.Drawing.Point(53, 536);
+            this.label9.Location = new System.Drawing.Point(60, 473);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 29);
             this.label9.TabIndex = 37;
@@ -862,7 +861,7 @@
             // textBox_HDL
             // 
             this.textBox_HDL.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_HDL.Location = new System.Drawing.Point(245, 682);
+            this.textBox_HDL.Location = new System.Drawing.Point(245, 618);
             this.textBox_HDL.Name = "textBox_HDL";
             this.textBox_HDL.Size = new System.Drawing.Size(379, 22);
             this.textBox_HDL.TabIndex = 48;
@@ -872,7 +871,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label8.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label8.Location = new System.Drawing.Point(45, 394);
+            this.label8.Location = new System.Drawing.Point(53, 340);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 29);
             this.label8.TabIndex = 38;
@@ -881,7 +880,7 @@
             // textbox_iron
             // 
             this.textbox_iron.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textbox_iron.Location = new System.Drawing.Point(245, 600);
+            this.textbox_iron.Location = new System.Drawing.Point(245, 536);
             this.textbox_iron.Name = "textbox_iron";
             this.textbox_iron.Size = new System.Drawing.Size(379, 22);
             this.textbox_iron.TabIndex = 47;
@@ -890,7 +889,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label11.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label11.Location = new System.Drawing.Point(60, 600);
+            this.label11.Location = new System.Drawing.Point(60, 533);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 29);
             this.label11.TabIndex = 39;
@@ -899,7 +898,7 @@
             // TextBox_HB
             // 
             this.TextBox_HB.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_HB.Location = new System.Drawing.Point(245, 463);
+            this.TextBox_HB.Location = new System.Drawing.Point(245, 399);
             this.TextBox_HB.Name = "TextBox_HB";
             this.TextBox_HB.Size = new System.Drawing.Size(379, 22);
             this.TextBox_HB.TabIndex = 46;
@@ -909,7 +908,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label10.Location = new System.Drawing.Point(49, 530);
+            this.label10.Location = new System.Drawing.Point(52, 466);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(129, 29);
             this.label10.TabIndex = 40;
@@ -918,7 +917,7 @@
             // TextBox_Creatinine
             // 
             this.TextBox_Creatinine.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_Creatinine.Location = new System.Drawing.Point(245, 537);
+            this.TextBox_Creatinine.Location = new System.Drawing.Point(245, 473);
             this.TextBox_Creatinine.Name = "TextBox_Creatinine";
             this.TextBox_Creatinine.Size = new System.Drawing.Size(379, 22);
             this.TextBox_Creatinine.TabIndex = 45;
@@ -928,7 +927,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label13.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label13.Location = new System.Drawing.Point(60, 741);
+            this.label13.Location = new System.Drawing.Point(65, 677);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 29);
             this.label13.TabIndex = 41;
@@ -937,7 +936,7 @@
             // Textbox_Urea
             // 
             this.Textbox_Urea.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Textbox_Urea.Location = new System.Drawing.Point(245, 394);
+            this.Textbox_Urea.Location = new System.Drawing.Point(245, 340);
             this.Textbox_Urea.Name = "Textbox_Urea";
             this.Textbox_Urea.Size = new System.Drawing.Size(379, 22);
             this.Textbox_Urea.TabIndex = 54;
@@ -947,7 +946,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label12.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label12.Location = new System.Drawing.Point(45, 676);
+            this.label12.Location = new System.Drawing.Point(60, 613);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(116, 29);
             this.label12.TabIndex = 42;
@@ -956,7 +955,7 @@
             // TextBox_RBC
             // 
             this.TextBox_RBC.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TextBox_RBC.Location = new System.Drawing.Point(245, 252);
+            this.TextBox_RBC.Location = new System.Drawing.Point(245, 224);
             this.TextBox_RBC.Name = "TextBox_RBC";
             this.TextBox_RBC.Size = new System.Drawing.Size(379, 22);
             this.TextBox_RBC.TabIndex = 44;
@@ -1033,12 +1032,12 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1152, 860);
+            this.ClientSize = new System.Drawing.Size(1152, 850);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel_left_btn);
-            this.Controls.Add(this.Patient_History_Panel);
             this.Controls.Add(this.panel_AddPatient);
             this.Controls.Add(this.panel_AddPatient2);
+            this.Controls.Add(this.Patient_History_Panel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
