@@ -39,13 +39,15 @@ namespace PatientCare360.Excel
 
         }
 
-        public static void AddUser(string UserName, string Pass, string id)
+        public static Boolean AddUser(string UserName, string Pass, string id)
         {
+
             int i = Worksheet.Rows.Length + 1;
             Worksheet["A" + i].Value = UserName;
             Worksheet["B" + i].Value = Pass;
             Worksheet["C" + i].Value = id;
             workBook.SaveAs(ExcelPafh1);
+            return true;
         }
 
         public static void AddPatient(string f_name, string l_name, string id ,string age , string smokes , string fever ,string diarrhea ,string vomiting , string pregnant , string wbc , string neut ,string lymph

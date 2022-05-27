@@ -26,8 +26,8 @@ namespace PatientCare360
             patientInfo.Add("l_name", "");
             patientInfo.Add("id", "");
             patientInfo.Add("age", "");
-            patientInfo.Add("smokes", "");
-            patientInfo.Add("fever", "");
+            patientInfo.Add("Smokers", "");
+            patientInfo.Add("Fever", "");
             patientInfo.Add("diarrhea", "");
             patientInfo.Add("vomiting", "");
             patientInfo.Add("pregnant", "");
@@ -44,7 +44,8 @@ namespace PatientCare360
             patientInfo.Add("diagnosis", "");
             patientInfo.Add("recommends", "");
 
-            diagnosis.Add("fever", 0);
+            diagnosis.Add("Smokers", 0);
+            diagnosis.Add("Fever", 0);
             diagnosis.Add("diarrhea", 0);
             diagnosis.Add("vomiting", 0);
             diagnosis.Add("pregnant", 0);
@@ -96,60 +97,6 @@ namespace PatientCare360
             int x = Int32.Parse(str);
             return x;
         }
-
-        public int CheckDictionaryValues1(Dictionary<string, double> dict)
-        {
-            try
-            {
-
-                dict["WBC"] = ConvertToDouble(dict["WBC"].ToString());
-                dict["Neut"] = ConvertToDouble(dict["Neut"].ToString());
-                dict["Lymph"] = ConvertToDouble(dict["Lymph"].ToString());
-                dict["RBC"] = ConvertToDouble(dict["RBC"].ToString());
-                dict["HCT"] = ConvertToDouble(dict["HCT"].ToString());
-                dict["Urea"] = ConvertToDouble(dict["Urea"].ToString());
-                dict["Hb"] = ConvertToDouble(dict["Hb"].ToString());
-                dict["Creatinine"] = ConvertToDouble(dict["Creatinine"].ToString());
-                dict["Iron"] = ConvertToDouble(dict["Iron"].ToString());
-                dict["HDL"] = ConvertToDouble(dict["HDL"].ToString());
-                dict["AP"] = ConvertToDouble(dict["AP"].ToString());
-            }
-            catch (Exception e)
-            {
-                System.Console.WriteLine(e.Message);
-                return 1;
-            }
-            var lst = dict.Values.Where(x => x < 0).ToList().ToList();
-            if (lst.Count != 0)
-            {
-                return 2;
-            }
-            return 3;
-        }
-
-
-        public bool CheckDictionaryValues(Dictionary<string, double> dict)
-        {
-            int flag = CheckDictionaryValues1(dict);
-            MessageBox.Show("Error");
-
-            if (flag == 1)
-            {
-                MessageBox.Show("Value must be numeric");
-                return false;
-            }
-            else if (flag == 2)
-            {
-                MessageBox.Show("Value must be not negative");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-
 
 
         public string deter_high_low_normal_fields(double a, double b, double val)

@@ -172,6 +172,12 @@ namespace PatientCare360
             {
                 MessageBox.Show("Enter only numeric values");
             }
+            if (isNegetive(TextBox_WBC.Text, TextBox_RBC.Text, Textbox_Urea.Text, TextBox_Creatinine.Text,
+                    textbox_iron.Text, textBox_HDL.Text, textBox_AP.Text))
+            {
+                MessageBox.Show("Enter only positive values");
+            }
+
             else
             {
                 panel_AddPatient.Visible = false;
@@ -189,6 +195,12 @@ namespace PatientCare360
                 dict["HDL"] = textBox_HDL.Text;
                 dict["AP"] = textBox_AP.Text;
             }
+        }
+        private bool isNegetive(string text, string s, string text1, string s1, string text2, string s2, string text3)
+        {
+            if (text.Contains("-") || s.Contains("-") || text1.Contains("-") || s1.Contains("-") || text2.Contains("-") || s2.Contains("-") || text3.Contains("-"))
+                return true;
+            return false;
         }
         private bool isNumeric(string text, string s, string text1, string s1, string text2, string s2, string text3)
         {
