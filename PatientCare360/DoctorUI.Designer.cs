@@ -596,7 +596,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(283, 37);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Patient Questioner";
+            this.label15.Text = "Patient Questionnaire";
             // 
             // Patient_History_Panel
             // 
@@ -638,7 +638,7 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label24.Location = new System.Drawing.Point(25, 96);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 32);
+            this.label24.Size = new System.Drawing.Size(57, 32);
             this.label24.TabIndex = 2;
             this.label24.Text = "ID: ";
             // 
@@ -1032,12 +1032,12 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1152, 850);
+            this.ClientSize = new System.Drawing.Size(921, 680);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel_left_btn);
-            this.Controls.Add(this.panel_AddPatient);
             this.Controls.Add(this.panel_AddPatient2);
             this.Controls.Add(this.Patient_History_Panel);
+            this.Controls.Add(this.panel_AddPatient);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
