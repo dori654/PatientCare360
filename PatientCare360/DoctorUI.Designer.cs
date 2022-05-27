@@ -592,7 +592,7 @@
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label15.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label15.Location = new System.Drawing.Point(284, 11);
+            this.label15.Location = new System.Drawing.Point(242, 26);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(283, 37);
             this.label15.TabIndex = 0;
