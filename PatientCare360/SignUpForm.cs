@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,60 +40,75 @@ namespace PatientCare360
         private void SignUpForm_Load(object sender, EventArgs e) { }
 
 
+        private bool ChecKSignUp(string username, string password, string confpassword, string fullname, string id)
+        {
+            if (CheckUserName(username))
+            {
+                MessageBox.Show("User Name Needs to be between 6 - 8 charcters and contains max 2 number");
+                return false;
+            }
+            if (password != confpassword)
+            {
+                MessageBox.Show("Passwords don't match");
+                return false;
+
+            }
+            if (!CheckPassword(password))
+            {
+                MessageBox.Show(
+                    "Password Length must be 8-10 contain at least 1 number  and 1 special charcter and 1 letter");
+                return false;
+
+            }
+            if (!CheckID(id))
+            {
+                MessageBox.Show("User's id must have a length of 9 characters!");
+                return false;
+
+            }
+            if (Excel.Excel.CheckID_User(id))
+            {
+                MessageBox.Show("User's ID already exists in the database!");
+                return false;
+
+            }
+            return true;
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
             Username = textBoxUsername.Text;
             Password = textBoxPassword.Text;
             Fullname = textBoxFuname.Text;
             id = textBoxID.Text;
             ConfPassword = textBoxConfPassword.Text;
 
-            if (CheckUserName(Username))
+            if (ChecKSignUp(Username, Password, ConfPassword, Fullname, id))
             {
-                MessageBox.Show("User Name Needs to be between 6 - 8 charcters and contains max 2 number");
-                
-            }
 
-            if (Password != ConfPassword)
-            {
-                MessageBox.Show("Passwords don't match");
-                
-            }
+                try
+                {
+                    Username = textBoxUsername.Text;
+                    Password = textBoxPassword.Text;
+                    Fullname = textBoxFuname.Text;
+                    id = textBoxID.Text;
+                    ConfPassword = textBoxConfPassword.Text;
 
-            if (!CheckPassword(Password))
-            {
-                MessageBox.Show(
-                    "Password Length must be 8-10 contain at least 1 number  and 1 special charcter and 1 letter");
-                
+                    if (Excel.Excel.AddUser(Username, Password, id))
+                    {
+                        MessageBox.Show("Registration completed");
+                        LoginForm log = new LoginForm();
+                        this.Visible = false;
+                        log.Visible = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("an a " + ex + "pops");
+                }
             }
-
-            if (!CheckID(id))
-            {
-                MessageBox.Show("User's id must have a length of 9 characters!");
-                
-            }
-            if (Excel.Excel.CheckID_User(id))
-            {
-                MessageBox.Show("User's ID already exists in the database!");
-                
-            }
-
             else
-            {
-                Username = textBoxUsername.Text;
-                Password = textBoxPassword.Text;
-                Fullname = textBoxFuname.Text;
-                id = textBoxID.Text;
-                ConfPassword = textBoxConfPassword.Text;
-                Excel.Excel.AddUser(textBoxUsername.Text, textBoxPassword.Text, textBoxID.Text);
-                MessageBox.Show("Registration completed");
-                LoginForm log = new LoginForm();
-                this.Visible = false;
-                log.Visible = true;
-            }
-
-
+                MessageBox.Show("Please try again");
         }
 
         private bool CheckUserName(string username)

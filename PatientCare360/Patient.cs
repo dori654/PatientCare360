@@ -26,7 +26,7 @@ namespace PatientCare360
             patientInfo.Add("l_name", "");
             patientInfo.Add("id", "");
             patientInfo.Add("age", "");
-            patientInfo.Add("smokes", "");
+            patientInfo.Add("Smokers", "");
             patientInfo.Add("fever", "");
             patientInfo.Add("diarrhea", "");
             patientInfo.Add("vomiting", "");
