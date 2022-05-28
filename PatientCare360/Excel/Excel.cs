@@ -1,8 +1,5 @@
 ﻿using System;
 using  IronXL;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using Microsoft.Office.Interop.Excel;
 
 
 namespace PatientCare360.Excel
