@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace PatientCare360
 {
     public partial class DoctorUI : Form
     {
+        private SignUpForm signUpForm = new SignUpForm();
         Patient pal = new Patient();
         Dictionary<string, string> dict = new Dictionary<string, string>();
         public DoctorUI()
@@ -130,6 +132,10 @@ namespace PatientCare360
             {
                 radioButton_Pregnant_Y.Visible=false;
             }
+            else
+            {
+                radioButton_Pregnant_Y.Visible = true;
+            }
             if (Check_ID(textBox_ID_panel2.Text) && Check_Age(Convert.ToInt32(textBox_Age_panel2.Text)))
             {
                 dict["age"] = textBox_Age_panel2.Text;
@@ -158,27 +164,19 @@ namespace PatientCare360
             string vomiting = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
             string pregnancy = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
 
-
-            Excel.Excel.AddPatient("Moshe","Davidian",textBox_ID_panel2.Text,textBox_Age_panel2.Text,smokes,fever,diarrhea,vomiting,pregnancy,
+            
+            Excel.Excel.AddPatient("Moshe", "Davidian", textBox_ID_panel2.Text,textBox_Age_panel2.Text,smokes,fever,diarrhea,vomiting,pregnancy,
                 TextBox_WBC.Text,Slider_Neut.Value.ToString(),Slider_Lymph.Value.ToString(),TextBox_RBC.Text,
                 Slider_HCT.Value.ToString(),Textbox_Urea.Text,TextBox_HB.Text,
                 TextBox_Creatinine.Text,textbox_iron.Text,textBox_HDL.Text,textBox_AP.Text,pal.diagnosis1);
            
         }
+        
         private void Button_Submit_Click_1(object sender, EventArgs e)
         {
-            if (!isNumeric(TextBox_WBC.Text, TextBox_RBC.Text, Textbox_Urea.Text, TextBox_Creatinine.Text,
+            if (isNumeric(TextBox_WBC.Text, TextBox_RBC.Text, Textbox_Urea.Text, TextBox_Creatinine.Text,
+                    textbox_iron.Text, textBox_HDL.Text, textBox_AP.Text) || !isNegetive(TextBox_WBC.Text, TextBox_RBC.Text, Textbox_Urea.Text, TextBox_Creatinine.Text,
                     textbox_iron.Text, textBox_HDL.Text, textBox_AP.Text))
-            {
-                MessageBox.Show("Enter only numeric values");
-            }
-            if (isNegetive(TextBox_WBC.Text, TextBox_RBC.Text, Textbox_Urea.Text, TextBox_Creatinine.Text,
-                    textbox_iron.Text, textBox_HDL.Text, textBox_AP.Text))
-            {
-                MessageBox.Show("Enter only positive values");
-            }
-
-            else
             {
                 panel_AddPatient.Visible = false;
               
@@ -195,12 +193,17 @@ namespace PatientCare360
                 dict["HDL"] = textBox_HDL.Text;
                 dict["AP"] = textBox_AP.Text;
             }
+         
+
         }
         private bool isNegetive(string text, string s, string text1, string s1, string text2, string s2, string text3)
         {
             if (text.Contains("-") || s.Contains("-") || text1.Contains("-") || s1.Contains("-") || text2.Contains("-") || s2.Contains("-") || text3.Contains("-"))
                 return true;
+            MessageBox.Show("Enter only positive values");
             return false;
+
+            
         }
         private bool isNumeric(string text, string s, string text1, string s1, string text2, string s2, string text3)
         {
@@ -217,6 +220,7 @@ namespace PatientCare360
             }
             catch (FormatException)
             {
+                MessageBox.Show("Enter only numeric values");
                 return false;
             }
             return true;

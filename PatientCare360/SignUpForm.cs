@@ -72,6 +72,13 @@ namespace PatientCare360
                 return false;
 
             }
+
+            if (!CheckFullName(fullname))
+            {
+                MessageBox.Show("Please enter your full name");
+                return false;
+
+            }
             return true;
         }
 
@@ -111,6 +118,12 @@ namespace PatientCare360
                 MessageBox.Show("Please try again");
         }
 
+        private bool CheckFullName(string fullname)
+        {
+            if (fullname.Contains(" "))
+                return true;
+            return false;
+        }
         private bool CheckUserName(string username)
         {
 

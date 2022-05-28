@@ -21,6 +21,7 @@ namespace PatientCare360.Excel
         public static WorkSheet Worksheet1 = workBook1.DefaultWorkSheet;
 
         public static int index;
+  
         //For readFile
         public static string wbc, neut, lymph, rbc, hct, urea, hb, crtn, iron, hdl, ap;
 
@@ -106,8 +107,13 @@ namespace PatientCare360.Excel
 
         public static string printDiagnosis(int index)
         {
-            return Worksheet1["U" + index].Value.ToString();
+            string ans = "";
+            
+            ans += Worksheet1["U" + index].Value.ToString() + "\n";
+      
+            return ans;
         }
+
 
         public static void ReadFile(string pafh)
         {
