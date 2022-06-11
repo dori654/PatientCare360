@@ -129,6 +129,7 @@ namespace PatientCare360
             {
                 radioButton_Pregnant_Y.Visible = true;
             }
+
             if (Check_ID(textBox_ID_panel2.Text) && Check_Age(Convert.ToInt32(textBox_Age_panel2.Text)))
             {
                 dict["age"] = textBox_Age_panel2.Text;
@@ -144,25 +145,27 @@ namespace PatientCare360
 
                 pal = new Patient(dict);
                 MessageBox.Show("Patient successfully added");
-                this.Visible=false;
+                this.Visible = false;
                 Treatment treatment = new Treatment();
                 treatment.Visible = true;
-                
+
                 treatment.info_Treatment(pal.SavePatientfile());
+            
+
+                string fever = radioButton_Fever_Y.Checked ? "Yes" : "No";
+                string smokes = radioButton_Smokes_Y.Checked ? "Yes" : "No";
+                string diarrhea = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
+                string vomiting = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
+                string pregnancy = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
+
+
+                Excel.Excel.AddPatient("Moshe", "Davidian", textBox_ID_panel2.Text, textBox_Age_panel2.Text, smokes,
+                    fever, diarrhea, vomiting, pregnancy,
+                    TextBox_WBC.Text, Slider_Neut.Value.ToString(), Slider_Lymph.Value.ToString(), TextBox_RBC.Text,
+                    Slider_HCT.Value.ToString(), Textbox_Urea.Text, TextBox_HB.Text,
+                    TextBox_Creatinine.Text, textbox_iron.Text, textBox_HDL.Text, textBox_AP.Text, pal.diagnosis1);
             }
 
-            string fever = radioButton_Fever_Y.Checked ? "Yes" : "No";
-            string smokes = radioButton_Smokes_Y.Checked ? "Yes" : "No";
-            string diarrhea = radioButton_Diarrhea_Y.Checked ? "Yes" : "No";
-            string vomiting = radioButton_Vomiting_Y.Checked ? "Yes" : "No";
-            string pregnancy = radioButton_Pregnant_Y.Checked ? "Yes" : "No";
-
-            
-            Excel.Excel.AddPatient("Moshe", "Davidian", textBox_ID_panel2.Text,textBox_Age_panel2.Text,smokes,fever,diarrhea,vomiting,pregnancy,
-                TextBox_WBC.Text,Slider_Neut.Value.ToString(),Slider_Lymph.Value.ToString(),TextBox_RBC.Text,
-                Slider_HCT.Value.ToString(),Textbox_Urea.Text,TextBox_HB.Text,
-                TextBox_Creatinine.Text,textbox_iron.Text,textBox_HDL.Text,textBox_AP.Text,pal.diagnosis1);
-           
         }
         
         private void Button_Submit_Click_1(object sender, EventArgs e)
